@@ -13,11 +13,23 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 100%;
 }
 
 .logo {
     height: 3rem;
     margin: 0 auto;
+    padding-top: 0.5em;
+}
+
+/* --------- Home Page layout */
+.home-page {
+    background-color:#FAFAFA;
+    width: 80%;
+    height: 65vh;
+    margin: 5rem auto;
+    max-height: 600px;
+    max-width: 850px;
+
 }
