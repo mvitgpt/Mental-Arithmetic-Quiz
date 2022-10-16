@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 
 /* --------- Global style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #3F13A4;
     font-family: 'Open sans', sans-serif;
@@ -27,7 +34,8 @@ body {
 .how {
     font-size: 1.2rem;
 }
-.home-page {
+
+.quiz-home {
     background-color:#FAFAFA;
     width: 80%;
     height: 70vh;
@@ -37,6 +45,18 @@ body {
     border-style: ridge;
     border-radius: 10px;
 }
+
+.game-rule {
+    /* text-align: right; */
+    width: 60%;
+    height: 2rem;
+
+}
+
+/* .game-rule i{
+    width: 2.5rem;
+    background-color: #FAFAFA;
+} */
 
 .initiate-quiz-box {
     text-align: center;

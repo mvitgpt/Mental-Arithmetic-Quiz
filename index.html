@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mental Arithmetic</title>
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
 </head>
 <body>
-    <div class="home-page">
+    <section class="quiz-home">
+        <div class="game-rule">
+            <i class="fa-regular fa-circle-info"></i>
+        </div>
+
+        <div class="user-name">
+            <i class="fa-light fa-circle-user"></i>
+        </div>
     <h1 class="heading">
         <img class="logo" src="assets/images/mental_logo.webp" alt="logo"> Mental Arithmetic Quiz
     </h1>
     <p class="how">How quick can you solve the questions?</p>
+    <p>Please enter your name</p>
     <div class="initiate-quiz-box">
     <button class="rules">Rules</button>
-    <button data-type="start" class="start-quiz">Start Quiz</button>
+    <button data-type="next" class="start-quiz">Next</button>
+    <!-- <button data-type="start" class="start-quiz">Start Quiz</button> -->
     </div>
-</div>
+    </section>
     
     <script src="assets/js/script.js"></script>
 </body>
