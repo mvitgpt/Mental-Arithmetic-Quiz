@@ -49,11 +49,6 @@ background-color: white;
 }
 
 /* --------- Home Page layout */
-.how {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-}
-
 .start-quiz-home {
     position: absolute;
     background-color:#FAFAFA;
@@ -67,6 +62,60 @@ background-color: white;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+ /* Quiz Rule Box  */
+.rule-box {
+    width: 100%;
+    /* width: 34rem; */
+    /* position: relative; */
+    background-color:#FAFAFA;
+    border-radius: 10px;
+    /* display: flex; */
+}
+
+.rule-title {
+    width: 100%;
+    height: 3.5rem;
+    font-size: 2rem;
+    padding: 0 2em;
+}
+
+.rules {
+    margin: 1.5rem 2.5rem;
+    text-align: justify;
+}
+
+.rule {
+    margin: 0.3rem 0;
+    font-size: 1.3rem;
+}
+
+/* Quiz Rule Box Buttons */
+.rule-box .buttons {
+    display: flex;
+    /* align-items: center; */
+    place-content: center;
+    height: 4rem;
+    border-top: 1px solid #595959;
+    color: #FAFAFA;
+}
+
+.rule-box .buttons button {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #3F13A4;
+    margin: 0.5rem;
+    color: #3f13a4;
+    background-color: #FAFAFA;
+
+}
+.quiz-intro-txt {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
 }
 
 /* .game-rule i{
@@ -91,16 +140,6 @@ input {
     font-size: 2rem;
     width: 100%; 
     padding-top: 0.5em;
-}
-.rules {
-    width: 10rem;
-    height: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #FAFAFA;
-    margin: 1rem auto;
-    background-color: #6B35E8;
-    border-radius: 8px;
 }
 
 .next {
