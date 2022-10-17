@@ -16,7 +16,7 @@
         <header>
             <div class="header-icon">
                 <div class="game-rule">
-                    <i class="fa-regular fa-circle-info"></i>
+                    <i class="fa-solid fa-circle-info"></i>
                 </div>
                 <div class="user-name">
                     <i class="fa-light fa-circle-user"></i>
@@ -30,7 +30,6 @@
             <h1 class="heading">
                 <img class="logo" src="assets/images/mental_logo.webp" alt="logo"> Mental Arithmetic Quiz
             </h1>
-
         </header>
         <div>
             <p class="how">How quick can you solve the questions?</p>
@@ -45,26 +44,38 @@
         </div>
 
         <!-- Quiz Rule Box -->
-        <div class="rule_box">
-            <div class="instruction"><span>Rules </span>
-            </div>
-            <div class="rules">
-                <div class="rule">1. The game consists of level one three, with an increase level of difficulty.
+        <section>
+            <div class="rule_box">
+                <div class="instruction"><span>Rules </span>
                 </div>
-                <div class="rule">2. The questions are mixture of addition, subtraction, multiplication and division.
+                <div class="rules">
+                    <div class="rule">1. The game consists of level one three, with an increase level of difficulty.
+                    </div>
+                    <div class="rule">2. The questions are mixture of addition, subtraction, multiplication and
+                        division.
+                    </div>
+                    <div class="rule">3. There are 5 questions per level.</div>
+                    <div class="rule">4. You have <span>30 seconds</span> per question.</div>
+                    <div class="rule">5. Enter your answer for each question.</div>
+                    <div class="rule">6. You'll get points on every correct answer.</div>
+                    <div class="rule">7. No calculator allowed.</div>
+                    <div class="rule">8. Click next to move on to the next question.</div>
                 </div>
-                <div class="rule">3. There are 5 questions per level.</div>
-                <div class="rule">4. You have <span>30 seconds</span> per question.</div>
-                <div class="rule">5. Enter your answer for each question.</div>
-                <div class="rule">6. You'll get points on every correct answer.</div>
-                <div class="rule">7. No calculator allowed.</div>
-                <div class="rule">8. Click next to move on to the next question.</div>
+                <div class="buttons">
+                    <button data-type="start" class="start-quiz">Start Quiz</button>
+                    <button data-type="home" class="go-home">Home</button>
+                </div>
             </div>
-            <div class="buttons">
-                <button data-type="start" class="start-quiz">Start Quiz</button>
-                <button data-type="home" class="go-home">Home</button>
-            </div>
+        </section>
+        <!-- Select Level of Difficulty -->
+        <section id="selection-area">
+            <h2>Select quiz level</h2>
+            <div class="level-button">
+            <button data-type="difficulty-level" id="difficulty-level1" aria-label="Difficulty Level">Level 1</button>
+            <button data-type="difficulty-level" id="difficulty-level2" aria-label="Difficulty Level">Level 2</button>
+            <button data-type="difficulty-level" id="difficulty-level3" aria-label="Difficulty Level">Level 3</button>  
         </div>
+        </section>
     </div>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>

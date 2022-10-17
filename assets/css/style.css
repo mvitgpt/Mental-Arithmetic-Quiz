@@ -113,3 +113,8 @@ input {
     background-color: #6B35E8;
     border-radius: 8px;
 }
+
+/* Select Level of Difficulty  */
+.level-button {
+    display: grid;
+}
