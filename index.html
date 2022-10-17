@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mental Arithmetic</title>
-    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
+
 <body>
-    <section class="quiz-home">
-        <div class="game-rule">
-            <i class="fa-regular fa-circle-info"></i>
+    <!-- Start Quiz -->
+    <div class="start-quiz-home">
+        <header>
+            <div class="header-icon">
+                <div class="game-rule">
+                    <i class="fa-regular fa-circle-info"></i>
+                </div>
+                <div class="user-name">
+                    <i class="fa-light fa-circle-user"></i>
+                </div>
+                <div class="timer">
+                    <i class="fa-solid fa-stopwatch"></i>
+                </div>
+                <div class="score">
+                </div>
+            </div>
+            <h1 class="heading">
+                <img class="logo" src="assets/images/mental_logo.webp" alt="logo"> Mental Arithmetic Quiz
+            </h1>
+
+        </header>
+        <div>
+            <p class="how">How quick can you solve the questions?</p>
+        </div>
+        <div class="user-input-area">
+            <label for="user-name"></label>
+            <input type="text" id="user-name" name="user-name" placeholder="Please enter your name" maxlength="8"
+                required>
+        </div>
+        <div class="initiate-quiz-box">
+            <button data-type="next" class="next">Next</button>
         </div>
 
-        <div class="user-name">
-            <i class="fa-light fa-circle-user"></i>
+        <!-- Quiz Rule Box -->
+        <div class="rule_box">
+            <div class="instruction"><span>Rules </span>
+            </div>
+            <div class="rules">
+                <div class="rule">1. The game consists of level one three, with an increase level of difficulty.
+                </div>
+                <div class="rule">2. The questions are mixture of addition, subtraction, multiplication and division.
+                </div>
+                <div class="rule">3. There are 5 questions per level.</div>
+                <div class="rule">4. You have <span>30 seconds</span> per question.</div>
+                <div class="rule">5. Enter your answer for each question.</div>
+                <div class="rule">6. You'll get points on every correct answer.</div>
+                <div class="rule">7. No calculator allowed.</div>
+                <div class="rule">8. Click next to move on to the next question.</div>
+            </div>
+            <div class="buttons">
+                <button data-type="start" class="start-quiz">Start Quiz</button>
+                <button data-type="home" class="go-home">Home</button>
+            </div>
         </div>
-    <h1 class="heading">
-        <img class="logo" src="assets/images/mental_logo.webp" alt="logo"> Mental Arithmetic Quiz
-    </h1>
-    <p class="how">How quick can you solve the questions?</p>
-    <p>Please enter your name</p>
-    <div class="initiate-quiz-box">
-    <button class="rules">Rules</button>
-    <button data-type="next" class="start-quiz">Next</button>
-    <!-- <button data-type="start" class="start-quiz">Start Quiz</button> -->
     </div>
-    </section>
-    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
