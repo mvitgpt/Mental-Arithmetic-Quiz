@@ -19,7 +19,7 @@
                     <i class="fas fa-info" aria-hidden="true" style="display: block;"></i>
                 </div>
                 <div class="user-name-icon">
-                    <i class="far fa-user"></i>
+                    <i class="far fa-user" aria-hidden="true" style="display: none;"></i>
                     <p id="user-name"></p>
                 </div>
                 <div class="timer-icon">
@@ -88,20 +88,19 @@
         <section class="question-box-area">
             <div class="header-icon">
                 <div class="user-name-icon" aria-hidden="true" style="display: block;">
-                    <i class="fas fa-user"></i>
-                    <!-- <i class="fa-light fa-circle-user"></i> -->
+                    <i class="far fa-user"></i>
                 </div>
                 <div class="timer-icon">
-                    <i class="fa fa-stopwatch" aria-hidden="true" style="display: block;"></i>
+                    <i class="fas fa-stopwatch" aria-hidden="true" style="display: block;"></i>
                 </div>
-                <div id="timer" style="color: orange;">0</div>
+                <div id="time-counter" style="color: orange;">0</div>
                 <div class="score">0 </div>
             </div>
             <div class="questions-counter">
                 <div class="questions-counter-txt">Question 1 of 5</div>
             </div>
             <div class="show-level">
-                <div class="level">level 1</div>
+                <div class="level">Level 1</div>
             </div>
             <div class="game-rule-icon hide"></div>
             <div class="questions-txt">
@@ -109,7 +108,7 @@
                 <p class="answer-message">Enter Answer:</p>
                 <input id="answer-box" type="number">
             </div>
-            <button data-type="submit" class="answer-button btn--white">Submit Answer</button>
+            <button data-type="submit" class="answer-button btn--white">Submit</button>
         </section>
         <!-- Quiz Feedback Box -->
         <section class="quiz-result">
