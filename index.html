@@ -16,13 +16,14 @@
         <header>
             <div class="header-icon">
                 <div class="game-rule-icon">
-                    <i class="fas fa-info"></i>
+                    <i class="fas fa-info" aria-hidden="true" style="display: block;"></i>
                 </div>
                 <div class="user-name-icon">
                     <i class="far fa-user"></i>
+                    <p id="user-name"></p>
                 </div>
                 <div class="timer-icon">
-                    <i class="fas fa-stopwatch"></i>
+                    <i class="fas fa-stopwatch" aria-hidden="true" style="display: none;"></i>
                 </div>
                 <div class="score">
                 </div>
@@ -42,7 +43,7 @@
         <div class="initiate-quiz-box">
             <button data-type="next" class="next">Next</button>
         </div>
-
+        
         <!-- Quiz Rule Box Section-->
         <section>
             <div class="rule-box">
@@ -80,17 +81,17 @@
                     aria-label="Difficulty Level">Level 3</button>
             </div>
             <div>
-            <button data-type="home" class="go-home">Home</button>
+                <button data-type="home" class="go-home">Home</button>
             </div>
         </section>
         <!-- Quiz Questions Box Area, Questions display with header icons -->
         <section class="question-box-area">
             <div class="header-icon">
-                <div class="user-name-icon">
+                <div class="user-name-icon" aria-hidden="true" style="display: block;">
                     <i class="fa-light fa-circle-user"></i>
                 </div>
                 <div class="timer-icon">
-                    <i class="fa fa-stopwatch"></i>
+                    <i class="fa fa-stopwatch" aria-hidden="true" style="display: block;"></i>
                 </div>
                 <div id="timer" style="color: orange;">0</div>
                 <div class="score">0 </div>
@@ -103,12 +104,22 @@
             </div>
             <div class="game-rule-icon hide"></div>
             <div class="questions-txt">
-            <!-- Questions displayed, user enter answers in the iput box -->
+                <!-- Questions displayed, user enter answers in the iput box -->
                 <p class="answer-message">Enter Answer:</p>
                 <input id="answer-box" type="number">
             </div>
             <button data-type="submit" class="answer-button btn--white">Submit Answer</button>
-
+        </section>
+        <!-- Quiz Feedback Box -->
+        <section class="quiz-result">
+            <div class="icon">
+            <i class="far fa-star"></i>
+            </div>
+            <div class="result-text">
+                <p>"Greatbjob ${user-name}, you scored ${4} out 0f ${5}. You're a star!"</p>
+            </div>
+            <button class="replay">Play Again</button>
+            <button class="quit">Quit Quiz </button>
         </section>
     </div>
     <!-- font awesome -->
