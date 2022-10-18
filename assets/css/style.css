@@ -32,17 +32,17 @@ body {
 
 .header-icon {
 display: flex;
-line-height: 2rem;
-padding-bottom: 1em;
+line-height: 1;
+/* display: inline-block; */
 }
 
 .header-icon .game-rule-icon {
 background-color: white;
     border: 1px solid;
-    font-size: 3.2rem;
-    margin: 0 30px;
-    width: 36px;
-    height: 2rem;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    width: 5%;
+    height: 1.8rem;
     position: absolute;
     right: 1%;
     top: 2%;
@@ -70,7 +70,6 @@ background-color: white;
     /* position: relative; */
     background-color:#FAFAFA;
     border-radius: 10px;
-    /* display: flex; */
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
 }
