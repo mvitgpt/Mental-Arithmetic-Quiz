@@ -92,7 +92,7 @@
                 <div class="timer-icon">
                     <i class="fa fa-stopwatch"></i>
                 </div>
-                <div id="timer">30</div>
+                <div id="timer" style="color: orange;">0</div>
                 <div class="score">0 </div>
             </div>
             <div class="questions-counter">
@@ -101,7 +101,13 @@
             <div class="show-level">
                 <div class="level">level 1</div>
             </div>
-            <div></div>
+            <div class="game-rule-icon hide"></div>
+            <div class="questions-txt">
+            <!-- Questions displayed, user enter answers in the iput box -->
+                <p class="answer-message">Enter Answer:</p>
+                <input id="answer-box" type="number">
+            </div>
+            <button data-type="submit" class="answer-button btn--white">Submit Answer</button>
 
         </section>
     </div>
