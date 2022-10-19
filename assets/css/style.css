@@ -233,3 +233,28 @@ input {
     flex-direction: column;
     justify-content: center;
 }
+
+.quiz-result .icon {
+    font-size: 6rem;
+    color: gold;
+    margin-bottom: 1rem;
+}
+
+.result-text {
+    font-size: 1.2rem;
+}
+
+.quiz-end {
+    display: flex;
+}
+
+.quiz-end button {
+    font-size: 1rem;
+    font-weight: 500;
+    width: 8rem;
+    height: 2.5rem;
+    margin: 0 0.5rem;
+    color: #3f13a4;
+    outline: none;
+    border: none;
+}
