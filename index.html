@@ -12,7 +12,7 @@
 
 <body>
     <!-- Start Quiz -->
-    <div class="start-quiz-home">
+    <div class="start-quiz-home" id="start-quiz-home">
         <header>
             <div class="header-icon">
                 <div class="game-rule-icon">
@@ -35,18 +35,19 @@
         <div>
             <p class="quiz-intro-txt">How quick can you solve the questions?</p>
         </div>
+        <!-- User name input area -->
         <div class="user-input-area">
             <label for="user-name"></label>
-            <input type="text" id="user-name" name="user-name" placeholder="Please enter your name" maxlength="8"
+            <input type="text" id="user-name-input" name="user-name" placeholder="Please enter your name" maxlength="8"
                 required>
         </div>
         <div class="initiate-quiz-box">
-            <button data-type="next" class="next">Next</button>
+            <button id="next-btn" data-type="next" class="next">Next</button>
         </div>
         
         <!-- Quiz Rule Box Section-->
         <section>
-            <div class="rule-box">
+            <div class="rule-box" id="rule-box">
                 <div class="rule-title"><span>Rules </span>
                 </div>
                 <div class="rules">
@@ -85,7 +86,7 @@
             </div>
         </section>
         <!-- Quiz Questions Box Area, Questions display with header icons -->
-        <section class="question-box-area">
+        <section class="question-box-area" id="question-box-area">
             <div class="header-icon">
                 <div class="user-name-icon" aria-hidden="true" style="display: block;">
                     <i class="far fa-user"></i>
@@ -111,7 +112,7 @@
             <button data-type="submit" class="answer-button btn--white">Submit</button>
         </section>
         <!-- Quiz Feedback Box -->
-        <section class="quiz-result">
+        <section class="quiz-result" id="quiz-result">
             <div class="icon">
             <i class="far fa-star"></i>
             </div>
@@ -127,6 +128,7 @@
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+  <script src="assets/js/questions.js"></script> 
 </body>
 
 </html>
