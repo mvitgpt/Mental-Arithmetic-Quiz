@@ -22,31 +22,37 @@
 // Get the home page box
 //let box = document.getElementsByClassName('home-page');
 
-// let userrname = document.getElementById("user-name-input")
-// const nextBtn = document.getElementById("next-btn")
-// let usernameText = document.getElementById("user-name")
 
-// nextBtn.addEventListener("click", function(){
-//     console.log(userrname.value, "dhjdhvfhve")
-//     usernameText.innerText = userrname.value
-// }
-// )
+let userName = document.getElementById("user-name-input")
+const nextBtn = document.getElementById("next-btn")
+let selection = document.getElementById("selection-area")
+let questionsArea = document.getElementById("question-box-area")
+// let usernameText = document.getElementById("username-txt")
+
+nextBtn.addEventListener("click", function() {
+    console.log(userName.value, "dhjdhvfhve")
+    // usernameText.innerText = userName.value
+    selection.innerText = userName.value;
+    questionsArea.innerText = userName.value;
+
+}
+)
 
 
-// let userName = document.getElementById('user-input-area');
+// let userName = document.getElementById('user-name-input');
 // userName.addEventListener('submit', userInput);
 
-function userInput(event){
-  event.preventDefault();
-  console.log('submitting ...');
+// function userInput(event){
+//   event.preventDefault();
+//   console.log('submitting ...');
   
-  let enterName = enterName.input['username'].value;
-  let onInput = document.getElementById('selection-area');
-  // onInput = selection-area.innerHTML
-  onInput.style.display ="block";
+//   let enterName = enterName.input['username'].value;
+//   let onInput = document.getElementById('selection-area');
+//   // onInput = selection-area.innerHTML
+//   onInput.style.display ="block";
 
-  userName.submit();
+//   userName.submit();
 
-  console.log("userName submitted");
-}
+//   console.log("userName submitted");
+// }
 
