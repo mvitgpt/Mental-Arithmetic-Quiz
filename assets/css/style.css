@@ -2,7 +2,7 @@
 
 /* --------- Global style */
 
-* {
+*, *::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,6 +13,8 @@ body {
     font-family: 'Open sans', sans-serif;
     color: #595959;
     text-align: center;
+    width: 100vw;
+    height: 100vw;
 }
 
 /* --------- Heading */
@@ -111,8 +113,8 @@ input {
     width: 100%;
     background-color:#FAFAFA;
     border-radius: 10px;
-    /* transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0; */
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
 }
 
 .rule-title {
@@ -163,6 +165,7 @@ input {
     height: 100%;
     /* transform: translate(-50%, -50%) scale(0.9);
     opacity: 0; */
+    display: none;
 
 }
 
@@ -193,6 +196,7 @@ input {
     border-radius: 10px;
     width: 100%;
     height: 100%;
+    display: none;
 }
 
 .question-box-area .header-icon {
@@ -241,6 +245,7 @@ input {
     height: 100%;
     flex-direction: column;
     justify-content: center;
+    display: none;
 }
 
 .quiz-result .icon {
@@ -262,8 +267,12 @@ input {
     font-weight: 500;
     width: 8rem;
     height: 2.5rem;
-    margin: 0 0.5rem;
-    color: #3f13a4;
+    margin: 2rem 0.5rem;
+    color: #FAFAFA;
     outline: none;
     border: none;
+    border-radius: 5px;
+    background-color: #3F13A4;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
