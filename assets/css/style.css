@@ -261,7 +261,6 @@ input {
     margin-right: 5rem;
 }
 
-
 .answer-buttons {
     display: grid;
     grid-template-columns: 30% 30%;
@@ -270,6 +269,66 @@ input {
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 1rem;
+}
+
+.option-btn {
+    background-color: #3f13a4;
+    border: #595959;
+    outline: none;
+    color: #FAFAFA;
+    border-radius: 5px;
+    padding: 0.2em 0.4em;
+ }
+ 
+ .option-btn:hover {
+     border-color: #050505;
+ }
+  
+ .option-btn.correct {
+     background-color: green;
+     color: #FAFAFA;
+ }
+ 
+ .option-btn.incorrect {
+     background-color: red;
+     color: #FAFAFA;
+ }
+ /* .questions-counter {
+display: flex;
+height: 3rem;
+/* padding: 0 2em; */
+/* justify-content: space-between;
+}  */
+ 
+.questions-counter-txt span {
+    margin-bottom: 2.5rem;
+}
+
+.questions-counter-txt p {
+     display: flex;
+     font-weight: 600; 
+     justify-content: center;
+}
+
+.questions-counter-txt p span{
+    padding: 0 0.2em; 
+    letter-spacing: 5px;
+    text-align: justify;
+    color: #050505;
+}
+
+.next-ques-button {
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 8rem;
+     height: 3rem;
+    border-radius: 5px;
+    border: none;
+    color: #FAFAFA;
+    background-color: #3F13A4;
+    /* margin-left: 70%; */
+    margin: 0 auto;
+
 }
 
 /* Quiz Feedback Box */
