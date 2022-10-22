@@ -61,6 +61,16 @@ background-color: white;
     flex-direction: column;
     /* display: none;  */
 }
+.hide {
+    /* display: none;   */
+}
+
+/* .home-box::before,
+.home-box::after {
+    content: "";
+    display: rule-box;
+    display: result-text;
+} */
 
 .quiz-intro-txt {
     font-size: 1.2rem;
@@ -72,9 +82,11 @@ background-color: white;
 }
 
 input {
-    width: 10rem;
+    width: 12rem;
     height: 3rem;
     border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #3F13A4;
 }
 
 /* #username {
@@ -108,59 +120,70 @@ input {
 
  /* -------------- Quiz Rule Box  */
  .rule-box {
-    max-width: 70%;
+    max-width: 80%;
     background-color:#FAFAFA;
     border-radius: 10px;
     display: grid;
-    height: 70vh;
-     /* max-height: 600px; */
-    width: 850px;  
+    max-height: 80vh;
+    height: 37.5rem;
+    width: 53rem;  
     border-style: ridge;
     margin: 5rem auto;
     justify-content: center;
-    display: none;
+    /* display: none; */
 }
 
 .rule-title {
-    width: 100%;
-    height: 3.5rem;
-    font-size: 2rem;
-    padding: 0.5em 0;
+    /* width: 100%; */
+    height: 3rem;
+    padding-top: 0.5em;
     font-size: 1.4rem;
     font-weight: 700;
+    color: #3f13a4;
 }
 
 .instructions {
-    /* margin: 1.5rem 2.5rem; */
+    margin: 0 1.5rem;
     text-align: left;
-    padding: 1px 2px;
+    /* padding: 1px 2px; */
 }
 
 .instructions .rule {
     margin: 0.3rem 0;
     font-size: 1.3rem;
+    line-height: 1.7rem;
 }
 
+.rule-box .rule span {
+    font-weight: 600;
+    color: #050505;
+}
+
+.total-question {}
+
 /* Quiz Rule Box Buttons */
-.rule-box .buttons {
+.rule-box .start-buttons {
     display: flex;
     place-content: center;
-    height: 4rem;
+    height: 3rem;
     border-top: 1px solid #595959;
     color: #FAFAFA;
 }
 
-.rule-box .buttons button,
-.go-home {
-    font-size: 1rem;
+.start-quiz-btn,
+.go-home-btn {
+    font-size: 1.2rem;
     font-weight: 500;
-    width: 6rem;
+    width: 7rem;
     height: 2.5rem;
     border-radius: 5px;
-    border: 1px solid #3F13A4;
+    background-color: #3F13A4;
     margin: 0.5rem;
     color: #3f13a4;
-    background-color: #FAFAFA;
+    color: #FAFAFA;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 /* -------------- Select Level of Difficulty */
@@ -168,17 +191,13 @@ input {
     display: grid;
     background-color:#FAFAFA;
     border-radius: 10px;
-    /* width: 100%;
-    height: 100%; */
     /* transform: translate(-50%, -50%) scale(0.9);
     opacity: 0; */
-    /* display: none; */
     width: 70%;
     height: 70vh;
     margin: 5rem auto;
     border-style: ridge;
-    display: none;
-
+    /* display: none; */
 }
 
 .select-quiz {
@@ -207,25 +226,26 @@ input {
     background-color:#FAFAFA;
     border-radius: 10px;
     max-width: 80%;
-    height: 70vh;
+    max-height: 80vh;
     margin: 5rem auto;
     height: 37.5rem;
     width: 53rem; 
     border-style: ridge; 
     /* display: none; */
-    box-shadow: 0 0 10px 2px
+    box-shadow: 0 0 10px 2px;
+
 }
 
 .question-box-area .header-icon {
     height: 2.5rem;
     display: flex;
+    border-bottom: 1px solid #595959;
     /* justify-content: space-evenly; */
-    border-radius: 5px 5px 0 0;
-    box-shadow: 0px 3px 5px 2px;
+    /* border-radius: 5px 5px 0 0;
     background-color: #FAFAFA;
+    /* width: 100%; */
 }
-.question-box-area
-.header-icon .user-icon {
+.user-icon {
     font-size: 1.5rem;
     margin: 0.8rem 4rem 0 0;
     color: #050505;  
@@ -261,14 +281,14 @@ input {
     margin-right: 5rem;
 }
 
-.answer-buttons {
+.option-buttons {
     display: grid;
     grid-template-columns: 30% 30%;
     grid-template-rows: 1fr 1fr;
-    gap: 35px;
+    gap: 2rem;
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
 }
 
 .option-btn {
@@ -277,7 +297,10 @@ input {
     outline: none;
     color: #FAFAFA;
     border-radius: 5px;
-    padding: 0.2em 0.4em;
+    padding: 0.2em 0.2em;
+    margin-bottom: 2rem;
+    height: 3rem;
+    font-size: 1.2rem;
  }
  
  .option-btn:hover {
@@ -293,21 +316,23 @@ input {
      background-color: red;
      color: #FAFAFA;
  }
- /* .questions-counter {
-display: flex;
-height: 3rem;
-/* padding: 0 2em; */
-/* justify-content: space-between;
-}  */
+
+ .level {
+    font-size: 1.2rem;
+    font-weight: 800;
+ }
+
+ .questions-counter {
+     color: #3F13A4;
+} 
  
-.questions-counter-txt span {
-    margin-bottom: 2.5rem;
-}
 
 .questions-counter-txt p {
      display: flex;
-     font-weight: 600; 
+     font-weight: 800; 
      justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
 }
 
 .questions-counter-txt p span{
@@ -315,12 +340,24 @@ height: 3rem;
     letter-spacing: 5px;
     text-align: justify;
     color: #050505;
+    margin: 0 1rem;
+}
+
+.question-box-area .questions-txt {
+    font-size: 1.3rem;
+    font-weight: 700;  
+}
+
+.next-question {
+    border-top: 1px solid #595959;
+    margin-bottom: 1rem;
+    line-height: 1.2rem;
 }
 
 .next-ques-button {
     font-size: 1.2rem;
     font-weight: 500;
-    width: 8rem;
+    width: 9rem;
      height: 3rem;
     border-radius: 5px;
     border: none;
@@ -328,20 +365,28 @@ height: 3rem;
     background-color: #3F13A4;
     /* margin-left: 70%; */
     margin: 0 auto;
-
+    margin-top: 1rem;
 }
 
-/* Quiz Feedback Box */
+/* ------------------ Quiz Feedback Box */
 .quiz-result {
     display: flex;
     align-items: center; 
     background-color:#FAFAFA;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    /* width: 53rem;
+    height: 100%; */
     flex-direction: column;
-    justify-content: center;
-    display: none;
+    /* justify-content: center; */
+    /* display: none; */
+    max-width: 80%;
+    height: 70vh;
+    margin: 5rem auto;
+    border-style: ridge
+}
+.quiz-result h2 {
+    margin-top: 1.5rem;
+    color: #3F13A4;
 }
 
 .quiz-result .icon {
@@ -352,6 +397,7 @@ height: 3rem;
 
 .result-text {
     font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .quiz-end {
@@ -363,7 +409,7 @@ height: 3rem;
     font-weight: 500;
     width: 8rem;
     height: 2.5rem;
-    margin: 2rem 0.5rem;
+    margin: 0 0.5rem;
     color: #FAFAFA;
     outline: none;
     border: none;

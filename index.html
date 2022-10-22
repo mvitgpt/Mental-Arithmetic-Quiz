@@ -11,19 +11,19 @@
 </head>
 
 <body>
-    <!-- Start Quiz -->
-    <div class="start-quiz-home" id="start-quiz-home">
+    <!--------------------- Start Quiz -->
+    <div class="start-quiz-home home-box hide" id="start-quiz-home">
         <header>
             <div class="header-icon">
                 <div class="game-rule-icon press-btn">
-                    <i class="fas fa-info" aria-hidden="true" style="display: block;"></i>
+                    <i class="fas fa-info" style="display: block;"></i>
                 </div>
                 <div class="user-icon">
-                    <i class="far fa-user" aria-hidden="true" style="display: none;"></i>
+                    <i class="far fa-user" style="display: none;"></i>
                     <p id="username-txt"></p>
                 </div>
                 <div class="timer-icon">
-                    <i class="fas fa-stopwatch" aria-hidden="true" style="display: none;"></i>
+                    <i class="fas fa-stopwatch" aria-label="Timer icon" style="display: none;"></i>
                 </div>
                 <div class="score">
                 </div>
@@ -40,6 +40,7 @@
             <label for="user-name-input"></label>
             <input type="text" id="user-name-input" name="user-name" placeholder="Please enter your name" maxlength="8"
                 required>
+                <p class="usernameText"></p>
         </div>
         <div class="initiate-quiz-btn">
             <button id="next-btn" data-type="next" class="next">Next</button>
@@ -47,33 +48,32 @@
     </div>
     <!-- Quiz Rule Box Section-->
     <section>
-        <div class="rule-box" id="rule-box" aria-hidden="true">
-            <div class="rule-title"><span>Rules </span>
-            </div>
+        <div class="rule-box home-box hide" id="rule-box">
+            <h2 class="rule-title"> Quiz Rules</h2>
             <div class="instructions">
                 <div class="rule">1. The game consists of level one to three, with an increase level of difficulty.
                 </div>
                 <div class="rule">2. The questions are mixture of addition, subtraction, multiplication and
                     division.
                 </div>
-                <div class="rule">3. There are 5 questions per level.</div>
-                <div class="rule">4. You have 30 seconds per question.</div>
+                <div class="rule">3. There are <span class="total-question">5</span> questions per level.</div>
+                <div class="rule">4. You have <span>30</span> seconds per question.</div>
                 <div class="rule">5. Enter your answer for each question.</div>
                 <div class="rule">6. You'll get points on every correct answer.</div>
                 <div class="rule">7. No calculator allowed.</div>
                 <div class="rule">8. Click next to move on to the next question.</div>
             </div>
             <!-- Quiz Rule Box Buttons-->
-            <div class="buttons">
-                <button data-type="start" class="start-quiz">Start Quiz</button>
-                <button data-type="home" class="go-home">Home</button>
+            <div class="start-buttons">
+                <button data-type="start" class="start-quiz-btn">Start Quiz</button>
+                <button data-type="home" class="go-home-btn">Home</button>
             </div>
         </div>
     </section>
     <!-- Select Level of Difficulty Section-->
-    <section id="selection-area">
+    <section id="selection-area" class="selection-area home-box hide">
         <div class="header-icon">
-            <div class="user-icon" aria-hidden="true" style="display: block;">
+            <div class="user-icon" aria-label="User Icon" style="display: block;">
                 <i class="far fa-user"></i>
             </div>
         </div>
@@ -87,17 +87,17 @@
                 3</button>
         </div>
         <div>
-            <button data-type="home" class="go-home">Home</button>
+            <button data-type="home" class="go-home-btn">Home</button>
         </div>
     </section>
-    <!-- Quiz Questions Section Area, Questions display with header icons -->
-    <section class="question-box-area" id="question-box-area">
+    <!--------- Quiz - Questions Section Area, Questions display with header icons -->
+    <section class="question-box-area home-box hide" id="question-box-area">
         <div class="header-icon">
-            <div class="user-icon" aria-hidden="true" style="display: block;">
-                <i class="far fa-user"> ::before</i>
+            <div class="user-icon" aria-label="User Icon" style="display: block;">
+                <i class="far fa-user"></i>
             </div>
             <div class="timer-icon">
-                <i class="fas fa-stopwatch" aria-hidden="true" style="display: block;"></i>
+                <i class="fas fa-stopwatch" aria-label="Timer Icon" style="display: block;"></i>
             </div>
             <div id="time-counter" class="time-counter" style="color: orange;">0</div>
             <div class="score">0 </div>
@@ -114,9 +114,9 @@
          <!-- Questions display area -->
         <div class="questions-txt" id="questions">
             <span>What is one quarter of 20 ?</span>
-        </div>
+        </div>`
 
-        <div class="answer-buttons">
+        <div class="option-buttons">
             <button class="option-btn" id="option1" aria-label="Anwser Option Button 1">option 1</button>
             <button class="option-btn" id="option2" aria-label="Anwser Option Button 2">option 2</button>
             <button class="option-btn" id="option3" aria-label="Anwser Option Button 3">option 3</button>
@@ -127,15 +127,18 @@
                 <p>Question <span> 2 of 5 </span></p>
             </div>
         </div> -->
+        <div class="next-question">
         <button data-type="continue" class="next-ques-button btn--white">Next Question</button>
+    </div>
     </section>
-    <!-- Quiz Feedback Box -->
-    <section class="quiz-result" id="quiz-result">
+    <!------------------------- Quiz Feedback Box -->
+    <section class="quiz-result home-box hide" id="quiz-result">
+        <h2>Quiz Result</h2>
         <div class="icon">
             <i class="far fa-star"></i>
         </div>
         <div class="result-text">
-            <p>"Great job ${user-name}, you scored ${4} out 0f ${5}. You're a star!"</p>
+            <p>Great job {user-name}, you scored 4 out of 5. You're a star!</p>
         </div>
         <div class="quiz-end">
             <button data-type="play" class="replay">Play Again</button>

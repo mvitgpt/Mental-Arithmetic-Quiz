@@ -1,15 +1,19 @@
-//Array of question number, questions and answers of different levels
-let questionsLevel1 = [
+//Array of question number, questions, options and answers of different levels
+const questions = [
     {
     num: 1,
     question: 61 + 4,
-    answer: 65,
-    difficulty: "easy"
+    difficulty: "easy",
+    answers: [
+        { text: "65", correct: true},
+        { text: "69", correct: false}
+    ]
 },
 
 {
     num: 2,
     question: 15 - 8,
+    option
     answer: 7,
     difficulty: "easy"
 },
@@ -217,6 +221,6 @@ let questionsLevel3 = [
 },
 ]
 
-let selectedLevel = document.getElementById("diffulty");
+// let selectedLevel = document.getElementById("diffulty");
 
-let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
+// let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);

@@ -22,46 +22,32 @@
 // Get the home page box
 //let box = document.getElementsByClassName('home-page');
 
+
+
 // User name display when the next button is clicked
-let userName = document.getElementById("user-name-input")
+const userName = document.getElementById("user-name-input")
 const nextBtn = document.getElementById("next-btn")
-let selection = document.getElementById("selection-area")
-let questionsArea = document.getElementById("question-box-area")
-// let usernameText = document.getElementById("username-txt")
+const selection = document.getElementById("selection-area")
+const questionsArea = document.getElementById("question-box-area")
+
 
 nextBtn.addEventListener("click", function() {
 
     console.log(userName.value, "dhjdhvfhve")
-    // usernameText.innerText = userName.value
+    userName.innerText = userName.value
     selection.innerText = userName.value;
     questionsArea.innerText = userName.value;
 }
 );
 
-const gameRule = document.getElementsByClassName("game-rule-icon");
-const ruleBox = document.getElementById("rule-box");
-gameRule.onclick = function () {
-  if (ruleBox.style.display !== "none") {
-    ruleBox.style.display = "none";
-  } else {
-    ruleBox.style.display = "block";
-  }
-};
+// const gameRule = document.getElementsByClassName("game-rule-icon");
+// const ruleBox = document.getElementById("rule-box");
+// gameRule.onclick = function () {
+//   if (ruleBox.style.display !== "none") {
+//     ruleBox.style.display = "none";
+//   } else {
+//     ruleBox.style.display = "block";
+//   }
+// };
 
-// let userName = document.getElementById('user-name-input');
-// userName.addEventListener('submit', userInput);
-
-// function userInput(event){
-//   event.preventDefault();
-//   console.log('submitting ...');
-  
-//   let enterName = enterName.input['username'].value;
-//   let onInput = document.getElementById('selection-area');
-//   // onInput = selection-area.innerHTML
-//   onInput.style.display ="block";
-
-//   userName.submit();
-
-//   console.log("userName submitted");
-// }
 
