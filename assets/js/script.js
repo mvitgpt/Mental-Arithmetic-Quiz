@@ -18,27 +18,21 @@
 // });
 
 
-
-// Get the home page box
-//let box = document.getElementsByClassName('home-page');
-
-
-
-// User name display when the next button is clicked
-const userName = document.getElementById("user-name-input")
-const nextBtn = document.getElementById("next-btn")
-const selection = document.getElementById("selection-area")
-const questionsArea = document.getElementById("question-box-area")
+// // User name display when the next button is clicked
+// const userName = document.getElementById("user-name-input")
+// const nextBtn = document.getElementById("next-btn")
+// const selection = document.getElementById("selection-area")
+// const questionsArea = document.getElementById("question-box-area")
 
 
-nextBtn.addEventListener("click", function() {
+// nextBtn.addEventListener("click", function() {
 
-    console.log(userName.value, "dhjdhvfhve")
-    userName.innerText = userName.value
-    selection.innerText = userName.value;
-    questionsArea.innerText = userName.value;
-}
-);
+//     console.log(userName.value, "dhjdhvfhve")
+//     userName.innerText = userName.value
+//     selection.innerText = userName.value;
+//     questionsArea.innerText = userName.value;
+// }
+// );
 
 // const gameRule = document.getElementsByClassName("game-rule-icon");
 // const ruleBox = document.getElementById("rule-box");
@@ -49,5 +43,20 @@ nextBtn.addEventListener("click", function() {
 //     ruleBox.style.display = "block";
 //   }
 // };
+
+
+
+
+// Get the Elements by their Tag Name
+const userName = document.getElementById("user-name-input");
+const nextBtn = document.getElementsByClassName("next-btn");
+const questionsArea = document.getElementById("question-box-area");
+
+nextBtn.addEventListener("click", runQuiz);
+
+function runQuiz() {
+    console.log("Started");
+    userName.innerText = userName.value;
+}
 
 
