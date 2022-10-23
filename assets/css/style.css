@@ -62,7 +62,7 @@ background-color: white;
     /* display: none;  */
 }
 .hide {
-    /* display: none;   */
+    display: none;  
 }
 
 /* .home-box::before,
