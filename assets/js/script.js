@@ -47,22 +47,27 @@
 
 
 
-// Get the Elements by their Tag Name
+// Get the HTML Elements by their Tag Name and assigned to variable
 let userName = document.getElementById("user-name-input")
+const errorMsg = document.getElementById("error-message")
 const nextBtn = document.getElementById("next-btn")
 const questionsArea = document.getElementById("question-box-area")
+const difficultyEasy = document.getElementById("difficulty-level1")
+const difficultyMedium = document.getElementById("difficulty-level2")
+const difficultyHard = document.getElementById("difficulty-level3")
+const questionBox = document.getElementById("question-box-area")
 const selection = document.getElementById("selection-area")
-const startBtn = document.getElementsByClassName('start-quiz-btn')
+const startBtn = document.getElementById('start-quiz-btn')
+const goHome = document.getElementById("go-home-btn")
+const quizResult = document.getElementById("quiz-result")
 const ruleBox = document.getElementById('rule-box')
 
 
 nextBtn.addEventListener("click", enterName)
 
 
-
 function enterName() {
-    console.log("Started");
-    userName.innerText = userName.value
+    userName.innerText = userName.value;
     selection.innerHTML = userName.value;
     questionsArea.innerText = userName.value;
     
@@ -72,9 +77,11 @@ function enterName() {
     // ruleBox.addEventListener.classList.add('hide')
     
     selectLevel.classList.remove('hide')
+    window.location.assign("rule-box")
 
 }
 
+// document.getElementById('rule-box').innerHTML = nextBtn.onload; 
 // startBtn.addEventListener("click", startQuiz)
 
 // function startQuiz(){
@@ -86,3 +93,6 @@ function enterName() {
 //     startBtn.addEventListener("click", startQuiz)
 // }
 // console.log("startBtn");
+
+    let qCounter = 1;
+    document.getElementById("questions-counter").innerHTML = (`Question ${}`)

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Online Interactive Arithmetic Quiz">
-    <meta name="keywords" content=" quiz, online quiz, mental maths, learn, interactive, fun, arithmetic quiz, challenging, multiple choice,">
+    <meta name="keywords"
+        content=" quiz, online quiz, mental maths, learn, interactive, fun, arithmetic quiz, challenging, multiple choice,">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mental Arithmetic Quiz</title>
     <!-- Logo link -->
@@ -15,7 +16,7 @@
 
 <body>
     <!--------------------- Start Quiz -->
-    <div class="start-quiz-home home-box hide" id="start-quiz-home">
+    <div class="start-quiz-home home-box" id="start-quiz-home">
         <header>
             <div class="header-icon">
                 <div class="game-rule-icon press-btn">
@@ -39,38 +40,43 @@
             <p class="quiz-intro-txt">How quick can you solve the questions?</p>
         </div>
         <!-- User name input area -->
-        <div class="user-input-area">
-            <label for="user-name-input"></label>
-            <input type="text" id="user-name-input" name="user-name" placeholder="Please enter your name" maxlength="8"
-                required>
-            <p class="usernameText"></p>
-        </div>
-        <div class="initiate-quiz-btn">
-            <button id="next-btn" data-type="next" class="next">Next</button>
-        </div>
+        <form id="user-form" action="">
+            <div class="user-input-area">
+                <label for="user-name-input"></label>
+                <input type="text" id="user-name-input" name="user-name" placeholder="Please enter your name"
+                    maxlength="8" aria-label="user-name-input" required>
+                    <!-- Error Message for Username Validation -->
+                <p class="usernameText"></p>
+                <div id="error-message" class="error-message"></div>
+                <!-- Proceed button to Quiz Rules -->
+                <div class="initiate-quiz-btn">
+                    <button id="next-btn" data-type="next" class="next">Next</button>
+                </div>
+            </div>
+        </form>
     </div>
     <!-- Quiz Rule Box Section-->
-        <section class="rule-box home-box hide" id="rule-box">
-            <h2 class="rule-title"> Quiz Rules</h2>
-            <div class="instructions">
-                <div class="rule">1. The game consists of level one to three, with an increase level of difficulty.
-                </div>
-                <div class="rule">2. The questions are mixture of addition, subtraction, multiplication and
-                    division.
-                </div>
-                <div class="rule">3. There are <span class="total-question">5</span> questions per level.</div>
-                <div class="rule">4. You have <span>30</span> seconds per question.</div>
-                <div class="rule">5. Enter your answer for each question.</div>
-                <div class="rule">6. You'll get points on every correct answer.</div>
-                <div class="rule">7. No calculator allowed.</div>
-                <div class="rule">8. Click next to move on to the next question.</div>
+    <section class="rule-box  hide" id="rule-box">
+        <h2 class="rule-title"> Quiz Rules</h2>
+        <div class="instructions">
+            <div class="rule">1. The game consists of level one to three, with an increase level of difficulty.
             </div>
-            <!-- Quiz Rule Box Buttons-->
-            <div class="start-buttons">
-                <button data-type="start" class="start-quiz-btn">Start Quiz</button>
-                <button data-type="home" class="go-home-btn">Home</button>
+            <div class="rule">2. The questions are mixture of addition, subtraction, multiplication and
+                division.
             </div>
-        </section>
+            <div class="rule">3. There are <span class="total-question">5</span> questions per level.</div>
+            <div class="rule">4. You have <span>30</span> seconds per question.</div>
+            <div class="rule">5. Enter your answer for each question.</div>
+            <div class="rule">6. You'll get points on every correct answer.</div>
+            <div class="rule">7. No calculator allowed.</div>
+            <div class="rule">8. Click next to move on to the next question.</div>
+        </div>
+        <!-- Quiz Rule Box Buttons-->
+        <div class="start-buttons">
+            <button data-type="start" class="start-quiz-btn" id="start-quiz-btn">Start Quiz</button>
+            <button data-type="home" class="go-home-btn" id="go-home-btn">Home</button>
+        </div>
+    </section>
     <!-- Select Level of Difficulty Section-->
     <section id="selection-area" class="selection-area home-box hide">
         <div class="header-icon">
@@ -80,11 +86,11 @@
         </div>
         <h2 class="select-quiz">Select Quiz Level</h2>
         <div class="level-button">
-            <button data-type="difficulty-level1" class="difficulty-level button" aria-label="Difficulty Level">Level
+            <button data-type="difficulty-level1" class="difficulty-level button" id="difficulty-level1" aria-label="Difficulty Level">Level
                 1</button>
-            <button data-type="difficulty-level2" class="difficulty-level button" aria-label="Difficulty Level">Level
+            <button data-type="difficulty-level2" class="difficulty-level button" id="difficulty-level2" aria-label="Difficulty Level">Level
                 2</button>
-            <button data-type="difficulty-level3" class="difficulty-level button" aria-label="Difficulty Level">Level
+            <button data-type="difficulty-level3" class="difficulty-level button" id="difficulty-level3" aria-label="Difficulty Level">Level
                 3</button>
         </div>
         <div>
@@ -101,7 +107,7 @@
                 <i class="fas fa-stopwatch" aria-label="Timer Icon" style="display: block;"></i>
             </div>
             <div id="time-counter" class="time-counter" style="color: orange;">0</div>
-            <div class="score">0 </div>
+            <div class="score" id="score">0 </div>
         </div>
         <div class="game-rule-icon hide"></div>
         <div class="show-level">
@@ -133,7 +139,7 @@
         </div>
     </section>
     <!------------------------- Quiz Feedback Box -->
-    <section class="quiz-result home-box hide" id="quiz-result">
+    <section class="quiz-result hom-box hide" id="quiz-result">
         <h2>Quiz Result</h2>
         <div class="icon">
             <i class="far fa-star"></i>
