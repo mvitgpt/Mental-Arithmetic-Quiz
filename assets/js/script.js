@@ -51,7 +51,7 @@ const difficultyMedium = document.getElementById("difficulty-level2")
 const difficultyHard = document.getElementById("difficulty-level3")
 const questionBox = document.getElementById("question-box-area")
 const selection = document.getElementById("selection-area")
-const optionsBtn = document.getElementById("option-buttons")
+const optionsBtn = document.getElementsByClassName("option-buttons")
 const startBtn = document.getElementById('start-quiz-btn')
 const goHome = document.getElementById("go-home-btn")
 const quizResult = document.getElementById("quiz-result")
@@ -121,20 +121,51 @@ function displayName() {
         const indexNum = availableSelections.indexOf(questionsIndex);
 
         // Remove the questionsIndex from the availableSelections Array, so the question is not repeated
-        availableSelections.splice(indexNum)
+        availableSelections.splice(indexNum, 1);
+
+        // Set the options, loop through options Array and push it into the availabeOptions Array 
+        const optionLen = currentQuestion.options.length;
+        for(let i = 0; i < optionLen; i++){
+            availableOptions.push(i);
+        }
+        // Set random Options and Append options container to the available options
+        // First loop through the options
+        for(let i = 0; i < optionLen; i++){
+            const randOption = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+            const optionIndex = availableOptions.indexOf(randOption);
+        // Remove the OptionIndex from the availableOptions Array, so the option is not repeated
+            availableOptions.splice(optionIndex, 1);
+            const option = document.getElementsByClassName("option-btn");
+            option.innerHTML = currentQuestion.options[randOption];
+            // option = currentQuestion.options[i];
+            option = i;
+            optionsBtn.appendChild(option);
+        }
+    
         questionsCounterIndex++;
         console.log(indexNum);
     }
 
-        function nextQ(){
-            if (questionsCounter === quiz.length){
-                console.log("finish quiz");
-            }
-            else{
-                selectNewQuestions();  
-            }
+    const nextQ = document.getElementById("next-ques-button")
 
+    nextQ.addEventListener("click", function() {
+        if (questionsCounter === quiz.length){
+            console.log("finish quiz");
         }
+        else{
+            selectNewQuestions();  
+        }
+    });
+
+        // function nextQ(){
+        //     if (questionsCounter === quiz.length){
+        //         console.log("finish quiz");
+        //     }
+        //     else{
+        //         selectNewQuestions();  
+        //     }
+
+        // }
 
      window.onload = fuction() {
     // //    Set all questions in  selectedQuestions Array
