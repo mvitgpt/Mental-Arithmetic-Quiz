@@ -34,21 +34,13 @@
 // }
 // );
 
-// const gameRule = document.getElementsByClassName("game-rule-icon");
-// const ruleBox = document.getElementById("rule-box");
-// gameRule.onclick = function () {
-//   if (ruleBox.style.display !== "none") {
-//     ruleBox.style.display = "none";
-//   } else {
-//     ruleBox.style.display = "block";
-//   }
-// };
 
 
 
 
 // Get the HTML Elements by their Tag Name and assigned to variable
-const userName = document.getElementById("user-name-input")
+const userNameInput = document.getElementById("user-name-input")
+const startQuiz = document.getElementById('start-quiz-home')
 const errorMsg = document.getElementById("error-message")
 const nextBtn = document.getElementById("next-btn")
 const questionsCounter = document.getElementById("questions-counter")
@@ -66,20 +58,19 @@ const quizResult = document.getElementById("quiz-result")
 const ruleBox = document.getElementById('rule-box')
 
 
-nextBtn.addEventListener("click", enterName)
+nextBtn.addEventListener("click", displayName)
 
 
 function displayName() {
-    userName.innerText = userName.value;
-    selection.innerHTML = userName.value;
-    questionsArea.innerText = userName.value;
+    console.log(userNameInput.value, "dhjdhvfhve")
+    userNameInput.innerText = userNameInput.value;
+
+    selection.innerHTML = "Hi " + userNameInput.value;
+    questionsArea.innerText = userNameInput.value;
     
-    nextBtn.addEventListener.classList.add('hide')
-   
-    startBtn.classList.add('hide')
-    // ruleBox.addEventListener.classList.add('hide')
+    startQuiz.classList.remove('hide')
     
-    selectedLevel.classList.remove('hide')
+    selection.classList.remove('hide')
     // window.location.assign("rule-box")
 
 }
@@ -118,33 +109,57 @@ function displayName() {
     // Set Questions Counter and display random Questions
     function selectNewQuestions(){
         // Set Question counter
-        questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of "
+        questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of " +
         quiz.length;
-
+        // Set Question text
         const questionsIndex = availableSelections[Math.floor(Math.random() * availableSelections.length)];
         currentQuestion = questionsIndex;
         questionsText.innerHTML = currentQuestion.question;
-        const firstIdex = availableSelections.indexOf()
+        console.log(questionsIndex);
+
+        // Index number of questions in the availableSelections Array
+        const indexNum = availableSelections.indexOf(questionsIndex);
+
+        // Remove the questionsIndex from the availableSelections Array, so the question is not repeated
+        availableSelections.splice(indexNum)
         questionsCounterIndex++;
+        console.log(indexNum);
     }
 
-
-    window.onload = fuction() {
-    //    Set all questions in  selectedQuestions Array
-        availableSelections();
-
-        // Call the selectNewQuestions function's function
-        selectNewQuestions();
-
-    };
-
-    // Function to randomly display quiz with level of diffivulty
-    function difficultyL1() {
-        quiz = questionsLevel1;
-        difficultyEasy.addEventListener("click", () =>{
-        selectedLevel = document.getElementsByClassName("difficulty");
-
-// let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
+        function nextQ(){
+            if (questionsCounter === quiz.length){
+                console.log("finish quiz");
+            }
+            else{
+                selectNewQuestions();  
+            }
 
         }
-    });
+
+     window.onload = fuction() {
+    // //    Set all questions in  selectedQuestions Array
+        availableSelections();
+
+    // Call the selectNewQuestions function's function
+        selectNewQuestions();
+
+     };
+
+//     // Function to randomly display quiz with level of diffivulty
+//     function difficultyL1() {
+//         quiz = questionsLevel1;
+//         difficultyEasy.addEventListener("click", () =>{
+//         selectedLevel = document.getElementsByClassName("difficulty");
+
+// // let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
+
+//         }
+//     });
+
+
+
+
+(function runQuiz(){})();
+
+
+function showResults(){}
