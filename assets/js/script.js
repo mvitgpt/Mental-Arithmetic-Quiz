@@ -48,11 +48,12 @@
 
 
 // Get the HTML Elements by their Tag Name and assigned to variable
-let userName = document.getElementById("user-name-input")
+const userName = document.getElementById("user-name-input")
 const errorMsg = document.getElementById("error-message")
 const nextBtn = document.getElementById("next-btn")
 const questionsCounter = document.getElementById("questions-counter")
 const questionsText = document.getElementById("questions-txt")
+const selectedLevel = document.getElementsByClassName("difficulty");
 const difficultyEasy = document.getElementById("difficulty-level1")
 const difficultyMedium = document.getElementById("difficulty-level2")
 const difficultyHard = document.getElementById("difficulty-level3")
@@ -68,7 +69,7 @@ const ruleBox = document.getElementById('rule-box')
 nextBtn.addEventListener("click", enterName)
 
 
-function enterName() {
+function displayName() {
     userName.innerText = userName.value;
     selection.innerHTML = userName.value;
     questionsArea.innerText = userName.value;
@@ -78,7 +79,7 @@ function enterName() {
     startBtn.classList.add('hide')
     // ruleBox.addEventListener.classList.add('hide')
     
-    selectLevel.classList.remove('hide')
+    selectedLevel.classList.remove('hide')
     // window.location.assign("rule-box")
 
 }
@@ -136,3 +137,14 @@ function enterName() {
         selectNewQuestions();
 
     };
+
+    // Function to randomly display quiz with level of diffivulty
+    function difficultyL1() {
+        quiz = questionsLevel1;
+        difficultyEasy.addEventListener("click", () =>{
+        selectedLevel = document.getElementsByClassName("difficulty");
+
+// let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
+
+        }
+    });
