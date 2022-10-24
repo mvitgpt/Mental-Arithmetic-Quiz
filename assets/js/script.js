@@ -51,12 +51,14 @@
 let userName = document.getElementById("user-name-input")
 const errorMsg = document.getElementById("error-message")
 const nextBtn = document.getElementById("next-btn")
-const questionsArea = document.getElementById("question-box-area")
+const questionsCounter = document.getElementById("questions-counter")
+const questionsText = document.getElementById("questions-txt")
 const difficultyEasy = document.getElementById("difficulty-level1")
 const difficultyMedium = document.getElementById("difficulty-level2")
 const difficultyHard = document.getElementById("difficulty-level3")
 const questionBox = document.getElementById("question-box-area")
 const selection = document.getElementById("selection-area")
+const optionsBtn = document.getElementById("option-buttons")
 const startBtn = document.getElementById('start-quiz-btn')
 const goHome = document.getElementById("go-home-btn")
 const quizResult = document.getElementById("quiz-result")
@@ -77,7 +79,7 @@ function enterName() {
     // ruleBox.addEventListener.classList.add('hide')
     
     selectLevel.classList.remove('hide')
-    window.location.assign("rule-box")
+    // window.location.assign("rule-box")
 
 }
 
@@ -94,5 +96,43 @@ function enterName() {
 // }
 // console.log("startBtn");
 
-    let qCounter = 1;
-    document.getElementById("questions-counter").innerHTML = (`Question ${}`)
+    // let qCounter = 1;
+    // document.getElementById("questions-counter").innerHTML = (`Question ${}`)
+
+    // Set variable to Index and empty Array  
+    let questionsCounterIndex = 0;
+    let currentQuestion;
+    let selectedQuestions = [];
+    let quiz;
+
+    // Function that loops through questions then Push questions into the selectedQuestions Array
+    function availableSelections() {
+        // const totalQuestions = quiz.length
+        for(let i = 0; i< quiz.length; i++) {
+            selectedQuestions.push(quiz[i]) 
+        }
+        console.log(selectedQuestions);
+    }
+
+    // Set Questions Counter and display random Questions
+    function selectNewQuestions(){
+        // Set Question counter
+        questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of "
+        quiz.length;
+
+        const questionsIndex = availableSelections[Math.floor(Math.random() * availableSelections.length)];
+        currentQuestion = questionsIndex;
+        questionsText.innerHTML = currentQuestion.question;
+        const firstIdex = availableSelections.indexOf()
+        questionsCounterIndex++;
+    }
+
+
+    window.onload = fuction() {
+    //    Set all questions in  selectedQuestions Array
+        availableSelections();
+
+        // Call the selectNewQuestions function's function
+        selectNewQuestions();
+
+    };
