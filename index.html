@@ -40,20 +40,21 @@
             <p class="quiz-intro-txt">How quick can you solve the questions?</p>
         </div>
         <!-- User name input area -->
-        <form id="user-form" action="">
+        <!-- <form id="user-form" action=""> -->
             <div class="user-input-area">
                 <label for="user-name-input"></label>
                 <input type="text" id="user-name-input" name="user-name" placeholder="Please Enter Your Name"
                     maxlength="8" aria-label="user-name-input" required>
                 <!-- Error Message for Username Validation -->
                 <p class="usernameText"></p>
-                <div id="error-message" class="error-message"></div>
+                <div id="error-msg" class="error-msg"></div>
                 <!-- Proceed button to Quiz Rules -->
                 <div class="initiate-quiz-btn">
                     <button id="next-btn" data-type="next" class="next-btn">Next</button>
                 </div>
             </div>
-        </form>
+        <!-- </form> -->
+        <!-- <h3 id="player-name"></h3> -->
     </div>
     <!-- Quiz Rule Box Section-->
     <section class="rule-box" id="rule-box">
@@ -83,6 +84,7 @@
             <div class="user-icon" aria-label="User Icon" style="display: block;">
                 <i class="far fa-user"></i>
             </div>
+            <!-- <h3 id="player-name"></h3> -->
         </div>
         <h2 class="select-quiz">Select Quiz Level</h2>
         <div class="level-button">
@@ -106,6 +108,7 @@
             <div class="user-icon" aria-label="User Icon" style="display: block;">
                 <i class="far fa-user"></i>
             </div>
+            <h3 id="player-name"></h3>
             <div id="time">
                 <div class="timer-icon">
                     <i class="fas fa-stopwatch" aria-label="Timer Icon" style="display: block;"></i>
@@ -114,7 +117,7 @@
             </div>
             <div class="score" id="score">0 </div>
         </div>
-        <div class="game-rule-icon hide"></div>
+        <div class="game-rule-icon"></div>
         <div class="show-level">
             <div class="level">Level 1</div>
         </div>

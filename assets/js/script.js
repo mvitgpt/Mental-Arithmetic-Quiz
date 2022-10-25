@@ -21,10 +21,13 @@
 
 // Get the HTML Elements by their Tag Name and assigned to variable
 // Start Quiz Section
+
 const startQuiz = document.getElementById('start-quiz-home');
 const userNameInput = document.getElementById("user-name-input");
 const nextBtn = document.getElementById("next-btn");
 const errorMsg = document.getElementById("error-message");
+let playerName  =  userNameInput.value;
+const playerNameElement = document.getElementById("player-name");
 
 // Quiz Rule Box Section
 const ruleBox = document.getElementById('rule-box');
@@ -67,11 +70,39 @@ const quitQuiz = document.getElementById("quit");
 window.addEventListener('DOMContentLoaded', () => { 
 nextBtn.addEventListener("click", function() {
 
-    userNameInput.innerText = userNameInput.value
-    selection.innerHTML = userNameInput.value;
-    questionsArea.innerHTML = userNameInput.value;
-    console.log(userNameInput.value, "dhjdhvfhve");
-}
+    // playerName = userNameInput.value;
+    // selection.innerHTML = userNameInput.value;
+    // questionsArea.innerHTML = userNameInput.value;
+    playerNameElement.innerHTML = userNameInput.value;
+
+    // console.log(userNameInput.value, "dhjdhvfhve");
+});
+
+// let errorMsg = '';
+
+// // if no user input is inserted
+// if (user == '') {
+//     errorMsg = "Please enter a Username";
+
+// // if user input is less than 8 characters 
+// } else if (user.length <= Number(6)) {
+//     errorMsg = "Username must have maximunm of 8 characters";
+// } 
+// // if errorMsg is not empty
+// if (errorMsg != '') {
+//     // display errorMsg on username home page
+//     // error-message.innerHTML = errorMsg;
+//     // return false;
+// };
+
+// return true;
+// };
+
+    if (nextBtn== "click"){
+            ruleBox.innerHTML == window.onload;
+        }else {
+            nextBtn;
+        }
  
 });
 
@@ -208,7 +239,7 @@ nextBtn.addEventListener("click", function() {
 
 
 
-(function runQuiz(){})();
+function runQuiz(){};
 
 
-function showResults(){}
+function showResults(){};

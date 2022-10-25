@@ -92,14 +92,14 @@ input {
     border: 1px solid #3F13A4;
 }
 
-/* #username {
+#player-name {
     font-size: 100%;
     font-weight: bold;
     text-transform: none;
-    margin-left: 2%;
+    text-align: center;
     margin-bottom: 0;
-    display: inline-block;
-} */
+    /* display: inline-block; */
+}
 
 .initiate-quiz-btn {
     text-align: center;
@@ -193,7 +193,7 @@ input {
 }
 
 /* -------------- Select Level of Difficulty */
-#selection-area {
+.selection-area {
     display: grid;
     background-color:#FAFAFA;
     border-radius: 10px;
@@ -202,6 +202,10 @@ input {
     margin: 5rem auto;
     border-style: ridge;
     /* display: none; */
+}
+
+.selection-area .header-icon .user-icon {
+    line-height: 2rem;
 }
 
 .select-quiz {
@@ -244,7 +248,7 @@ input {
     height: 3rem;
     display: flex;
     border-bottom: 1px solid #595959;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* width: 100%; */
 }
 .user-icon {
