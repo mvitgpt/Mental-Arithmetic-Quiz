@@ -39,41 +39,44 @@
 
 
 // Get the HTML Elements by their Tag Name and assigned to variable
-const userNameInput = document.getElementById("user-name-input")
-const startQuiz = document.getElementById('start-quiz-home')
-const errorMsg = document.getElementById("error-message")
-const nextBtn = document.getElementById("next-btn")
-const questionsCounter = document.getElementById("questions-counter")
-const questionsText = document.getElementById("questions-txt")
+const userNameInput = document.getElementById("user-name-input");
+const startQuiz = document.getElementById('start-quiz-home');
+const errorMsg = document.getElementById("error-message");
+const nextBtn = document.getElementById("next-btn");
+const questionsCounter = document.getElementById("questions-counter");
+const questionsText = document.getElementById("questions-txt");
 const selectedLevel = document.getElementsByClassName("difficulty");
-const difficultyEasy = document.getElementById("difficulty-level1")
-const difficultyMedium = document.getElementById("difficulty-level2")
-const difficultyHard = document.getElementById("difficulty-level3")
-const questionBox = document.getElementById("question-box-area")
-const selection = document.getElementById("selection-area")
-const optionsBtn = document.getElementsByClassName("option-buttons")
-const startBtn = document.getElementById('start-quiz-btn')
-const goHome = document.getElementById("go-home-btn")
-const quizResult = document.getElementById("quiz-result")
-const ruleBox = document.getElementById('rule-box')
+const difficultyEasy = document.getElementById("difficulty-level1");
+const difficultyMedium = document.getElementById("difficulty-level2");
+const difficultyHard = document.getElementById("difficulty-level3");
+const questionBox = document.getElementById("question-box-area");
+const selection = document.getElementById("selection-area");
+const optionsBtn = document.getElementsByClassName("option-buttons");
+const startBtn = document.getElementById('start-quiz-btn');
+const goHome = document.getElementById("go-home-btn");
+const quizResult = document.getElementById("quiz-result");
+const ruleBox = document.getElementById('rule-box');
 
 
 nextBtn.addEventListener("click", displayName)
-
+ 
 
 function displayName() {
-    console.log(userNameInput.value, "dhjdhvfhve")
+    console.log(userNameInput.value, "")
     userNameInput.innerText = userNameInput.value;
 
-    selection.innerHTML = "Hi " + userNameInput.value;
-    questionsArea.innerText = userNameInput.value;
+    selection.innerHTML = userNameInput.value;
+    questionBox.innerText = userNameInput.value;
+    if (nextBtn == "click"){
+        ruleBox.innerHTML == window.onload;
+    }else {
+        nextBtn;
+    }
     
-    startQuiz.classList.remove('hide')
-    
-    selection.classList.remove('hide')
-    // window.location.assign("rule-box")
-
+    // window.addEventListener('DOMContentLoaded', (event) => { }
 }
+
+
 
 // document.getElementById('rule-box').innerHTML = nextBtn.onload; 
 // startBtn.addEventListener("click", startQuiz)
@@ -88,8 +91,6 @@ function displayName() {
 // }
 // console.log("startBtn");
 
-    // let qCounter = 1;
-    // document.getElementById("questions-counter").innerHTML = (`Question ${}`)
 
     // Set variable to Index and empty Array  
     let questionsCounterIndex = 0;
@@ -167,14 +168,14 @@ function displayName() {
 
         // }
 
-     window.onload = fuction() {
-    // //    Set all questions in  selectedQuestions Array
-        availableSelections();
+    //  window.onload = fuction() {
+    // // //    Set all questions in  selectedQuestions Array
+    //     availableSelections();
 
-    // Call the selectNewQuestions function's function
-        selectNewQuestions();
+    // // Call the selectNewQuestions function's function
+    //     selectNewQuestions();
 
-     };
+    //  };
 
 //     // Function to randomly display quiz with level of diffivulty
 //     function difficultyL1() {
