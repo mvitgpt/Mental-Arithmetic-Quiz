@@ -205,7 +205,8 @@ input {
 }
 
 .selection-area .header-icon .user-icon {
-    line-height: 2rem;
+    line-height: 3rem;
+    margin: 0.5rem 2rem 0 0;
 }
 
 .select-quiz {

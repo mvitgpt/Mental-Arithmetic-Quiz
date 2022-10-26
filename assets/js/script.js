@@ -21,13 +21,12 @@
 
 // Get the HTML Elements by their Tag Name and assigned to variable
 // Start Quiz Section
-
 const startQuiz = document.getElementById('start-quiz-home');
 const userNameInput = document.getElementById("user-name-input");
 const nextBtn = document.getElementById("next-btn");
-const errorMsg = document.getElementById("error-message");
+const errorMsg = document.getElementById("error");
 let playerName  =  userNameInput.value;
-const playerNameElement = document.getElementById("player-name");
+const playerNameTxt = document.getElementById("player-name");
 
 // Quiz Rule Box Section
 const ruleBox = document.getElementById('rule-box');
@@ -64,46 +63,41 @@ const resultText = document.getElementById("result-text");
 const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
 
-
+/** Function to Check UserName input and display error message if invalid or empty
+ */
 
 // User name display when the next button is clicked 
 window.addEventListener('DOMContentLoaded', () => { 
 nextBtn.addEventListener("click", function() {
 
-    // playerName = userNameInput.value;
+    playerName = userNameInput.value;
     // selection.innerHTML = userNameInput.value;
     // questionsArea.innerHTML = userNameInput.value;
-    playerNameElement.innerHTML = userNameInput.value;
+    playerNameTxt.innerHTML = userNameInput.value;
+    // console.log(userNameInput.value);
 
-    // console.log(userNameInput.value, "dhjdhvfhve");
+    let errorTxt = '';
+    //  let msg = errorTxt;
+    // if username input is empty
+if (playerName == '') {
+    errorTxt = "Please enter a Username";
+
+// if username input is less than 8 characters 
+} else if (playerName.length <= Number(6)) {
+    errorTxt = "Username must have maximunm of 8 characters";
+} 
+// if errorMsg is not empty
+if (errorTxt !== '') {
+    // display error message in the errorMsg div on home page
+    
+    errorMsg.innerHTML = errorTxt;
+} else{
+    nextBtn.click();  
+}
+// console.log(errorTxt);
+   
 });
 
-// let errorMsg = '';
-
-// // if no user input is inserted
-// if (user == '') {
-//     errorMsg = "Please enter a Username";
-
-// // if user input is less than 8 characters 
-// } else if (user.length <= Number(6)) {
-//     errorMsg = "Username must have maximunm of 8 characters";
-// } 
-// // if errorMsg is not empty
-// if (errorMsg != '') {
-//     // display errorMsg on username home page
-//     // error-message.innerHTML = errorMsg;
-//     // return false;
-// };
-
-// return true;
-// };
-
-    if (nextBtn== "click"){
-            ruleBox.innerHTML == window.onload;
-        }else {
-            nextBtn;
-        }
- 
 });
 
 

@@ -46,8 +46,8 @@
                 <input type="text" id="user-name-input" name="user-name" placeholder="Please Enter Your Name"
                     maxlength="8" aria-label="user-name-input" required>
                 <!-- Error Message for Username Validation -->
-                <p class="usernameText"></p>
-                <div id="error-msg" class="error-msg"></div>
+                <!-- <p class="usernameText"></p> -->
+                <div id="error" class="error-msg"><p id="error"></p></div>
                 <!-- Proceed button to Quiz Rules -->
                 <div class="initiate-quiz-btn">
                     <button id="next-btn" data-type="next" class="next-btn">Next</button>
@@ -84,7 +84,7 @@
             <div class="user-icon" aria-label="User Icon" style="display: block;">
                 <i class="far fa-user"></i>
             </div>
-            <!-- <h3 id="player-name"></h3> -->
+            <h3 id="player-name"></h3>
         </div>
         <h2 class="select-quiz">Select Quiz Level</h2>
         <div class="level-button">
