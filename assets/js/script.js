@@ -64,9 +64,7 @@ const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
 
 /** Function to Check UserName input and display error message if invalid or empty
- */
-
-// User name display when the next button is clicked 
+  User name display when the next button is clicked */ 
 window.addEventListener('DOMContentLoaded', () => { 
 nextBtn.addEventListener("click", function() {
 
@@ -77,14 +75,13 @@ nextBtn.addEventListener("click", function() {
     // console.log(userNameInput.value);
 
     let errorTxt = '';
-    //  let msg = errorTxt;
     // if username input is empty
 if (playerName == '') {
     errorTxt = "Please enter a Username";
 
 // if username input is less than 8 characters 
 } else if (playerName.length <= Number(6)) {
-    errorTxt = "Username must have maximunm of 8 characters";
+    errorTxt = "Username must have maximum of 8 characters";
 } 
 // if errorMsg is not empty
 if (errorTxt !== '') {
@@ -95,7 +92,12 @@ if (errorTxt !== '') {
     nextBtn.click();  
 }
 // console.log(errorTxt);
-   
+   if (ruleBox.style.display !== "none") {
+    ruleBox.style.display = "none";
+   }else {
+    ruleBox.style.display = "block";
+  }
+
 });
 
 });
@@ -106,7 +108,6 @@ if (errorTxt !== '') {
 // function displayName() {
 //     console.log(userNameInput.value, "")
 //     userNameInput.innerText = userNameInput.value;
-
 //     selection.innerHTML = userNameInput.value;
 //     questionBox.innerText = userNameInput.value;
 //     if (nextBtn == "click"){
@@ -114,7 +115,6 @@ if (errorTxt !== '') {
 //     }else {
 //         nextBtn;
 //     }
-    
 //     // window.addEventListener('DOMContentLoaded', (event) => { }
 // }
 

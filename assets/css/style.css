@@ -135,7 +135,7 @@ input {
     border-style: ridge;
     margin: 5rem auto;
     justify-content: center;
-    /* display: none; */
+    display: none;
 }
 
 .rule-title {
