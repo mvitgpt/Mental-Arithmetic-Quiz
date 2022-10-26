@@ -1,8 +1,6 @@
 /* The following code was taken from the Code Institute course content.*/
 /* Script to run before loading page content */
 
-
-
 // document.addEventListener("DOMContentLoaded", function() {
 //     let buttons = document.getElementsByTagName("button");
 //     for (let button of buttons) {
@@ -92,45 +90,35 @@ if (errorTxt !== '') {
     nextBtn.click();  
 }
 // console.log(errorTxt);
+
+// Redirect user to rule box when next button is clicked
    if (ruleBox.style.display !== "none") {
     ruleBox.style.display = "none";
    }else {
     ruleBox.style.display = "block";
   }
-
 });
 
 });
 
 
-// nextBtn.addEventListener("click", displayName)
- 
-// function displayName() {
-//     console.log(userNameInput.value, "")
-//     userNameInput.innerText = userNameInput.value;
-//     selection.innerHTML = userNameInput.value;
-//     questionBox.innerText = userNameInput.value;
-//     if (nextBtn == "click"){
-//         ruleBox.innerHTML == window.onload;
-//     }else {
-//         nextBtn;
-//     }
-//     // window.addEventListener('DOMContentLoaded', (event) => { }
-// }
+
+startBtn.addEventListener("click", function() {
+    if (startBtn.click) {
+        selection.style.display !== "none";
+       
+    } else if ( selection.style.display = "none"){
+
+    }else if ( selection.style.display = "block"){
+
+    } else{
+        goHome.click === true;
+    }
+       
+      
+});
 
 
-
-// document.getElementById('rule-box').innerHTML = nextBtn.onload; 
-// startBtn.addEventListener("click", startQuiz)
-
-// function startQuiz(){
-//     startBtn.classList.add('hide')
-//     // ruleBox.addEventListener.classList.add('hide')
-    
-//     selectLevel.classList.remove('hide')
-
-//     startBtn.addEventListener("click", startQuiz)
-// }
 
 
 

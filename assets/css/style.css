@@ -201,7 +201,7 @@ input {
     /* height: 70vh; */
     margin: 5rem auto;
     border-style: ridge;
-    /* display: none; */
+    display: none;
 }
 
 .selection-area .header-icon .user-icon {
