@@ -25,7 +25,8 @@ const questionBox = document.getElementById("question-box-area");
 const questionsCounter = document.getElementById("questions-counter");
 const questionsText = document.getElementById("questions-txt");
 const timeCounter = document.getElementById("time-counter");
-const scores = document.getElementById("score");
+const userScore = document.getElementById("user-score");
+const totalScore = document.getElementById("total-score");
 
 // Answer options Section
 const option1 = document.getElementById("option1");
@@ -123,7 +124,7 @@ if (errorTxt !== '') {
     let timer = 0;
     let interval = 0; 
     let index = 0;
-    let scorePoint = 0;
+    let score = 0;
     let userAnswer = undefined;
 
     //  Set function for time count down
