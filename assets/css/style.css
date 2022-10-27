@@ -64,9 +64,9 @@ background-color: white;
     /* display: none;  */
 }
 
-/* .hide {
+.hide {
      display: none;   
-} */
+}
 
 /* .home-box::before,
 .home-box::after {
@@ -240,7 +240,7 @@ input {
     margin: 5rem auto;
     /* width: 53rem;  */ 
     border-style: ridge; 
-    /* display: none; */
+    display: none;
     box-shadow: 0 0 10px 2px;
 
 }
@@ -300,6 +300,7 @@ input {
     justify-content: center;
     margin: 1rem 0;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .option-btn {

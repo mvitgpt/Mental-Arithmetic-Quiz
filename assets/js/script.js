@@ -87,38 +87,53 @@ if (errorTxt !== '') {
     
     errorMsg.innerHTML = errorTxt;
 } else{
-    nextBtn.click();  
+    // nextBtn.click();  
+    startQuiz.classList.add('hide');
 }
 // console.log(errorTxt);
 
 // Redirect user to rule box when next button is clicked
    if (ruleBox.style.display !== "none") {
-    ruleBox.style.display = "none";
-   }else {
     ruleBox.style.display = "block";
+   }else {
+    ruleBox.style.display = "none";
   }
-});
+ });
 
-});
-
-
-
-startBtn.addEventListener("click", function() {
-    if (startBtn.click) {
-        selection.style.display !== "none";
-       
-    } else if ( selection.style.display = "none"){
-
-    }else if ( selection.style.display = "block"){
-
-    } else{
-        goHome.click === true;
-    }
-       
-      
-});
+ });
 
 
+// function runQuiz() {
+//     startQuiz.classList.add('hide');
+//     ruleBox.classList.add.remove('hide');
+//     selection.classList.remove('hide')
+// };
+
+
+
+
+
+// Redirect user to Quiz level selection box when start quiz button is clicked
+// startBtn.addEventListener("click", function() {
+//     if (selection.style.display !== "none") {
+//         selection.style.display = "block"; 
+//     } else { 
+//      selection.style.display = "none";
+//     }  
+//     ruleBox.classList.add('hide'); 
+//     // ruleBox.classList.remove('hide'); 
+//     // selection.classList.remove('hide');    
+// });
+
+ startBtn.addEventListener("click", function(){
+    ruleBox.style.display = "none";
+    selection.style.display = "block";
+ });
+ 
+ goHome.addEventListener("click", function(){
+    ruleBox.style.display = "none";
+    startQuiz.style.display = "block";
+ });
 
 
 
@@ -221,7 +236,4 @@ startBtn.addEventListener("click", function() {
 
 
 
-function runQuiz(){};
-
-
-function showResults(){};
+// function showResults(){};
