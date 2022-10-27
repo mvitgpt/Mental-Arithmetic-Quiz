@@ -177,7 +177,7 @@ input {
 }
 
 .start-quiz-btn,
-.go-home-btn {
+.home-btn {
     font-size: 1.1rem;
     font-weight: 500;
     width: 7rem;
@@ -240,7 +240,7 @@ input {
     margin: 5rem auto;
     /* width: 53rem;  */ 
     border-style: ridge; 
-    display: none;
+    /* display: none; */
     box-shadow: 0 0 10px 2px;
 
 }

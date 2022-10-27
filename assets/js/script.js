@@ -1,22 +1,3 @@
-/* The following code was taken from the Code Institute course content.*/
-/* Script to run before loading page content */
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     let buttons = document.getElementsByTagName("button");
-//     for (let button of buttons) {
-//         button.addEventListener("click", function() {
-//             if (this.getAttribute("data-type") === "submit") {
-//                 alert("You clicked Submit!");
-//             } else {
-//                 let gameType = this.getAttribute("data-type");
-//                 alert(`You clicked ${gameType}`);
-//             }
-//         });
-//     }
-// });
-
-
-
 // Get the HTML Elements by their Tag Name and assigned to variable
 // Start Quiz Section
 const startQuiz = document.getElementById('start-quiz-home');
@@ -29,7 +10,7 @@ const playerNameTxt = document.getElementById("player-name");
 // Quiz Rule Box Section
 const ruleBox = document.getElementById('rule-box');
 const startBtn = document.getElementById('start-quiz-btn');
-const goHome = document.getElementById("go-home-btn");
+const backHome = document.getElementById("back-home-btn");
 
 // Select Level of Difficulty Section
 const selection = document.getElementById("selection-area");
@@ -37,6 +18,7 @@ const selectedLevel = document.getElementsByClassName("difficulty");
 const level1 = document.getElementById("difficulty-level1");
 const level2 = document.getElementById("difficulty-level2");
 const level3 = document.getElementById("difficulty-level3");
+const homeBtn = document.getElementById("home-btn");
 
 // Questions Section
 const questionBox = document.getElementById("question-box-area");
@@ -101,41 +83,58 @@ if (errorTxt !== '') {
  });
 
  });
-
-
-// function runQuiz() {
-//     startQuiz.classList.add('hide');
-//     ruleBox.classList.add.remove('hide');
-//     selection.classList.remove('hide')
-// };
-
-
-
-
-
-// Redirect user to Quiz level selection box when start quiz button is clicked
-// startBtn.addEventListener("click", function() {
-//     if (selection.style.display !== "none") {
-//         selection.style.display = "block"; 
-//     } else { 
-//      selection.style.display = "none";
-//     }  
-//     ruleBox.classList.add('hide'); 
-//     // ruleBox.classList.remove('hide'); 
-//     // selection.classList.remove('hide');    
-// });
-
+// Redirect user to quiz level selection box when start quiz button is clicked
  startBtn.addEventListener("click", function(){
     ruleBox.style.display = "none";
-    selection.style.display = "block";
+    selection.style.display = "block"; //show difficulty level box
  });
- 
- goHome.addEventListener("click", function(){
-    ruleBox.style.display = "none";
+
+ // Redirect user to question page for each level when home button is clicked
+    level1.addEventListener("click", function(){
+    selection.style.display = "none";
+    questionBox.style.display = "block"; //show question box
+ });
+
+ level2.addEventListener("click", function(){
+    selection.style.display = "none";
+    questionBox.style.display = "block"; //show question box
+ });
+
+ level3.addEventListener("click", function(){
+    selection.style.display = "none";
+    questionBox.style.display = "block"; //show question box
+ });
+
+// Redirect user to home page when home button is clicked on the difficulty level page
+    homeBtn.addEventListener("click", function(){
+    selection.style.display = "none";
     startQuiz.style.display = "block";
  });
 
+ // Redirect user to home page when home button is clicked on the quiz rule box
+    backHome.addEventListener("click", function(){
+    ruleBox.style.display = "none";
+    startQuiz.style.display = "block";
+    });
 
+   
+
+
+    let timer = 0;
+    let interval = 0; 
+    let index = 0;
+    let scorePoint = 0;
+    let userAnswer = undefined;
+
+    //  Set function for time count down
+    let countDown = ()=> {
+      if (timeCounter === 25) {
+        clearInterval(interval);
+      } else {
+        timeCounter++;
+        console.log(timeCounter);
+      } 
+    }
 
     // Set variable to Index and empty Array  
     let questionsCounterIndex = 0;
@@ -237,3 +236,11 @@ if (errorTxt !== '') {
 
 
 // function showResults(){};
+// function runQuiz() {
+//     startQuiz.classList.add('hide');
+//     ruleBox.classList.add.remove('hide');
+//     selection.classList.remove('hide')
+// };
+ // homeBtn.onclick = ()=>{
+    //     window.location.reload(); //reload the current window
+    // }
