@@ -19,20 +19,23 @@
     <div class="start-quiz-home home-box" id="start-quiz-home">
         <header>
             <div class="header-icon">
-                <div class="game-rule-icon press-btn">
+                <div class="game-rule-icon" id="game-rule-icon">
                     <i class="fas fa-info" style="display: block;"></i>
                 </div>
-                <div>
-                    <a href="https://github.com/Shida18719" target="_blank" class="contact-btn">
-                        <i class="fab fa-github"></i></a>
-                </div>
-                <div>
-                    <a href="https://www.linkedin.com/in/rashidat-adekoya-668843245/" target="_blank" class="contact-btn">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
+                <div class="social-icon"> 
+                        <a href="https://github.com/Shida18719" target="_blank" class="contact-btn">
+                            <i class="fab fa-github"></i></a>
+                    
+                    
+                        <a href="https://www.linkedin.com/in/rashidat-adekoya-668843245/" target="_blank"
+                            class="contact-btn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    
                 </div>
             </div>
-                <!-- <div class="user-icon">
+
+            <!-- <div class="user-icon">
                     <i class="far fa-user" style="display: none;"></i>
                     <p id="username-txt"></p>
                 </div>
@@ -41,28 +44,30 @@
                 </div>
                 <div class="score">
                 </div> -->
-            <div>
+
             <h1 class="heading">
                 <img class="logo" src="assets/images/mental_logo.webp" alt="logo"> Mental Arithmetic Quiz
             </h1>
-            </div>
+
         </header>
         <div>
             <p class="quiz-intro-txt">How quick can you solve the questions?</p>
         </div>
         <!-- User name input area -->
-            <div class="user-input-area">
-                <label for="user-name-input"></label>
-                <input type="text" id="user-name-input" name="user-name" placeholder="Please Enter Your Name"
-                    maxlength="8" aria-label="user-name-input" required>
-                <!-- Error Message for Username Validation -->
-                <!-- <p class="usernameText"></p> -->
-                <div id="error" class="error-msg"><p id="error"></p></div>
-                <!-- Proceed button to Quiz Rules -->
-                <div class="initiate-quiz-btn">
-                    <button id="next-btn" data-type="next" class="next-btn">Next</button>
-                </div>
+        <div class="user-input-area">
+            <label for="user-name-input"></label>
+            <input type="text" id="user-name-input" name="user-name" placeholder="Please Enter Your Name" maxlength="8"
+                aria-label="user-name-input" required>
+            <!-- Error Message for Username Validation -->
+            <!-- <p class="usernameText"></p> -->
+            <div id="error" class="error-msg">
+                <p id="error"></p>
             </div>
+            <!-- Proceed button to Quiz Rules -->
+            <div class="initiate-quiz-btn">
+                <button id="next-btn" data-type="next" class="next-btn">Next</button>
+            </div>
+        </div>
     </div>
     <!-- Quiz Rule Box Section-->
     <section class="rule-box hide" id="rule-box">
@@ -121,12 +126,12 @@
                 <div class="timer-icon">
                     <i class="fas fa-stopwatch" aria-label="Timer Icon" style="display: block;"></i>
                 </div>
-                <div id="time-counter" class="time-counter" style="color: orange;">0</div>
+                <div id="time-counter" class="time-counter" style="color: orange;">:0</div>
             </div>
             <div class="score">
                 <span id="user-score">0</span>
                 <span> / </span>
-                    <span id="total-score">0</span>
+                <span id="total-score">0</span>
             </div>
         </div>
         <div class="game-rule-icon"></div>
@@ -176,13 +181,13 @@
     <footer>
         &copy; 2022 | Mental Arithmetic Quiz By Rashidat Adekoya.
         <p>This site is not intended for commercial use</p>
-     </footer>
-    
+    </footer>
+
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/2d736759eb.js" crossorigin="anonymous"></script>
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
-    
+
 </body>
 
 </html>
