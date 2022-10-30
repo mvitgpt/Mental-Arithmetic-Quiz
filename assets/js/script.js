@@ -45,7 +45,8 @@ const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
 
 /** Function to Check UserName input and display error message if invalid or empty
-  User name display when the next button is clicked */ 
+  User name display when the next button is clicked 
+  */ 
 window.addEventListener('DOMContentLoaded', () => { 
 nextBtn.addEventListener("click", function() {
 
@@ -87,23 +88,23 @@ if (errorTxt !== '') {
 // Redirect user to quiz level selection box when start quiz button is clicked
  startBtn.addEventListener("click", function(){
     ruleBox.style.display = "none";
-    selection.style.display = "block"; //show difficulty level box
+    selection.style.display = "block"; 
  });
 
  // Redirect user to question page for each level when a level is selected 
     level1.addEventListener("click", function(){
-    selection.style.display = "none";      //hide level selection box
-    questionBox.style.display = "block";   //show question box
+    selection.style.display = "none";      
+    questionBox.style.display = "block";   
  });
 
  level2.addEventListener("click", function(){
     selection.style.display = "none";
-    questionBox.style.display = "block"; //show question box
+    questionBox.style.display = "block"; 
  });
 
  level3.addEventListener("click", function(){
     selection.style.display = "none";
-    questionBox.style.display = "block"; //show question box
+    questionBox.style.display = "block"; 
  });
 
 // Redirect user to home page when home button is clicked on the difficulty level page

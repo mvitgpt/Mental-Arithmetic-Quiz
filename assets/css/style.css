@@ -488,6 +488,7 @@ input {
 
 footer {
     color: #050505;
+    margin-bottom: 0.5rem;
 }
 
 footer p {
