@@ -22,10 +22,10 @@ const homeBtn = document.getElementById("home-btn");
 
 // Questions Section
 const questionBox = document.getElementById("question-box-area");
-const questionsCounter = document.getElementById("questions-counter");
+let questionsCounter = document.getElementById("questions-counter");
 const questionsText = document.getElementById("questions-txt");
 const timeCounter = document.getElementById("time-counter");
-const userScore = document.getElementById("user-score");
+let userScore = document.getElementById("user-score");
 const totalScore = document.getElementById("total-score");
 
 // Answer options Section
@@ -120,11 +120,125 @@ if (errorTxt !== '') {
     });
 
 
+    // Question counter varialbe set to 1
+    questionsCounter = 1;
+
+    // Score varialbe set to 0
+    userScore = 0;
+    userScore.innerHTML = (`Score: ${userScore}/5`);
+
+    let questionNum = 1;
+    let currentQuestion;
+    // let selectedQuestions = [];
+    let quiz;
+    let shuffledQuestions;
+
+
+// Conditional statement adapted from jsfiddle.net
+// Code to execute difficulty level selection
+    if (selectLevel == 'level1') {
+        shuffledQuestions = questionsLevel1;
+    } else if (selectLevel == "level2") {
+        shuffledQuestions= questionsLevel2;
+    } else if (selectLevel == "level3") {
+        shuffledQuestions= questionsLevel3;
+    }   else {
+        shuffledQuestions = makeRandomQuestions();
+        };
+
+//Function to enable difficulty level selection 
+        function difficultyL1Questions() {
+            showDifficultyL1Questions()   
+        };
     
+        function difficultyL2Questions(){};
+    
+        function difficultyL3Questions(){};    
+
+ // Set Questions Counter and display random Questions
+    function makeRandomQuestions(){
+     questionsCounter.innerHTML = "Question " + (questionsCounter + 1) + " of " +
+     quiz.length;
+
+    let randomQuestions = Math.floor(Math.random() * quiz.length );
+    currentQuestion = quiz[randomQuestions];
+
+    quiz.splice(randomQuestions, 1);
+
+    questionsText.innerHTML = currentQuestion.question
+
+// Credited to youtuber web Dev Simplified
+    shuffledQuestions = quiz.sort(() => Math.random() - .5);
+
+    for(let i = 0; i < currentQuestion.options.length; i++){
+        optionBtn[i].innerHTML = currentQuestion.options[i];
+        optionBtn.addEventListener("click", function() { 
+     });  
+    }
+
+        setNextQuestions();
+    };
+
+    function correctAnswer(){
+        const correctBtn = document.createElement("correct-Btn");
+        correctBtn.innerText = answer.text;
+        correctBtn.classList.add("optionBtn");
+        if(answer.correct) {
+            correctBtn.dataset.correct = answer.correct;
+        }
+        questionBox.style.backgroundColor = "green";
+    }
+
+    
+//Function to display random difficulty level selection questions
+    function showDifficultyL1Questions() {
+    quiz = questionsLevel1;
+    level1.addEventListener("click", () =>{
+        
+    });
+    makeRandomQuestions();
+    };
+
+    function showDifficultyL2Questions(){};
+
+    function showDifficultyL3Questions(){};    
+
+
+    function selectOptions(){
+        for (let i = 0; i < 4; i++){
+            optionBtn[i].addEventListener("click", function() { 
+                if(currentQuestion.answer == currentQuestion.options[i]){
+                    optionBtn[i].id = "correct";
+                    userScore++;
+                    userScore.innerHTML = (`Score: ${userScore}/5`);
+                    questionsText.innerHTML = currentQuestion.question;
+                    correctAnswer();
+                } else{
+                    questionsText.innerHTML = `Answer: ${currentQuestion.answer}`;
+                    answer[i].id = "wrong";
+                }
+            });  
+        }
+    }
+
+
+
+    
+    function setNextQuestions(){
+        displayQuestionsLevel(shuffledQuestions[currentQuestion]);
+    };
+
+
+    // nextQueBtn.addEventListener("click", function() { 
+    //             }
+    //         });
+
+
+// Set variable to Index and empty Array 
+
     let timer = 0;
     let interval = 0; 
     let index = 0;
-    let score = 0;
     let userAnswer = undefined;
 
     //  Set function for time count down
@@ -137,96 +251,18 @@ if (errorTxt !== '') {
       } 
     }
 
-    // Set variable to Index and empty Array  
-    let questionsCounterIndex = 0;
-    let questionNum = 1;
-    let currentQuestion;
-    let selectedQuestions = [];
-    let quiz;
 
-    let shuffledQuestions;
 
-    function displayQuestionsLevel(){
+
+
+
+
+
+
     //  let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectLevel);
     //  selectLevel = filteredQuestionsByDifficulty;
 
-    // Set Question counter
-     questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of " +
-     quiz.length;
-
-    let randomQuestions = Math.floor(Math.random() * quiz.length );
-    currentQuestion = quiz[randomQuestions];
-
-    quiz.splice(randomQuestions, 1);
-
-    questionsText.innerHTML = currentQuestion.question
-
-    shuffledQuestions = quiz.sort(() => Math.random() - .5);
-
-    for(let i = 0; i < currentQuestion.options.length; i++){
-        optionBtn[i].innerHTML = currentQuestion.options[i];
-        optionBtn.addEventListener("click", function() {
-        
-     });
-        
-    }
-
-     if (selectLevel == 'level1') {
-        shuffledQuestions = questionsLevel1;
-    } else if (selectLevel == "level2") {
-        shuffledQuestions= questionsLevel2;
-    } else if (selectLevel == "level3") {
-        shuffledQuestions= questionsLevel3;
-    }   else {
-        shuffledQuestions = randomQuestions;
-        }
-
-        setNextQuestions();
-    };
-
-    function difficultyL1Questions() {
-        quiz = questionsLevel1;
-        displayQuestionsLevel();
-
-
-    };
-
-    function difficultyL2Questions(){};
-
-    function difficultyL3Questions(){};
     
-    function setNextQuestions(){
-        displayQuestionsLevel(shuffledQuestions[currentQuestion]);
-    };
-
-
-    // nextQueBtn.addEventListener("click", function() { 
-    //             }
-    //         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Function that loops through questions then Push questions into the selectedQuestions Array
-    // function availableQuestions() {
-    //     // const totalQuestions = quiz.length
-    //     for(let i = 0; i< quiz.length; i++) {
-    //         selectedQuestions.push(quiz[i]) 
-    //     }
-    //     console.log(selectedQuestions);
-    // }
-
-    // // Set Questions Counter and display random Questions
     // function selectRandomQuestions(){
     //     // Set Question counter
     //     questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of " +
