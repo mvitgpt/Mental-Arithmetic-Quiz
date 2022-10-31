@@ -82,7 +82,7 @@ const questionsLevel1 = [
 ] 
 
 // Level 2 Questions
-let questionsLevel2 = [
+const questionsLevel2 = [
     {
     num: 1,
     question: "7 x 4 = 30 - ?",

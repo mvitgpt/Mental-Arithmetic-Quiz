@@ -71,8 +71,7 @@ if (errorTxt !== '') {
     // display error message in the errorMsg div on home page
     
     errorMsg.innerHTML = errorTxt;
-} else{
-    // nextBtn.click();  
+} else{ 
     startQuiz.classList.add('hide');
 }
 
@@ -119,7 +118,7 @@ if (errorTxt !== '') {
     startQuiz.style.display = "block";
     });
 
-
+    
     // Question counter varialbe set to 1
     questionsCounter = 1;
 
@@ -130,12 +129,12 @@ if (errorTxt !== '') {
     let questionNum = 1;
     let currentQuestion;
     let quiz;
-    // let shuffledQuestions;
-
+    
 
 // Conditional statement adapted from jsfiddle.net
 // Code to execute difficulty level selection
-
+    function displayLevelQuestions() {
+    let shuffledQuestions;
     if (selectLevel == 'level1') {
         shuffledQuestions = questionsLevel1;
     } else if (selectLevel == "level2") {
@@ -145,21 +144,20 @@ if (errorTxt !== '') {
     }   else {
         shuffledQuestions = makeRandomQuestions();
         };
+    };
 
 //Function to enable difficulty level selection 
         function difficultyL1Questions() {
             showDifficultyL1Questions()   
         };
     
+
         function difficultyL2Questions(){};
     
         function difficultyL3Questions(){};    
 
  // Set Questions Counter and display random Questions
     function makeRandomQuestions(){
-    //  questionsCounter.innerHTML = "Question " + (questionsCounter + 1) + " of " +
-    //  quiz.length;
-
      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
 
 
@@ -197,7 +195,7 @@ if (errorTxt !== '') {
     function showDifficultyL1Questions() {
     quiz = questionsLevel1;
     level1.addEventListener("click", () =>{
-        
+        displayLevelQuestions();  
     });
     makeRandomQuestions();
     };

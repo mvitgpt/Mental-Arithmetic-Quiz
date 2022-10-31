@@ -93,21 +93,11 @@ color: #050505;
     /* display: none;  */
     /* box-shadow: 0 0 9px 4px; */
     box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
-    /* display: flex;
-    flex-direction: column; */
-    /* justify-content: center; */
 }
 
 .hide {
      display: none;   
 }
-
-/* .home-box::before,
-.home-box::after {
-    content: "";
-    display: rule-box;
-    display: result-text;
-} */
 
 .quiz-intro-txt {
     font-size: 1.2rem;
@@ -124,15 +114,6 @@ input {
     border-radius: 8px;
     margin-bottom: 2rem;
     border: 1px solid #3F13A4;
-}
-
-#player-name {
-    font-size: 100%;
-    font-weight: bold;
-    text-transform: none;
-    text-align: center;
-    margin-bottom: 0;
-    /* display: inline-block; */
 }
 
 .initiate-quiz-btn {
@@ -155,7 +136,6 @@ input {
     background-color: #6B35E8;
     border-radius: 8px;
     cursor: pointer;
-   
 }
 
  /* -------------- Quiz Rule Box  */
@@ -164,9 +144,7 @@ input {
     background-color:#FAFAFA;
     border-radius: 10px;
     display: grid;
-    /* max-height: 80vh;
-    height: 37.5rem;
-    width: 53rem;   */
+    width: 80vw;   
     border-style: ridge;
     margin: 5rem auto;
     justify-content: center;
@@ -174,7 +152,6 @@ input {
 }
 
 .rule-title {
-    /* width: 100%; */
     height: 3rem;
     padding-top: 0.5em;
     font-size: 1.4rem;
@@ -244,9 +221,18 @@ input {
     margin: 0.5rem 2rem 0 0;
 }
 
+.selection-area .player-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: none;
+    /* margin-bottom: 1rem; */
+    margin-left: 1rem;
+    display: inline-flex;
+}
+
 .select-quiz {
     margin: 1.5rem 0 1rem 0;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .level-button {
@@ -276,7 +262,6 @@ input {
     border-style: ridge; 
     /* display: none; */
     box-shadow: 0 0 10px 2px;
-
 }
 
 .question-box-area .header-icon {
@@ -292,6 +277,16 @@ input {
     margin: 0.8rem 4rem 0 0;
     /* margin: 0.5rem 8rem 1rem 2rem; */
     color: #050505;  
+}
+
+.question-box-area .player-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: none;
+    /* margin-bottom: 0; */
+    display: inline-flex;
+    /* margin-top: 0.5rem;
+    margin-right: 5rem; */
 }
 
 #time {
@@ -431,7 +426,6 @@ input {
     align-items: center; 
     background-color:#FAFAFA;
     border-radius: 10px;
-    /* width: 53rem; */
     flex-direction: column;
     /* justify-content: center; */
     display: none;
@@ -451,7 +445,6 @@ input {
     /* margin-bottom: 1rem; */
     width: 30px;
     height: 80px;
-    /* background: red; */
     transition: width 2s, height 2s, transform 2s;
 }
   
@@ -495,3 +488,5 @@ footer {
 footer p {
     font-size: small;
 }
+
+/* Media Quries */
