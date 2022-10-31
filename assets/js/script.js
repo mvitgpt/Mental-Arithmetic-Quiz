@@ -129,7 +129,6 @@ if (errorTxt !== '') {
 
     let questionNum = 1;
     let currentQuestion;
-    // let selectedQuestions = [];
     let quiz;
     let shuffledQuestions;
 
@@ -157,8 +156,11 @@ if (errorTxt !== '') {
 
  // Set Questions Counter and display random Questions
     function makeRandomQuestions(){
-     questionsCounter.innerHTML = "Question " + (questionsCounter + 1) + " of " +
-     quiz.length;
+    //  questionsCounter.innerHTML = "Question " + (questionsCounter + 1) + " of " +
+    //  quiz.length;
+
+     questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
+
 
     let randomQuestions = Math.floor(Math.random() * quiz.length );
     currentQuestion = quiz[randomQuestions];
@@ -210,7 +212,7 @@ if (errorTxt !== '') {
                 if(currentQuestion.answer == currentQuestion.options[i]){
                     optionBtn[i].id = "correct";
                     userScore++;
-                    userScore.innerHTML = (`Score: ${userScore}/5`);
+                    userScore.innerHTML = (`Score: ${userScore}/10`);
                     questionsText.innerHTML = currentQuestion.question;
                     correctAnswer();
                 } else{
@@ -219,23 +221,17 @@ if (errorTxt !== '') {
                 }
             });  
         }
+
     }
 
 
 
     
     function setNextQuestions(){
-        displayQuestionsLevel(shuffledQuestions[currentQuestion]);
+        // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
     };
 
-
-    // nextQueBtn.addEventListener("click", function() { 
-    //             }
-    //         });
-
-
-// Set variable to Index and empty Array 
-
+// Set variable to Index
     let timer = 0;
     let interval = 0; 
     let index = 0;
@@ -259,31 +255,28 @@ if (errorTxt !== '') {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
     //  let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectLevel);
     //  selectLevel = filteredQuestionsByDifficulty;
 
     
     // function selectRandomQuestions(){
-    //     // Set Question counter
-    //     questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of " +
-    //     quiz.length;
     //     // Set Question text
     //     const randomQuestions = selectedQuestions[Math.floor(Math.random() * selectedQuestions.length)];
     //     currentQuestion = randomQuestions;
     //     questionsText.innerHTML = currentQuestion.questions-txt;
     //     console.log(randomQuestions);
     // }
-
-
-
-
-
-
-
-
-
-
-
 
 //     // Function that loops through questions then Push questions into the selectedQuestions Array
 //     function availableQuestions() {
@@ -321,6 +314,7 @@ if (errorTxt !== '') {
 //         for(let i = 0; i < optionLen; i++){
 //             const randOption = availableOptions[Math.floor(Math.random() * availableOptions.length)];
 //             const optionIndex = availableOptions.indexOf(randOption);
+
 //         // Remove the OptionIndex from the availableOptions Array, so the option is not repeated
 //             availableOptions.splice(optionIndex, 1);
 //             const option = document.getElementsByClassName("option-btn");
@@ -345,7 +339,6 @@ if (errorTxt !== '') {
 //         }
 //     });
 
-
 //       window.onload = ()=> {
 //     //     Set all questions in  selectedQuestions Array
 //          availableQuestions();
@@ -363,7 +356,6 @@ if (errorTxt !== '') {
 
 // // let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
 
-        
 //     });
 // }
 
