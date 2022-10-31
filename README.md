@@ -15,14 +15,14 @@ This quiz is targeted towards individuals
 # Table of Contents
 
 1. [Overview]()
-   + [Initial Discussion]()
 2. [Features]()
    + [Existing Features]()  
    + [Future Features]() 
 3. [User Experience]()
    + [Site Goals]()  
    + [User Stories]() 
-   + [Design Structure / Typography and Color Scheme]() 
+   + [Design Structure]() 
+   + [Typography and Color Scheme]() 
    + [Wireframes]() 
 4. [Technologies]() 
 5. [Testing]() 
@@ -39,12 +39,41 @@ This quiz is targeted towards individuals
    + [Media]()
 9. [Acknowledgements]() 
 
+***
+# 1. Overview
 
 
+# 2. Features
 
 
+# 3. User Experience
+
+## Site Goals
 
 
+## User Stories
+
+
+## Design Structure 
+
+
+## Typography and Color Scheme
+***
+## Typography
+
++ Google Fonts was used for the following:
++ Open sans is used for the body text on this site for user experience readability, with a secondary sans-serif font.
++ Montserrat is used for headings on the site for readability, simple and clean looking, with a secondary of serif font.
+
+## Color Scheme
+
++ Mental Arithmetic Quiz uses cold color palette, which is a color that can calm and soothe. The color palette was created using the [Coolors](https://coolors.co/palette/6b35e8-3f13a4-050505-595959-fafafa) website.
++ The colors used are #6B35E8, #3F13A4, #050505, #595959 and #FAFAFA.
+
+ ![Color Scheme](./READMEimages/color-scheme.png)
+
+## Wireframes 
+***
 
 
 
