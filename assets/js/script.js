@@ -5,7 +5,7 @@ const userNameInput = document.getElementById("user-name-input");
 const nextBtn = document.getElementById("next-btn");
 const errorMsg = document.getElementById("error");
 let playerName  =  userNameInput.value;
-const playerNameTxt = document.getElementById("player-name");
+const playerNameTxt = document.querySelectorAll("#player-name");
 
 // Quiz Rule Box Section
 const ruleBox = document.getElementById('rule-box');
@@ -51,15 +51,16 @@ window.addEventListener('DOMContentLoaded', () => {
 nextBtn.addEventListener("click", function() {
 
     playerName = userNameInput.value;
-    // selection.innerHTML = userNameInput.value;
-    // questionsArea.innerHTML = userNameInput.value;
-    playerNameTxt.innerHTML = userNameInput.value;
-    // console.log(userNameInput.value);
+    for(let i = 0; i < playerNameTxt.length; i++){
+        playerNameTxt[i].innerHTML= userNameInput.value;
+    }
+    // console.log(playerNameTxt);
 
     let errorTxt = '';
     // if username input is empty
 if (playerName == '') {
     errorTxt = "Please enter a Username";
+    playerName.style.pointerEvent = "none";
 
 // if username input is less than 8 characters 
 } else if (playerName.length <= Number(6)) {
@@ -74,7 +75,6 @@ if (errorTxt !== '') {
     // nextBtn.click();  
     startQuiz.classList.add('hide');
 }
-// console.log(errorTxt);
 
 // Redirect user to rule box when next button is clicked
    if (ruleBox.style.display !== "none") {
@@ -130,11 +130,12 @@ if (errorTxt !== '') {
     let questionNum = 1;
     let currentQuestion;
     let quiz;
-    let shuffledQuestions;
+    // let shuffledQuestions;
 
 
 // Conditional statement adapted from jsfiddle.net
 // Code to execute difficulty level selection
+
     if (selectLevel == 'level1') {
         shuffledQuestions = questionsLevel1;
     } else if (selectLevel == "level2") {
@@ -162,7 +163,7 @@ if (errorTxt !== '') {
      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
 
 
-    let randomQuestions = Math.floor(Math.random() * quiz.length );
+    let randomQuestions = Math.floor(Math.random() * 10 );
     currentQuestion = quiz[randomQuestions];
 
     quiz.splice(randomQuestions, 1);

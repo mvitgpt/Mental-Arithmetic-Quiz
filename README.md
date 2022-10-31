@@ -70,10 +70,29 @@ This quiz is targeted towards individuals
 + Mental Arithmetic Quiz uses cold color palette, which is a color that can calm and soothe. The color palette was created using the [Coolors](https://coolors.co/palette/6b35e8-3f13a4-050505-595959-fafafa) website.
 + The colors used are #6B35E8, #3F13A4, #050505, #595959 and #FAFAFA.
 
- ![Color Scheme](./READMEimages/color-scheme.png)
+ ![Color Palette](./READMEimages/quiz-color-palette-img.png)
 
 ## Wireframes 
 ***
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+
+
+
+
+
+
 
 
 
@@ -81,13 +100,6 @@ This quiz is targeted towards individuals
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-
-
-## Gitpod Reminders
-
-
-
 
 ------
 
