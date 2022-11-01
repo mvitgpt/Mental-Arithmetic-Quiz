@@ -10,7 +10,7 @@ const questionsLevel1 = [
 
 {
     num: 2,
-    question: 15 - 8,
+    question: "15 - 8",
     options: ['13', '9', '7', '64'],
     answer: 2,
      difficulty: "easy"
@@ -18,7 +18,7 @@ const questionsLevel1 = [
    
 {
     num: 3,
-    question: 6 + 4 + 8,
+    question: "6 + 4 + 8",
     options: ['18', '19', '24', '16'],
     answer: 0,
     difficulty: "easy"

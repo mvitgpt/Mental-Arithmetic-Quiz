@@ -124,23 +124,38 @@ if (errorTxt !== '') {
     questionsCounter = 1;
 
     // Score varialbe set to 0
-    userScore = 0;
-    userScore.innerHTML = (`Score: ${userScore}/5`);
-    let questionNum = 1;
+   let  userScored = 0;
+    userScore.innerHTML = (`Score: ${userScored}/5`);
+    let questionNum = 0;
     let currentQuestion;
     
     // questionsText
     let allQuestions = questionsLevel1;
-    questionsText.innerHTML = allQuestions[0].question;
+    questionsText.innerHTML = allQuestions[questionNum].question;
 
 
-    option1.innerHTML = allQuestions[0].options[0];
-    option2.innerHTML = allQuestions[0].options[1];
-    option3.innerHTML = allQuestions[0].options[2];
-    option4.innerHTML = allQuestions[0].options[3];
+    option1.innerHTML = allQuestions[questionNum].options[0];
+    option2.innerHTML = allQuestions[questionNum].options[1];
+    option3.innerHTML = allQuestions[questionNum].options[2];
+    option4.innerHTML = allQuestions[questionNum].options[3];
 
 
+    function optionClick(userAnswer) {
+        if(userAnswer == allQuestions[questionNum].answer) {
+            userScored++;
+            userScore.innerHTML = (`Score: ${userScored}/5`);
+        }
+        questionNum+=1;
+        questionsText.innerHTML = allQuestions[questionNum].question;
+   
+   
+        option1.innerHTML = allQuestions[questionNum].options[0];
+        option2.innerHTML = allQuestions[questionNum].options[1];
+        option3.innerHTML = allQuestions[questionNum].options[2];
+        option4.innerHTML = allQuestions[questionNum].options[3];
 
+        console.log("option");
+    }
 
 
 
