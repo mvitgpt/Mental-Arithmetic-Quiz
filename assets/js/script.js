@@ -61,10 +61,10 @@ nextBtn.addEventListener("click", function() {
     // if username input is empty
 if (playerName == '') {
     errorTxt = "Please enter a Username";
-    playerName.style.pointerEvent = "none";
+    // playerName.style.pointerEvent = "none";
 
 // if username input is less than 8 characters 
-} else if (playerName.length <= Number(6)) {
+} else if (playerName.length > 8) {
     errorTxt = "Username must have maximum of 8 characters";
 } 
 // if errorMsg is not empty
@@ -77,7 +77,7 @@ if (errorTxt !== '') {
 }
 
 // Redirect user to rule box when next button is clicked
-   if (ruleBox.style.display !== "none") {
+   if (ruleBox.style.display == "none" && playerName !== "") {
     ruleBox.style.display = "block";
    }else {
     ruleBox.style.display = "none";
@@ -91,20 +91,25 @@ if (errorTxt !== '') {
     selection.style.display = "block"; 
  });
 
+    let difficultyLevel;
  // Redirect user to question page for each level when a level is selected 
     level1.addEventListener("click", function(){
     selection.style.display = "none";      
-    questionBox.style.display = "block";   
+    questionBox.style.display = "block"; 
+    difficultyLevel = "easy"; 
+
  });
 
  level2.addEventListener("click", function(){
     selection.style.display = "none";
     questionBox.style.display = "block"; 
+    difficultyLevel = "medium"; 
  });
 
  level3.addEventListener("click", function(){
     selection.style.display = "none";
     questionBox.style.display = "block"; 
+    difficultyLevel = "hard"; 
  });
 
 // Redirect user to home page when home button is clicked on the difficulty level page
@@ -129,8 +134,21 @@ if (errorTxt !== '') {
     let questionNum = 0;
     let currentQuestion;
     
-    // questionsText
-    let allQuestions = shuffle(questionsLevel1.slice(0, 5));
+    if (difficultyLevel === 'easy') {
+                currentQuestion = questionsLevel1;
+                
+            } else if (difficultyLevel === "medium") {
+                currentQuestion= questionsLevel2;
+                
+            } else {
+                difficultyLevel === "hard";
+                currentQuestion= questionsLevel3;
+                
+            } 
+    
+            
+    let allQuestions = shuffle(currentQuestion);
+    allQuestions = allQuestions.slice(0, 5);
 
     questionsText.innerHTML = allQuestions[questionNum].question;
 
