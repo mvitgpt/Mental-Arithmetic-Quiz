@@ -489,4 +489,30 @@ footer p {
     font-size: small;
 }
 
-/* Media Quries */
+/* --------------- Media Queries */
+@media (max-width: 760px) {
+    .question-box-area {
+        width: 100%;
+    }
+    
+    .question-box-area .questions-txt {
+        font-size: 1.1rem;
+        font-weight: 500;  
+    }
+
+    .option-buttons {
+        grid-template-columns: none;
+        margin-bottom: 0;
+        gap: 0;
+        
+    }
+
+    .option-btn {
+       transition: all 0.3s ease; 
+       font-size: 1.1rem;
+       margin-bottom: 2rem;
+       padding: 0.2em 2em;
+
+    
+    }
+}

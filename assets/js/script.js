@@ -53,6 +53,9 @@ nextBtn.addEventListener("click", function() {
     playerName = userNameInput.value;
     for(let i = 0; i < playerNameTxt.length; i++){
         playerNameTxt[i].innerHTML= userNameInput.value;
+        userNameInput.value = "";
+        userNameInput.focus;
+
     }
     // console.log(playerNameTxt);
 
@@ -125,26 +128,31 @@ if (errorTxt !== '') {
     // Score varialbe set to 0
     userScore = 0;
     userScore.innerHTML = (`Score: ${userScore}/5`);
-
     let questionNum = 1;
     let currentQuestion;
-    let quiz;
     
 
 // Conditional statement adapted from jsfiddle.net
-// Code to execute difficulty level selection
-    function displayLevelQuestions() {
-    let shuffledQuestions;
-    if (selectLevel == 'level1') {
-        shuffledQuestions = questionsLevel1;
-    } else if (selectLevel == "level2") {
-        shuffledQuestions= questionsLevel2;
-    } else if (selectLevel == "level3") {
-        shuffledQuestions= questionsLevel3;
-    }   else {
-        shuffledQuestions = makeRandomQuestions();
-        };
-    };
+
+    
+    const quiz = 0;
+
+    // shuffle(questionsLevel1);
+    // shuffle(questionsLevel2);
+    // shuffle(questionsLevel3);
+
+    // Conditional statement to execute difficulty Level Questions
+    selectLevel = difficulty("easy, medium, hard");
+
+    if (selectLevel == 'easy') {
+        quiz = questionsLevel1;
+    } else if (selectLevel == "medium") {
+        quiz= questionsLevel2;
+    } else {
+        selectLevel == "hard";
+        quiz= questionsLevel3;
+    } 
+
 
 //Function to enable difficulty level selection 
         function difficultyL1Questions() {
@@ -161,7 +169,7 @@ if (errorTxt !== '') {
      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
 
 
-    let randomQuestions = Math.floor(Math.random() * 10 );
+    let randomQuestions = Math.floor(Math.random() * quiz.length );
     currentQuestion = quiz[randomQuestions];
 
     quiz.splice(randomQuestions, 1);
@@ -169,26 +177,18 @@ if (errorTxt !== '') {
     questionsText.innerHTML = currentQuestion.question
 
 // Credited to youtuber web Dev Simplified
-    shuffledQuestions = quiz.sort(() => Math.random() - .5);
+    // shuffledQuestions = quiz.sort(() => Math.random() - .5);
+    currentQuestion.options.sort(() => Math.random() - .5);
 
     for(let i = 0; i < currentQuestion.options.length; i++){
         optionBtn[i].innerHTML = currentQuestion.options[i];
-        optionBtn.addEventListener("click", function() { 
-     });  
+    //     optionBtn.addEventListener("click", function() { 
+    //  });  
     }
 
-        setNextQuestions();
     };
 
-    function correctAnswer(){
-        const correctBtn = document.createElement("correct-Btn");
-        correctBtn.innerText = answer.text;
-        correctBtn.classList.add("optionBtn");
-        if(answer.correct) {
-            correctBtn.dataset.correct = answer.correct;
-        }
-        questionBox.style.backgroundColor = "green";
-    }
+  
 
     
 //Function to display random difficulty level selection questions
@@ -250,7 +250,15 @@ if (errorTxt !== '') {
 
 
 
-
+    // function correctAnswer(){
+    //     const correctBtn = document.createElement("correct-Btn");
+    //     correctBtn.innerText = answer.text;
+    //     correctBtn.classList.add("optionBtn");
+    //     if(answer.correct) {
+    //         correctBtn.dataset.correct = answer.correct;
+    //     }
+    //     questionBox.style.backgroundColor = "green";
+    // }
 
 
 
