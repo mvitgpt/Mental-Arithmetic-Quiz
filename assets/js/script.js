@@ -53,8 +53,6 @@ nextBtn.addEventListener("click", function() {
     playerName = userNameInput.value;
     for(let i = 0; i < playerNameTxt.length; i++){
         playerNameTxt[i].innerHTML= userNameInput.value;
-        userNameInput.value = "";
-        userNameInput.focus;
 
     }
     // console.log(playerNameTxt);
@@ -142,17 +140,22 @@ if (errorTxt !== '') {
     // shuffle(questionsLevel3);
 
     // Conditional statement to execute difficulty Level Questions
-    selectLevel = difficulty("easy, medium, hard");
+    
+    function displayLevelQuestions(selectDifficultyLevel) {
+    let difficulty = ("easy, medium, hard");
 
-    if (selectLevel == 'easy') {
+    if (selectDifficultyLevel === 'easy') {
         quiz = questionsLevel1;
-    } else if (selectLevel == "medium") {
+        showDifficultyL1Questions(difficulty);
+    } else if (selectDifficultyLevel === "medium") {
         quiz= questionsLevel2;
+        showDifficultyL2Questions(difficulty);
     } else {
-        selectLevel == "hard";
+        selectDifficultyLevel === "hard";
         quiz= questionsLevel3;
+        showDifficultyL2Questions(difficulty);
     } 
-
+}
 
 //Function to enable difficulty level selection 
         function difficultyL1Questions() {
@@ -168,7 +171,6 @@ if (errorTxt !== '') {
     function makeRandomQuestions(){
      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
 
-
     let randomQuestions = Math.floor(Math.random() * quiz.length );
     currentQuestion = quiz[randomQuestions];
 
@@ -177,7 +179,6 @@ if (errorTxt !== '') {
     questionsText.innerHTML = currentQuestion.question
 
 // Credited to youtuber web Dev Simplified
-    // shuffledQuestions = quiz.sort(() => Math.random() - .5);
     currentQuestion.options.sort(() => Math.random() - .5);
 
     for(let i = 0; i < currentQuestion.options.length; i++){
@@ -189,8 +190,6 @@ if (errorTxt !== '') {
     };
 
   
-
-    
 //Function to display random difficulty level selection questions
     function showDifficultyL1Questions() {
     quiz = questionsLevel1;
