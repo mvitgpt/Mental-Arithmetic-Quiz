@@ -129,135 +129,166 @@ if (errorTxt !== '') {
     let questionNum = 1;
     let currentQuestion;
     
+    // questionsText
+    let allQuestions = questionsLevel1;
+    questionsText.innerHTML = allQuestions[0].question;
+
+
+    option1.innerHTML = allQuestions[0].options[0];
+    option2.innerHTML = allQuestions[0].options[1];
+    option3.innerHTML = allQuestions[0].options[2];
+    option4.innerHTML = allQuestions[0].options[3];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Conditional statement adapted from jsfiddle.net
 
     
-    const quiz = 0;
+//     let quiz;
 
-    // shuffle(questionsLevel1);
-    // shuffle(questionsLevel2);
-    // shuffle(questionsLevel3);
+//     // shuffle(questionsLevel1);
+//     // shuffle(questionsLevel2);
+//     // shuffle(questionsLevel3);
 
-    // Conditional statement to execute difficulty Level Questions
+//     // Conditional statement to execute difficulty Level Questions
     
-    function displayLevelQuestions(selectDifficultyLevel) {
-    let difficulty = ("easy, medium, hard");
+//     function displayLevelQuestions(selectDifficultyLevel) {
+//     let difficulty = ("easy, medium, hard");
 
-    if (selectDifficultyLevel === 'easy') {
-        quiz = questionsLevel1;
-        showDifficultyL1Questions(difficulty);
-    } else if (selectDifficultyLevel === "medium") {
-        quiz= questionsLevel2;
-        showDifficultyL2Questions(difficulty);
-    } else {
-        selectDifficultyLevel === "hard";
-        quiz= questionsLevel3;
-        showDifficultyL2Questions(difficulty);
-    } 
-}
+//     if (selectDifficultyLevel === 'easy') {
+//         quiz = questionsLevel1;
+//         showDifficultyL1Questions(difficulty);
+//     } else if (selectDifficultyLevel === "medium") {
+//         quiz= questionsLevel2;
+//         showDifficultyL2Questions(difficulty);
+//     } else {
+//         selectDifficultyLevel === "hard";
+//         quiz= questionsLevel3;
+//         showDifficultyL2Questions(difficulty);
+//     } 
+// }
 
-//Function to enable difficulty level selection 
-        function difficultyL1Questions() {
-            showDifficultyL1Questions()   
-        };
+// //Function to enable difficulty level selection 
+//         function difficultyL1Questions() {
+//             showDifficultyL1Questions()   
+//         };
     
 
-        function difficultyL2Questions(){};
+//         function difficultyL2Questions(){};
     
-        function difficultyL3Questions(){};    
+//         function difficultyL3Questions(){};    
 
- // Set Questions Counter and display random Questions
-    function makeRandomQuestions(){
-     questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
+//  // Set Questions Counter and display random Questions
+//     function makeRandomQuestions(){
+//      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
 
-    let randomQuestions = Math.floor(Math.random() * quiz.length );
-    currentQuestion = quiz[randomQuestions];
+//     let randomQuestions = Math.floor(Math.random() * quiz.length );
+//     currentQuestion = quiz[randomQuestions];
 
-    quiz.splice(randomQuestions, 1);
+//     quiz.splice(randomQuestions, 1);
 
-    questionsText.innerHTML = currentQuestion.question
+//     questionsText.innerHTML = currentQuestion.question
 
-// Credited to youtuber web Dev Simplified
-    currentQuestion.options.sort(() => Math.random() - .5);
+// // Credited to youtuber web Dev Simplified
+//     currentQuestion.options.sort(() => Math.random() - .5);
 
-    for(let i = 0; i < currentQuestion.options.length; i++){
-        optionBtn[i].innerHTML = currentQuestion.options[i];
-    //     optionBtn.addEventListener("click", function() { 
-    //  });  
-    }
+//     for(let i = 0; i < currentQuestion.options.length; i++){
+//         optionBtn[i].innerHTML = currentQuestion.options[i];
+//     //     optionBtn.addEventListener("click", function() { 
+//     //  });  
+//     }
 
-    };
+//     };
 
   
-//Function to display random difficulty level selection questions
-    function showDifficultyL1Questions() {
-    quiz = questionsLevel1;
-    level1.addEventListener("click", () =>{
-        displayLevelQuestions();  
-    });
-    makeRandomQuestions();
-    };
+// //Function to display random difficulty level selection questions
+//     function showDifficultyL1Questions() {
+//     quiz = questionsLevel1;
+//     level1.addEventListener("click", () =>{
+//         displayLevelQuestions();  
+//     });
+//     makeRandomQuestions();
+//     };
 
-    function showDifficultyL2Questions(){};
+//     function showDifficultyL2Questions(){};
 
-    function showDifficultyL3Questions(){};    
+//     function showDifficultyL3Questions(){};    
 
 
-    function selectOptions(){
-        for (let i = 0; i < 4; i++){
-            optionBtn[i].addEventListener("click", function() { 
-                if(currentQuestion.answer == currentQuestion.options[i]){
-                    optionBtn[i].id = "correct";
-                    userScore++;
-                    userScore.innerHTML = (`Score: ${userScore}/10`);
-                    questionsText.innerHTML = currentQuestion.question;
-                    correctAnswer();
-                } else{
-                    questionsText.innerHTML = `Answer: ${currentQuestion.answer}`;
-                    answer[i].id = "wrong";
-                }
-            });  
-        }
+//     function selectOptions(){
+//         for (let i = 0; i < 4; i++){
+//             optionBtn[i].addEventListener("click", function() { 
+//                 if(currentQuestion.answer == currentQuestion.options[i]){
+//                     optionBtn[i].id = "correct";
+//                     userScore++;
+//                     userScore.innerHTML = (`Score: ${userScore}/10`);
+//                     questionsText.innerHTML = currentQuestion.question;
+//                     correctAnswer();
+//                 } else{
+//                     questionsText.innerHTML = `Answer: ${currentQuestion.answer}`;
+//                     answer[i].id = "wrong";
+//                 }
+//             });  
+//         }
 
-    }
+//     }
 
 
 
     
-    function setNextQuestions(){
-        // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
-    };
+//     function setNextQuestions(){
+//         // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
+//     };
 
-// Set variable to Index
-    let timer = 0;
-    let interval = 0; 
-    let index = 0;
-    let userAnswer = undefined;
+// // Set variable to Index
+//     let timer = 0;
+//     let interval = 0; 
+//     let index = 0;
+//     let userAnswer = undefined;
 
-    //  Set function for time count down
-    let countDown = ()=> {
-      if (timeCounter === 25) {
-        clearInterval(interval);
-      } else {
-        timeCounter++;
-        console.log(timeCounter);
-      } 
-    }
-
-
+//     //  Set function for time count down
+//     let countDown = ()=> {
+//       if (timeCounter === 25) {
+//         clearInterval(interval);
+//       } else {
+//         timeCounter++;
+//         console.log(timeCounter);
+//       } 
+//     }
 
 
 
-    // function correctAnswer(){
-    //     const correctBtn = document.createElement("correct-Btn");
-    //     correctBtn.innerText = answer.text;
-    //     correctBtn.classList.add("optionBtn");
-    //     if(answer.correct) {
-    //         correctBtn.dataset.correct = answer.correct;
-    //     }
-    //     questionBox.style.backgroundColor = "green";
-    // }
+
+
+//     // function correctAnswer(){
+//     //     const correctBtn = document.createElement("correct-Btn");
+//     //     correctBtn.innerText = answer.text;
+//     //     correctBtn.classList.add("optionBtn");
+//     //     if(answer.correct) {
+//     //         correctBtn.dataset.correct = answer.correct;
+//     //     }
+//     //     questionBox.style.backgroundColor = "green";
+//     // }
 
 
 

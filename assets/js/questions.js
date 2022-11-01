@@ -2,7 +2,7 @@
 const questionsLevel1 = [
     {
     num: 1,
-    question: 61 + 4,
+    question: "61 + 4",
     options: ['69', '65', '75', '64'],
     answer: 1,
     difficulty: "easy"
