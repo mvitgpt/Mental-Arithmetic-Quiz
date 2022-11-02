@@ -130,11 +130,13 @@ if (errorTxt !== '') {
     questionsCounter = 1;
 
     // Score varialbe set to 0
-   let  userScored = 0;
+    let  userScored = 0;
     userScore.innerHTML = (`Score: ${userScored}/5`);
     let questionNum = 0;
     let currentQuestion;
-    
+
+    // Code adapted from jsfiddle.net
+    // Conditional statement to execute difficulty Level Questions
     if (difficultyLevel === 'easy') {
                 currentQuestion = questionsLevel1;
                 
@@ -143,21 +145,19 @@ if (errorTxt !== '') {
                 
             } else {
                 difficultyLevel === "hard";
-                currentQuestion= questionsLevel3;
-                
+                currentQuestion= questionsLevel3;  
             } 
-    
-            
+    // Methods to select and display 5 questions out of 10 everytime player plays. 
     let allQuestions = shuffle(currentQuestion);
     allQuestions = allQuestions.slice(0, 5);
 
-    questionsText.innerHTML = allQuestions[questionNum].question;
+    // questionsText.innerHTML = allQuestions[questionNum].question;
 
 
-    option1.innerHTML = allQuestions[questionNum].options[0];
-    option2.innerHTML = allQuestions[questionNum].options[1];
-    option3.innerHTML = allQuestions[questionNum].options[2];
-    option4.innerHTML = allQuestions[questionNum].options[3];
+    // option1.innerHTML = allQuestions[questionNum].options[0];
+    // option2.innerHTML = allQuestions[questionNum].options[1];
+    // option3.innerHTML = allQuestions[questionNum].options[2];
+    // option4.innerHTML = allQuestions[questionNum].options[3];
 
 
     function optionClick(userAnswer) {
@@ -177,6 +177,7 @@ if (errorTxt !== '') {
         console.log("option");
     }
 
+    // Function to randomly display quiz with level of difficulty
     function shuffle(array) {
         let currentIndex = array.length,  randomIndex;
       
@@ -212,7 +213,6 @@ if (errorTxt !== '') {
 
 
 
-// Conditional statement adapted from jsfiddle.net
 
     
 //     let quiz;
@@ -222,7 +222,6 @@ if (errorTxt !== '') {
 //     // shuffle(questionsLevel3);
 
 //     // Conditional statement to execute difficulty Level Questions
-    
 //     function displayLevelQuestions(selectDifficultyLevel) {
 //     let difficulty = ("easy, medium, hard");
 
