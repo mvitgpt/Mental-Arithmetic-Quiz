@@ -35,7 +35,7 @@ body {
     margin-top: 2.5rem;
 }
 
-.start-quiz-home .header-icon {
+.header-icon {
     height: 3rem;
     display: flex;
     justify-content: space-between;
@@ -44,24 +44,24 @@ body {
     text-align: justify;
     }
 
-.header-icon .game-rule-icon {
+/* .header-icon .game-rule-icon {
 background-color:#FAFAFA;
 color: #050505;
     border: 1px solid;
     font-size: 1.5rem;
     /* width: 5%; */
-    height: 1.8rem; 
-    margin-left: 1.5rem;
+    /* height: 1.8rem; 
+    margin-left: 1.5rem; */
     /* margin: 0.5rem 5rem 1rem 2rem;  */
-    transition: all .3s ease-in-out; 
-}
+    /* transition: all .3s ease-in-out;  */
+/* }
 .game-rule-icon i:hover {
     transform: translateY(3px);
     color: #6B35E8;
-} 
+}   */
 
   .header-icon .social-icon{
-    color: #3F13A4;
+    color: #FAFAFA;
     font-size: 1.5rem; 
     /* width: 80%; */
     display: inline-flex;
@@ -70,20 +70,23 @@ color: #050505;
 }  
 
 .header-icon .social-icon a>i {
-    margin: 0 2rem 0 2rem;
-    transition: all .3s ease-in-out; 
-   
+    margin-left: 3rem;
+    transition: all .3s ease-in-out;
+    color: #FAFAFA; 
+    font-size: 2rem;
 }
+
 .header-icon .social-icon a>i:hover { 
     transform: translateY(3px);
-    color: #6B35E8;
+    color: #050505;
+    background: #FAFAFA;
 }
 
 /* --------- Start Quiz Home Page layout */
 .start-quiz-home {
     background-color:#FAFAFA;
     max-width: 80vw;
-    height: 70vh;
+    height: 65vh;
     margin: 5rem auto;
     /* height: 37.5rem; */
     width: 80%;
@@ -214,6 +217,12 @@ input {
     margin: 5rem auto;
     border-style: ridge;
     display: none;
+}
+
+.selection-area .header-icon {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 0;
 }
 
 .selection-area .header-icon .user-icon {
@@ -530,7 +539,7 @@ footer p {
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
     .question-box-area .user-icon i {
         display: none;
     } 
