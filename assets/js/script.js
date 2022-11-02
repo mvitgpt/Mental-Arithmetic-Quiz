@@ -155,23 +155,24 @@ let countDown = ()=> {
     } 
 }
 
+// Score varialbe set to 0
 let userScored = 0;
 userScore.innerHTML = (`Score: ${userScored}/5`);
 let questionNum = 0;
 
 let currentQuestion;
 
-// Methods to select and display 5 questions out of 10 everytime player plays. 
+
 let allQuestions = [];
 
-// Score varialbe set to 0
 
+ // Function to execute difficulty Level Questions
 function questionStart() {
-    // Show your questions box
+    // Show questions box
     questionBox.style.display = "block"; 
 
     // Code adapted from jsfiddle.net
-    // Conditional statement to execute difficulty Level Questions
+   
     if (difficultyLevel == 'easy') {
         currentQuestion = questionsLevel1;
     } else if (difficultyLevel == "medium") {
@@ -180,10 +181,10 @@ function questionStart() {
         currentQuestion= questionsLevel3;  
     }
 
-    renderQuestions()
+    renderQuestions();
 }
 
-// Render your first question
+// Render first question
 function renderQuestions() {
     // Set the difficulity level & load the first question.
     allQuestions = shuffle(currentQuestion);
@@ -198,7 +199,7 @@ function renderQuestions() {
 
 }
 
-
+// Function to check if answer is coreect, option button changes to green and vice visa
 function optionClick(userAnswer) {
     if(userAnswer == allQuestions[questionNum].answer) {
         userScored++;
@@ -210,10 +211,9 @@ function optionClick(userAnswer) {
         checkAnswers(userAnswer).style.backgroundColor="red"
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
     }
-
-    
 }
 
+// Function check and return answer option, if answer is strictly equal to option index
 function checkAnswers(answerId) {
     if(answerId === 0)
         return option1
@@ -223,8 +223,9 @@ function checkAnswers(answerId) {
         return option3
     else if(answerId === 3)
         return option4
-}
+};
 
+// Function to display next questions and answer options 
 function nextQuestion() {
     questionNum+=1;
     questionsText.innerHTML = allQuestions[questionNum].question;
@@ -245,7 +246,8 @@ function nextQuestion() {
     timer = 0;
 }
 
-    // Function to randomly display quiz with level of difficulty
+   //Code from jsfiddle.net/gautamz07/zotsc64e/
+  // Function to randomly display quiz with level of difficulty
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
 
