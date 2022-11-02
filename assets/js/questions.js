@@ -34,7 +34,7 @@ const questionsLevel1 = [
 
 {
     num: 5,
-    question: 5 + 4 + 9,
+    question: "5 + 4 + 9",
     options: ['18', '19', '21', '16'],
     answer: 0,
     difficulty: "easy"
@@ -58,7 +58,7 @@ const questionsLevel1 = [
 
 {
     num: 8,
-    question: 16 - 7,
+    question: "16 - 7",
     options: ['8', '9', '11', '13'],
     answer: 1,
     difficulty: "easy"
@@ -157,7 +157,7 @@ const questionsLevel2 = [
 
 {
     num: 10,
-    question: 44 - 9,
+    question: "44 - 9",
     options: ['35', '33', '44', '43'],
     answer: 0,
     difficulty: "medium"
@@ -184,7 +184,7 @@ let questionsLevel3 = [
    
 {
     num: 3,
-    question: 820 - 40,
+    question: "820 - 40",
     options: ['780', '720', '740', '760'],
     answer: 0,
     difficulty: "hard"
@@ -192,7 +192,7 @@ let questionsLevel3 = [
 
 {
     num: 4,
-    question: 1009 - 100,
+    question: "1009 - 100",
     options: ['999', '909', '990', '901'],
     answer: 1,
     difficulty: "hard"

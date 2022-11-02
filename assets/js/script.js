@@ -91,8 +91,9 @@ if (errorTxt !== '') {
     selection.style.display = "block"; 
  });
 
-    let difficultyLevel;
+    
  // Redirect user to question page for each level when a level is selected 
+    let difficultyLevel;
     level1.addEventListener("click", function(){
     selection.style.display = "none";      
     questionBox.style.display = "block"; 
