@@ -77,10 +77,10 @@ if (errorTxt !== '') {
 }
 
 // Redirect user to rule box when next button is clicked
-   if (ruleBox.style.display == "none" && playerName !== "") {
-    ruleBox.style.display = "block";
-   }else {
+   if (ruleBox.style.display == "block" && playerName !== "") {
     ruleBox.style.display = "none";
+   }else {
+    ruleBox.style.display = "block";
   }
  });
 
