@@ -100,7 +100,7 @@ if (errorTxt !== '') {
     difficultyLevel = "easy"; 
 
     interval = setInterval(countDown, 1000);
-    displayQuestions();
+    optionClick();
 
 
  });
@@ -166,7 +166,6 @@ if (errorTxt !== '') {
     } else {
       timer++;
       timeCounter.innerText = timer;
-      console.log(timeCounter);
     } 
   }
     // Methods to select and display 5 questions out of 10 everytime player plays. 
@@ -183,7 +182,7 @@ if (errorTxt !== '') {
     // option4.innerHTML = allQuestions[questionNum].options[3];
 
 
-    function displayQuestions(userAnswer) {
+    function optionClick(userAnswer) {
         if(userAnswer == allQuestions[questionNum].answer) {
             userScored++;
             userScore.innerHTML = (`Score: ${userScored}/5`);
@@ -197,6 +196,7 @@ if (errorTxt !== '') {
         option4.innerHTML = allQuestions[questionNum].options[3];
 
         console.log("option");
+        // Start timer
         timer = 0;
     }
 
@@ -220,7 +220,24 @@ if (errorTxt !== '') {
       }
 
 
-
+      function selectOptions(){
+                
+                    optionBtn[i].addEventListener("click", function() { 
+                        optionBtn[i].classList.add("active");
+                        if(currentQuestion.answer === currentQuestion.options[i]){
+                            options[i].id = "correct";
+                            userScored++;
+                            
+                        } else{
+                            questionsText.innerHTML = `Answer: ${currentQuestion.answer}`;
+                            answer[i].id = "wrong";
+                            userScored += 0;
+                        }
+                        clearInterval(interval);
+                    });  
+                
+        
+            }
     
 
    
@@ -233,7 +250,7 @@ if (errorTxt !== '') {
 
 
     
-//     let quiz;
+
 
 //     // shuffle(questionsLevel1);
 //     // shuffle(questionsLevel2);
@@ -307,7 +324,7 @@ if (errorTxt !== '') {
 //                 if(currentQuestion.answer == currentQuestion.options[i]){
 //                     optionBtn[i].id = "correct";
 //                     userScore++;
-//                     userScore.innerHTML = (`Score: ${userScore}/10`);
+//                     userScore.innerHTML = (`Score: ${userScore}/5`);
 //                     questionsText.innerHTML = currentQuestion.question;
 //                     correctAnswer();
 //                 } else{
@@ -410,9 +427,6 @@ if (errorTxt !== '') {
 //             option = i;
 //             option.appendChild(option);
 //         }
-    
-//         questionsCounterIndex++;
-//         console.log(indexNum);
 //     }
 
 //     nextQueBtn.addEventListener("click", function() {
@@ -430,7 +444,6 @@ if (errorTxt !== '') {
 
 //     // // Call the selectNewQuestions function's function
 //          selectNewQuestions();
-
 //      };
 
 //     // Function to randomly display quiz with level of diffivulty
