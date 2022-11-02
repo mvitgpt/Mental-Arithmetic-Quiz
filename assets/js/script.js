@@ -99,6 +99,10 @@ if (errorTxt !== '') {
     questionBox.style.display = "block"; 
     difficultyLevel = "easy"; 
 
+    interval = setInterval(countDown, 1000);
+    displayQuestions();
+
+
  });
 
  level2.addEventListener("click", function(){
@@ -127,10 +131,12 @@ if (errorTxt !== '') {
 
     
     // Question counter varialbe set to 1
-    questionsCounter = 1;
+    let questionDisplayCounter = 1;
+    // questionsCounter = 1;
+    questionsCounter.innerHTML = (`Question ${questionDisplayCounter} of 5`);
 
     // Score varialbe set to 0
-    let  userScored = 0;
+    let userScored = 0;
     userScore.innerHTML = (`Score: ${userScored}/5`);
     let questionNum = 0;
     let currentQuestion;
@@ -147,9 +153,26 @@ if (errorTxt !== '') {
                 difficultyLevel === "hard";
                 currentQuestion= questionsLevel3;  
             } 
+
+    //  Set function for time counter
+         
+    let timer = 0;
+    let interval = 0; 
+
+    let countDown = ()=> {
+    if (timer === 25) {
+      clearInterval(interval);
+      nextQueBtn.click();
+    } else {
+      timer++;
+      timeCounter.innerText = timer;
+      console.log(timeCounter);
+    } 
+  }
     // Methods to select and display 5 questions out of 10 everytime player plays. 
     let allQuestions = shuffle(currentQuestion);
     allQuestions = allQuestions.slice(0, 5);
+
 
     // questionsText.innerHTML = allQuestions[questionNum].question;
 
@@ -160,7 +183,7 @@ if (errorTxt !== '') {
     // option4.innerHTML = allQuestions[questionNum].options[3];
 
 
-    function optionClick(userAnswer) {
+    function displayQuestions(userAnswer) {
         if(userAnswer == allQuestions[questionNum].answer) {
             userScored++;
             userScore.innerHTML = (`Score: ${userScored}/5`);
@@ -168,13 +191,13 @@ if (errorTxt !== '') {
         questionNum+=1;
         questionsText.innerHTML = allQuestions[questionNum].question;
    
-   
         option1.innerHTML = allQuestions[questionNum].options[0];
         option2.innerHTML = allQuestions[questionNum].options[1];
         option3.innerHTML = allQuestions[questionNum].options[2];
         option4.innerHTML = allQuestions[questionNum].options[3];
 
         console.log("option");
+        timer = 0;
     }
 
     // Function to randomly display quiz with level of difficulty
@@ -198,14 +221,9 @@ if (errorTxt !== '') {
 
 
 
+    
 
-
-
-
-
-
-
-
+   
 
 
 
@@ -242,8 +260,6 @@ if (errorTxt !== '') {
 //         function difficultyL1Questions() {
 //             showDifficultyL1Questions()   
 //         };
-    
-
 //         function difficultyL2Questions(){};
     
 //         function difficultyL3Questions(){};    
@@ -311,24 +327,8 @@ if (errorTxt !== '') {
 //     };
 
 // // Set variable to Index
-//     let timer = 0;
-//     let interval = 0; 
 //     let index = 0;
 //     let userAnswer = undefined;
-
-//     //  Set function for time count down
-//     let countDown = ()=> {
-//       if (timeCounter === 25) {
-//         clearInterval(interval);
-//       } else {
-//         timeCounter++;
-//         console.log(timeCounter);
-//       } 
-//     }
-
-
-
-
 
 //     // function correctAnswer(){
 //     //     const correctBtn = document.createElement("correct-Btn");
@@ -414,8 +414,6 @@ if (errorTxt !== '') {
 //         questionsCounterIndex++;
 //         console.log(indexNum);
 //     }
-
-//     const nextQuestionBtn = document.getElementById("next-ques-button");
 
 //     nextQueBtn.addEventListener("click", function() {
 //         if (questionsCounter === quiz.length){

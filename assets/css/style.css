@@ -374,25 +374,20 @@ input {
     margin: 0.5rem 0 1rem 0;
  }
 
- .questions-counter {
+ .questions-counter-container {
      color: #3F13A4;
+     font-weight: 600; 
+     font-size: 1.1rem;
+     margin: 0 1rem 1.5rem 1rem;
 } 
  
-.questions-counter-txt p {
+/* .questions-counter p {
      display: flex;
      font-weight: 700; 
      justify-content: center;
     font-size: 1.2rem;
     margin-bottom: 2rem;
-}
-
-.questions-counter-txt p span{
-    padding: 0 0.2em; 
-    letter-spacing: 5px;
-    text-align: justify;
-    color: #050505;
-    margin: 0 1rem;
-}
+} */
 
 .question-box-area .questions-txt {
     font-size: 1.3rem;
