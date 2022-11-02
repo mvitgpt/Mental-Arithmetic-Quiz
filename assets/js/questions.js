@@ -75,7 +75,7 @@ const questionsLevel1 = [
 {
     num: 10,
     question: "6 x 2 = 3 x ?",
-    options: ['18', '19', '24', '16'],
+    options: ['8', '9', '4', '6'],
     answer: 2,
     difficulty: "easy"
 },

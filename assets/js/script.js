@@ -116,8 +116,8 @@ level1.addEventListener("click", function(){
      selection.style.display = "none";      
      difficultyLevel = "easy"; 
  
-     questionStart()
-     // interval = setInterval(countDown, 1000);
+     questionStart();
+     interval = setInterval(countDown, 1000);
      // optionClick();
 });
  // Medium level
@@ -125,14 +125,16 @@ level2.addEventListener("click", function(){
      selection.style.display = "none";
      difficultyLevel = "medium"; 
  
-     questionStart()
+     questionStart();
+     interval = setInterval(countDown, 1000);
 });
  // Hard level
 level3.addEventListener("click", function(){
      selection.style.display = "none";
      difficultyLevel = "hard"; 
  
-     questionStart()
+     questionStart();
+     interval = setInterval(countDown, 1000);
 });
     
 // Question counter varialbe set to 1
@@ -140,8 +142,7 @@ let questionDisplayCounter = 1;
 // questionsCounter = 1;
 questionsCounter.innerHTML = (`Question ${questionDisplayCounter} of 5`);
 
-//  Set function for time counter
-         
+//  Set function for time counter     
 let timer = 0;
 let interval = 0; 
 
@@ -199,7 +200,7 @@ function renderQuestions() {
 
 }
 
-// Function to check if answer is coreect, option button changes to green and vice visa
+// Function to check if user answer is coreect, option button changes to green and vice visa
 function optionClick(userAnswer) {
     if(userAnswer == allQuestions[questionNum].answer) {
         userScored++;
@@ -235,10 +236,10 @@ function nextQuestion() {
     option3.innerHTML = allQuestions[questionNum].options[2];
     option4.innerHTML = allQuestions[questionNum].options[3];
 
-    option1.style.backgroundColor = "#3f13a4"
-    option2.style.backgroundColor = "#3f13a4"
-    option3.style.backgroundColor = "#3f13a4"
-    option4.style.backgroundColor = "#3f13a4"
+    option1.style.backgroundColor = "#3f13a4";
+    option2.style.backgroundColor = "#3f13a4";
+    option3.style.backgroundColor = "#3f13a4";
+    option4.style.backgroundColor = "#3f13a4";
 
 
     // console.log("option");
