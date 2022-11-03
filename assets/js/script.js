@@ -61,6 +61,7 @@ nextBtn.addEventListener("click", function() {
     // if username input is empty
 if (playerName == '') {
     errorTxt = "Please enter a Username";
+    ruleBox.style.display = "none";
     // playerName.style.pointerEvent = "none";
 
 // if username input is less than 8 characters 
@@ -74,14 +75,15 @@ if (errorTxt !== '') {
     errorMsg.innerHTML = errorTxt;
 } else{ 
     startQuiz.classList.add('hide');
+    ruleBox.style.display = "block";
 }
 
 // Redirect user to rule box when next button is clicked
-   if (ruleBox.style.display == "block" && playerName !== "") {
-    ruleBox.style.display = "none";
-   }else {
-    ruleBox.style.display = "block";
-  }
+//    if (ruleBox.style.display == "block" && playerName !== "") {
+//     ruleBox.style.display = "none";
+//    }else {
+    
+//   }
  });
 
  });
