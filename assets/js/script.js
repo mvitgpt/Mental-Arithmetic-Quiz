@@ -117,7 +117,7 @@ level1.addEventListener("click", function(){
      difficultyLevel = "easy"; 
  
      questionStart();
-     interval = setInterval(countDown, 1000);
+     interval = setInterval(countTime, 1000);
      
 });
  // Medium level
@@ -126,7 +126,7 @@ level2.addEventListener("click", function(){
      difficultyLevel = "medium"; 
  
      questionStart();
-     interval = setInterval(countDown, 1000);
+     interval = setInterval(countTime, 1000);
 });
  // Hard level
 level3.addEventListener("click", function(){
@@ -134,7 +134,7 @@ level3.addEventListener("click", function(){
      difficultyLevel = "hard"; 
  
      questionStart();
-     interval = setInterval(countDown, 1000);
+     interval = setInterval(countTime, 1000);
 });
     
 
@@ -142,7 +142,7 @@ level3.addEventListener("click", function(){
 let timer = 0;
 let interval = 0; 
 
-let countDown = ()=> {
+let countTime = ()=> {
     if (timer === 20) {
         clearInterval(interval);
         nextQueBtn.click();
@@ -238,36 +238,35 @@ function nextQuestion() {
     option3.style.backgroundColor = "#3f13a4";
     option4.style.backgroundColor = "#3f13a4";
 
-
     // Start timer
     timer = 0;  
 
     // Increase question count on the click of next button
     questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
-    // if(questionsCounter.innerText == 5 ) {
-          
-    // }
+    if(questionsCounter.innerText == 5 ) {
+        quizResult.style.display = "block";  
+    }
 }
 
    //Code from jsfiddle.net/gautamz07/zotsc64e/
   // Function to randomly display quiz with level of difficulty
-function shuffle(array) {
-    let currentIndex = array.length,  randomIndex;
+function shuffle(questionsArray) {
+    let currentQuestionIndex = questionsArray.length,  randomise;
 
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
+    // The conditional statement to shuffle the remaininig questions.
+    while (currentQuestionIndex != 0) {
 
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
+        // Pick from the remaining questions.
+        randomise = Math.floor(Math.random() * currentQuestionIndex);
+        currentQuestionIndex--;
 
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
+        // And swap it with the current .
+        [questionsArray[currentQuestionIndex], questionsArray[randomise]] = [
+            questionsArray[randomise], questionsArray[currentQuestionIndex]];
     }
 
-    return array;
+    return questionsArray;
 };
 
 // Show result
@@ -305,9 +304,7 @@ function showResults(){};
     
 
 // }
-        
 
-   
 
 //     // Conditional statement to execute difficulty Level Questions
 //     function displayLevelQuestions(selectDifficultyLevel) {
@@ -348,16 +345,10 @@ function showResults(){};
 //     function showDifficultyL2Questions(){};
 
 //     function showDifficultyL3Questions(){};    
-
-
     
 //     function setNextQuestions(){
 //         // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
 //     };
-
-// // Set variable to Index
-//     let index = 0;
-//     let userAnswer = undefined;
 
 //     // function correctAnswer(){
 //     //     const correctBtn = document.createElement("correct-Btn");
@@ -402,32 +393,13 @@ function showResults(){};
 //         questionsText.innerHTML = currentQuestion.questions-txt;
 //         console.log(questionsIndex);
 
-//         // Index number of questions in the availableSelections Array
-//         const indexNum = availableQuestions.indexOf(questionsIndex);
-
-//         // Remove the questionsIndex from the availableSelections Array, so the question is not repeated
-//         availableQuestions.splice(indexNum, 1);
 
 //         // Set the options, loop through options Array and push it into the availabeOptions Array 
 //         const optionLen = currentQuestion.options.length;
 //         for(let i = 0; i < optionLen; i++){
 //             availableOptions.push(i);
 //         }
-//         // Set random Options and Append options container to the available options
-//         // First loop through the options
-//         for(let i = 0; i < optionLen; i++){
-//             const randOption = availableOptions[Math.floor(Math.random() * availableOptions.length)];
-//             const optionIndex = availableOptions.indexOf(randOption);
 
-//         // Remove the OptionIndex from the availableOptions Array, so the option is not repeated
-//             availableOptions.splice(optionIndex, 1);
-//             const option = document.getElementsByClassName("option-btn");
-//             option.innerHTML = currentQuestion.options[randOption];
-//             // option = currentQuestion.options[i];
-//             option = i;
-//             option.appendChild(option);
-//         }
-//     }
 
 //     nextQueBtn.addEventListener("click", function() {
 //         if (questionsCounter === quiz.length){
