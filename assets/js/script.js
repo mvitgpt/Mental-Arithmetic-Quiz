@@ -118,7 +118,6 @@ level1.addEventListener("click", function(){
  
      questionStart();
      interval = setInterval(countDown, 1000);
-     // optionClick();
 });
  // Medium level
 level2.addEventListener("click", function(){
@@ -139,6 +138,7 @@ level3.addEventListener("click", function(){
     
 // Question counter varialbe set to 1
 let questionDisplayCounter = 1;
+
 // questionsCounter = 1;
 questionsCounter.innerHTML = (`Question ${questionDisplayCounter} of 5`);
 
@@ -147,7 +147,7 @@ let timer = 0;
 let interval = 0; 
 
 let countDown = ()=> {
-    if (timer === 25) {
+    if (timer === 20) {
         clearInterval(interval);
         nextQueBtn.click();
     } else {
@@ -198,6 +198,7 @@ function renderQuestions() {
     option3.innerHTML = allQuestions[questionNum].options[2];
     option4.innerHTML = allQuestions[questionNum].options[3];
 
+    
 }
 
 // Function to check if user answer is coreect, option button changes to green and vice visa
@@ -242,9 +243,8 @@ function nextQuestion() {
     option4.style.backgroundColor = "#3f13a4";
 
 
-    // console.log("option");
     // Start timer
-    timer = 0;
+    timer = 0;   
 }
 
    //Code from jsfiddle.net/gautamz07/zotsc64e/
@@ -266,6 +266,22 @@ function shuffle(array) {
 
     return array;
 }
+
+// Show result
+function showResults(){};
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -290,20 +306,6 @@ function shuffle(array) {
 
    
 
-
-
-
-
-
-
-
-    
-
-
-//     // shuffle(questionsLevel1);
-//     // shuffle(questionsLevel2);
-//     // shuffle(questionsLevel3);
-
 //     // Conditional statement to execute difficulty Level Questions
 //     function displayLevelQuestions(selectDifficultyLevel) {
 //     let difficulty = ("easy, medium, hard");
@@ -319,15 +321,7 @@ function shuffle(array) {
 //         quiz= questionsLevel3;
 //         showDifficultyL2Questions(difficulty);
 //     } 
-// }
-
-// //Function to enable difficulty level selection 
-//         function difficultyL1Questions() {
-//             showDifficultyL1Questions()   
-//         };
-//         function difficultyL2Questions(){};
-    
-//         function difficultyL3Questions(){};    
+// }    
 
 //  // Set Questions Counter and display random Questions
 //     function makeRandomQuestions(){
@@ -335,23 +329,10 @@ function shuffle(array) {
 
 //     let randomQuestions = Math.floor(Math.random() * quiz.length );
 //     currentQuestion = quiz[randomQuestions];
-
 //     quiz.splice(randomQuestions, 1);
 
-//     questionsText.innerHTML = currentQuestion.question
-
 // // Credited to youtuber web Dev Simplified
-//     currentQuestion.options.sort(() => Math.random() - .5);
 
-//     for(let i = 0; i < currentQuestion.options.length; i++){
-//         optionBtn[i].innerHTML = currentQuestion.options[i];
-//     //     optionBtn.addEventListener("click", function() { 
-//     //  });  
-//     }
-
-//     };
-
-  
 // //Function to display random difficulty level selection questions
 //     function showDifficultyL1Questions() {
 //     quiz = questionsLevel1;
@@ -364,26 +345,6 @@ function shuffle(array) {
 //     function showDifficultyL2Questions(){};
 
 //     function showDifficultyL3Questions(){};    
-
-
-//     function selectOptions(){
-//         for (let i = 0; i < 4; i++){
-//             optionBtn[i].addEventListener("click", function() { 
-//                 if(currentQuestion.answer == currentQuestion.options[i]){
-//                     optionBtn[i].id = "correct";
-//                     userScore++;
-//                     userScore.innerHTML = (`Score: ${userScore}/5`);
-//                     questionsText.innerHTML = currentQuestion.question;
-//                     correctAnswer();
-//                 } else{
-//                     questionsText.innerHTML = `Answer: ${currentQuestion.answer}`;
-//                     answer[i].id = "wrong";
-//                 }
-//             });  
-//         }
-
-//     }
-
 
 
     
@@ -407,21 +368,9 @@ function shuffle(array) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     //  let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectLevel);
     //  selectLevel = filteredQuestionsByDifficulty;
 
-    
     // function selectRandomQuestions(){
     //     // Set Question text
     //     const randomQuestions = selectedQuestions[Math.floor(Math.random() * selectedQuestions.length)];
@@ -487,13 +436,6 @@ function shuffle(array) {
 //     });
 
 //       window.onload = ()=> {
-//     //     Set all questions in  selectedQuestions Array
-//          availableQuestions();
-
-//     // // Call the selectNewQuestions function's function
-//          selectNewQuestions();
-//      };
-
 //     // Function to randomly display quiz with level of diffivulty
 //     function difficultyL1() {
 //         quiz = questionsLevel1;
@@ -505,7 +447,6 @@ function shuffle(array) {
 //     });
 // }
 
-// // function showResults(){};
 // // function runQuiz() {
 // //     startQuiz.classList.add('hide');
 // //     ruleBox.classList.add.remove('hide');
