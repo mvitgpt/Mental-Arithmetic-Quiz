@@ -2,7 +2,7 @@
 // Start Quiz Section
 const startQuiz = document.getElementById('start-quiz-home');
 const userNameInput = document.getElementById("user-name-input");
-const nextBtn = document.getElementById("next-btn");
+const usernameBtn = document.getElementById("next-btn");
 const errorMsg = document.getElementById("error");
 let playerName  =  userNameInput.value;
 const playerNameTxt = document.querySelectorAll("#player-name");
@@ -45,10 +45,10 @@ const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
 
 /** Function to Check UserName input and display error message if invalid or empty
-    User name display when the next button is clicked 
+    User name display when the next button is clicked (onload) 
   */ 
 window.addEventListener('DOMContentLoaded', () => { 
-nextBtn.addEventListener("click", function() {
+    usernameBtn.addEventListener("click", function() {
 
     playerName = userNameInput.value;
     for(let i = 0; i < playerNameTxt.length; i++){
@@ -65,15 +65,15 @@ if (playerName == '') {
     // playerName.style.pointerEvent = "none";
 
 // if username input is less than 8 characters 
-} else if (playerName.length > 8) {
+} else if (playerName.length >= 8) {
     errorTxt = "Username must have maximum of 8 characters";
 } 
 // if errorMsg is not empty
 if (errorTxt !== '') {
     // display error message in the errorMsg div on home page
-    
     errorMsg.innerHTML = errorTxt;
 } else{ 
+    localStorage.setItem("player", playerName);
     startQuiz.classList.add('hide');
     ruleBox.style.display = "block";
 }
@@ -108,10 +108,12 @@ backHome.addEventListener("click", function(){
 
 nextQueBtn.addEventListener("click", function() {
     nextQuestion();
-})
+});
 
 // Redirect user to question page for each level when a level is selected 
 let difficultyLevel = "";
+
+playerName = localStorage.getItem("player");
 
  // Easy level
 level1.addEventListener("click", function(){
