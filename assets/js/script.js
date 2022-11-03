@@ -45,7 +45,7 @@ const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
 
 /** Function to Check UserName input and display error message if invalid or empty
-  User name display when the next button is clicked 
+    User name display when the next button is clicked 
   */ 
 window.addEventListener('DOMContentLoaded', () => { 
 nextBtn.addEventListener("click", function() {
@@ -105,7 +105,7 @@ backHome.addEventListener("click", function(){
 });
 
 nextQueBtn.addEventListener("click", function() {
-    nextQuestion()
+    nextQuestion();
 })
 
 // Redirect user to question page for each level when a level is selected 
@@ -118,6 +118,7 @@ level1.addEventListener("click", function(){
  
      questionStart();
      interval = setInterval(countDown, 1000);
+     
 });
  // Medium level
 level2.addEventListener("click", function(){
@@ -136,11 +137,6 @@ level3.addEventListener("click", function(){
      interval = setInterval(countDown, 1000);
 });
     
-// Question counter varialbe set to 1
-let questionDisplayCounter = 1;
-
-// questionsCounter = 1;
-questionsCounter.innerHTML = (`Question ${questionDisplayCounter} of 5`);
 
 //  Set function for time counter     
 let timer = 0;
@@ -154,9 +150,9 @@ let countDown = ()=> {
         timer++;
         timeCounter.innerText = timer;
     } 
-}
+};
 
-// Score varialbe set to 0
+// Set the variables for score, question number, current question and all questions
 let userScored = 0;
 userScore.innerHTML = (`Score: ${userScored}/5`);
 let questionNum = 0;
@@ -167,7 +163,7 @@ let currentQuestion;
 let allQuestions = [];
 
 
- // Function to execute difficulty Level Questions
+ // Function to execute each difficulty Level Questions
 function questionStart() {
     // Show questions box
     questionBox.style.display = "block"; 
@@ -183,11 +179,12 @@ function questionStart() {
     }
 
     renderQuestions();
-}
+    
+};
 
 // Render first question
 function renderQuestions() {
-    // Set the difficulity level & load the first question.
+    // Get the difficulity level's set of random questions and options & load the first question.
     allQuestions = shuffle(currentQuestion);
     allQuestions = allQuestions.slice(0, 5);
 
@@ -196,10 +193,9 @@ function renderQuestions() {
     option1.innerHTML = allQuestions[questionNum].options[0];
     option2.innerHTML = allQuestions[questionNum].options[1];
     option3.innerHTML = allQuestions[questionNum].options[2];
-    option4.innerHTML = allQuestions[questionNum].options[3];
-
+    option4.innerHTML = allQuestions[questionNum].options[3];  
     
-}
+};
 
 // Function to check if user answer is coreect, option button changes to green and vice visa
 function optionClick(userAnswer) {
@@ -213,7 +209,7 @@ function optionClick(userAnswer) {
         checkAnswers(userAnswer).style.backgroundColor="red"
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
     }
-}
+};
 
 // Function check and return answer option, if answer is strictly equal to option index
 function checkAnswers(answerId) {
@@ -227,7 +223,7 @@ function checkAnswers(answerId) {
         return option4
 };
 
-// Function to display next questions and answer options 
+// Function to display next question and answer options 
 function nextQuestion() {
     questionNum+=1;
     questionsText.innerHTML = allQuestions[questionNum].question;
@@ -244,7 +240,14 @@ function nextQuestion() {
 
 
     // Start timer
-    timer = 0;   
+    timer = 0;  
+
+    // Increase question count on the click of next button
+    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+
+    // if(questionsCounter.innerText == 5 ) {
+          
+    // }
 }
 
    //Code from jsfiddle.net/gautamz07/zotsc64e/
@@ -265,7 +268,7 @@ function shuffle(array) {
     }
 
     return array;
-}
+};
 
 // Show result
 function showResults(){};
