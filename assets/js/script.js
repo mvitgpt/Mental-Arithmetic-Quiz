@@ -37,6 +37,7 @@ const optionBtn = document.getElementsByClassName("option-btn");
 
 // Next question button
 const nextQueBtn = document.getElementById("next-ques-btn");
+const quizEnd = document.getElementById("quiz-end");
 
 // Result Section
 const quizResult = document.getElementById("quiz-result");
@@ -124,10 +125,9 @@ level1.addEventListener("click", function(){
      levelTitle.innerHTML = "Level 1"; 
  
      questionStart();
-     interval = setInterval(countTime, 1000);
-     
+     interval = setInterval(countTime, 1000);  
 });
-}) 
+ 
  // Medium level
 level2.addEventListener("click", function(){
      selection.style.display = "none";
@@ -146,7 +146,7 @@ level3.addEventListener("click", function(){
      questionStart();
      interval = setInterval(countTime, 1000);
 });
-    
+});    
 
 //  Set function for time counter     
 let timer = 0;
@@ -216,12 +216,21 @@ function optionClick(userAnswer) {
         userScore.innerHTML = (`Score: ${userScored}/5`);
 
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
+       
     }
     else {
         checkAnswers(userAnswer).style.backgroundColor="red"
-        checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
+        checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green";
+        
     }
+    
 };
+
+function disableOptions() {
+    for(let btn of optionBtn) {
+        btn.disabled = !optionBtn.disabled;
+    }
+} 
 
 // Function check and return answer option, if answer is strictly equal to option index
 function checkAnswers(answerId) {
@@ -256,10 +265,22 @@ function nextQuestion() {
     // Increase question count on the click of next button
     questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
-    if(questionsCounter.innerText == 5 ) {
-        quizResult.style.display = "block";  
+    // disableOptions();
+
+    if(questionsCounter.innerText > 4 ) {
+        quizEnd.innerHTML = `End of Questions.`
+
+    }else{
+        nextQueBtn.addEventListener("click", () => {
+            quizResult.style.display = "block"; 
+        }) 
+    
     }
+
 }
+
+
+// playerName.style.pointerEvent = "none";
 
    //Code from jsfiddle.net/gautamz07/zotsc64e/
   // Function to randomly display quiz with level of difficulty
@@ -282,7 +303,9 @@ function shuffle(questionsArray) {
 };
 
 // Show result
-function showResults(){};
+function showResults(){
+    quizEnd.innerHTML = `End of Questions.`
+};
 
 
 
@@ -343,20 +366,6 @@ function showResults(){};
 //     currentQuestion = quiz[randomQuestions];
 //     quiz.splice(randomQuestions, 1);
 
-// // Credited to youtuber web Dev Simplified
-
-// //Function to display random difficulty level selection questions
-//     function showDifficultyL1Questions() {
-//     quiz = questionsLevel1;
-//     level1.addEventListener("click", () =>{
-//         displayLevelQuestions();  
-//     });
-//     makeRandomQuestions();
-//     };
-
-//     function showDifficultyL2Questions(){};
-
-//     function showDifficultyL3Questions(){};    
     
 //     function setNextQuestions(){
 //         // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
