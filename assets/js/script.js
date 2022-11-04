@@ -40,7 +40,7 @@ const nextQueBtn = document.getElementById("next-ques-btn");
 const quizEnd = document.getElementById("quiz-end");
 
 // Result Section
-const quizResult = document.getElementById("quiz-result");
+const quizResultContainer = document.getElementById("quiz-result");
 const resultText = document.getElementById("result-text");
 const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
@@ -56,9 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
         playerNameTxt[i].innerHTML= userNameInput.value;
 
     }
-    // console.log(playerNameTxt);
 
-    let errorTxt = '';
+let errorTxt = '';
     // if username input is empty
 if (playerName == '') {
     errorTxt = "Please enter a Username";
@@ -77,17 +76,12 @@ if (errorTxt !== '') {
     localStorage.setItem("player", playerName);
     startQuiz.classList.add('hide');
     ruleBox.style.display = "block";
-}
+    }
 
-// Redirect user to rule box when next button is clicked
-//    if (ruleBox.style.display == "block" && playerName !== "") {
-//     ruleBox.style.display = "none";
-//    }else {
-    
-//   }
  });
 
  });
+
 // Redirect user to quiz level selection box when start quiz button is clicked
  startBtn.addEventListener("click", function(){
     ruleBox.style.display = "none";
@@ -109,8 +103,6 @@ backHome.addEventListener("click", function(){
 
 nextQueBtn.addEventListener("click", function() {
     nextQuestion();
-
-    // disableOptions();
     
 });
 
@@ -129,7 +121,7 @@ level1.addEventListener("click", function(){
  
      questionStart();
      interval = setInterval(countTime, 1000); 
-     endOfQuiz(); 
+    
 });
  
  // Medium level
@@ -217,10 +209,10 @@ function renderQuestions() {
 function optionClick(userAnswer) {
     if(userAnswer == allQuestions[questionNum].answer) {
         userScored++;
-        userScore.innerHTML = (`Score: ${userScored}/5`);
+        userScore.innerHTML = `${userScored}/5`;
 
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
-       
+
     }
     else {
         checkAnswers(userAnswer).style.backgroundColor="red"
@@ -236,7 +228,7 @@ function disableOptions() {
     }
 } 
 
-// Function check and return answer option, if answer is strictly equal to option index
+// Function check and return answer option, if answer is strictly equal to option's index
 function checkAnswers(answerId) {
     if(answerId === 0)
         return option1
@@ -265,14 +257,14 @@ function nextQuestion() {
 
     // Start timer
     timer = 0;  
-
+    
     // Increase question count on the click of next button
     questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
     // disableOptions();
 
-    if(questionsCounter.innerText  == 5 ) {
-        resultText.innerHTML = `End of Questions.`;
+    if(questionsCounter.innerText  == 5) {
+        quizEnd.innerHTML = `End of Questions.`;
         questionBox.style.display = "none";
         showResults();
     }
@@ -283,9 +275,11 @@ function nextQuestion() {
 
 // playerName.style.pointerEvent = "none";
 
-   //Code from jsfiddle.net/gautamz07/zotsc64e/
-  // Function to randomly display quiz with level of difficulty
+ /**
+ * Function to randomly display quiz with level of difficulty using the Math.random() to Swap an item with another
+*/
 function shuffle(questionsArray) {
+    //Code from jsfiddle.net/gautamz07/zotsc64e/
     let currentQuestionIndex = questionsArray.length,  randomise;
 
     // The conditional statement to shuffle the remaininig questions.
@@ -297,7 +291,7 @@ function shuffle(questionsArray) {
 
         // And swap it with the current .
         [questionsArray[currentQuestionIndex], questionsArray[randomise]] = [
-            questionsArray[randomise], questionsArray[currentQuestionIndex]];
+         questionsArray[randomise], questionsArray[currentQuestionIndex]];
     }
 
     return questionsArray;
@@ -305,18 +299,24 @@ function shuffle(questionsArray) {
 
 // Show result
 function showResults(){
-    quizResult.style.display = "block"; 
-    resultText.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
+    quizResultContainer.style.display = "block"; 
+    // resultText.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
 
+    if (userScored > 3){ 
+        //creating  new span element and passing the user score number and total question number
+        resultText.innerHTML = ` congrats!  You are a Star, ${playerName}. You scored ${userScored} out of 5. You're ready to move up a new level`;
+      }
+      else if(userScored > 1){  
+        resultText.innerHTML = ` Nice, ${playerName}. You scored ${userScored} out of 5`;
+        
+      }
+      else{ 
+        resultText.innerHTML = ` Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;
+        
+      }
 };
 
 
-
-// nextQueBtn.addEventListener("click", () => {
-           
-//     //  userScore.innerHTML = (`${userScored}/5`);
-//     // quizEnd.innerHTML = `Welldone. You scores ${userScored} out of 5`;
-//     quizEnd.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
 
 
 
