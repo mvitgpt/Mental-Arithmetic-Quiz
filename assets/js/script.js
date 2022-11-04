@@ -109,6 +109,9 @@ backHome.addEventListener("click", function(){
 
 nextQueBtn.addEventListener("click", function() {
     nextQuestion();
+
+    // disableOptions();
+    
 });
 
 // Redirect user to question page for each level when a level is selected 
@@ -125,7 +128,8 @@ level1.addEventListener("click", function(){
      levelTitle.innerHTML = "Level 1"; 
  
      questionStart();
-     interval = setInterval(countTime, 1000);  
+     interval = setInterval(countTime, 1000); 
+     endOfQuiz(); 
 });
  
  // Medium level
@@ -267,17 +271,14 @@ function nextQuestion() {
 
     // disableOptions();
 
-    if(questionsCounter.innerText > 4 ) {
-        quizEnd.innerHTML = `End of Questions.`
-
-    }else{
-        nextQueBtn.addEventListener("click", () => {
-            quizResult.style.display = "block"; 
-        }) 
-    
+    if(questionsCounter.innerText  == 5 ) {
+        resultText.innerHTML = `End of Questions.`;
+        questionBox.style.display = "none";
+        showResults();
     }
 
-}
+};
+
 
 
 // playerName.style.pointerEvent = "none";
@@ -304,12 +305,18 @@ function shuffle(questionsArray) {
 
 // Show result
 function showResults(){
-    quizEnd.innerHTML = `End of Questions.`
+    quizResult.style.display = "block"; 
+    resultText.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
+
 };
 
 
 
-
+// nextQueBtn.addEventListener("click", () => {
+           
+//     //  userScore.innerHTML = (`${userScored}/5`);
+//     // quizEnd.innerHTML = `Welldone. You scores ${userScored} out of 5`;
+//     quizEnd.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
 
 
 
