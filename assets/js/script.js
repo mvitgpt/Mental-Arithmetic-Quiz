@@ -113,21 +113,26 @@ nextQueBtn.addEventListener("click", function() {
 // Redirect user to question page for each level when a level is selected 
 let difficultyLevel = "";
 
-playerName = localStorage.getItem("player");
+// playerName = localStorage.getItem("player");
+ const levelTitle = document.getElementById("level");
 
  // Easy level
+ window.addEventListener('DOMContentLoaded', () => {  
 level1.addEventListener("click", function(){
      selection.style.display = "none";      
-     difficultyLevel = "easy"; 
+     difficultyLevel = "easy";
+     levelTitle.innerHTML = "Level 1"; 
  
      questionStart();
      interval = setInterval(countTime, 1000);
      
 });
+}) 
  // Medium level
 level2.addEventListener("click", function(){
      selection.style.display = "none";
      difficultyLevel = "medium"; 
+     levelTitle.innerHTML = "Level 2";
  
      questionStart();
      interval = setInterval(countTime, 1000);
@@ -136,6 +141,7 @@ level2.addEventListener("click", function(){
 level3.addEventListener("click", function(){
      selection.style.display = "none";
      difficultyLevel = "hard"; 
+     levelTitle.innerHTML = "Level 3";
  
      questionStart();
      interval = setInterval(countTime, 1000);
@@ -171,6 +177,8 @@ let allQuestions = [];
 function questionStart() {
     // Show questions box
     questionBox.style.display = "block"; 
+    playerName = localStorage.getItem("player");
+
 
     // Code adapted from jsfiddle.net
    
