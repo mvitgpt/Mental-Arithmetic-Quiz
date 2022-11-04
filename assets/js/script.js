@@ -158,19 +158,12 @@ let countTime = ()=> {
     } 
 };
 
-
-
-    // clearInterval(interval);
-    
-
-
 // Set the variables for score, question number, current question and all questions
 let userScored = 0;
 userScore.innerHTML = (`Score: ${userScored}/5`);
 let questionNum = 0;
 
 let currentQuestion;
-
 
 let allQuestions = [];
 
@@ -180,7 +173,6 @@ function questionStart() {
     // Show questions box
     questionBox.style.display = "block"; 
     playerName = localStorage.getItem("player");
-
 
     // Code adapted from jsfiddle.net
    
@@ -193,7 +185,6 @@ function questionStart() {
     }
 
     renderQuestions();
-    
 };
 
 // Render first question
@@ -241,7 +232,10 @@ function optionClick(userAnswer) {
 //     }
 //   }
 
-// Function check and return answer option, if answer is strictly equal to option's index. Stops displaying the wrong answers the wrong questions
+
+/**  Function check and return answer option, if answer is strictly equal to option's index. 
+*Stops displaying the wrong answers the wrong questions
+*/
 function checkAnswers(answerId) {
     if(answerId === 0)
         return option1
@@ -274,8 +268,6 @@ function nextQuestion() {
     // Increase question count on the click of next button
     questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
-    // disableOptions();
-
   // Count the total answer 
     if(questionsCounter.innerText >= 5) {
         console.log("finish quiz");
@@ -286,9 +278,6 @@ function nextQuestion() {
     }
 
 };
-
-// questionsCounter.innerText
-
 
 // playerName.style.pointerEvent = "none";
 
@@ -324,20 +313,20 @@ function showResults(){
     if (userScored > 3){ 
         //creating template literals and passing the user name,score  and total questions 
         icon.innerHTML = `<i class="far fa-star" aria-hidden="true" id="star"></i>`;
-        resultText.innerHTML = ` congrats!  You are a Star, ${playerName}. You scored ${userScored} out of 5. You're ready to move up a new level`;
+        resultText.innerHTML = ` congrats! ${playerName}.You are a Star, You scored ${userScored} out of 5. You're ready to move up a new level`;
       }
 
       else if(userScored > 1){  
-        resultText.innerHTML = ` Nice, ${playerName}. You scored ${userScored} out of 5`;
+        resultText.innerHTML = `Nice, ${playerName}. You scored ${userScored} out of 5`;
         
       }
       else{ 
-        resultText.innerHTML = ` Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;   
+        resultText.innerHTML = `Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;   
     }
 };
-// Restart quiz
+
+   // Restart quiz page
 replayQuiz.addEventListener("click", function(){
-    // ruleBox.style.display = "block";
     quizResultContainer.style.display = "none"; 
     window.location.reload();
 
@@ -363,7 +352,6 @@ replayQuiz.addEventListener("click", function(){
 //     options[i].classList.remove();
 // }
 
-
 //  // Set Questions Counter and display random Questions
 //     function makeRandomQuestions(){
 //      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
@@ -372,7 +360,6 @@ replayQuiz.addEventListener("click", function(){
 //     currentQuestion = quiz[randomQuestions];
 //     quiz.splice(randomQuestions, 1);
 
-    
 //     function setNextQuestions(){
 //         // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
 //     };
@@ -386,7 +373,6 @@ replayQuiz.addEventListener("click", function(){
 //     //     }
 //     //     questionBox.style.backgroundColor = "green";
 //     // }
-
 
     //  let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectLevel);
     //  selectLevel = filteredQuestionsByDifficulty;
@@ -420,16 +406,8 @@ replayQuiz.addEventListener("click", function(){
 //     });
 
 //       window.onload = ()=> {
-//     // Function to randomly display quiz with level of diffivulty
-//     function difficultyL1() {
-//         quiz = questionsLevel1;
-//         difficultyEasy.addEventListener("click", () =>{
-//         selectedLevel = document.getElementsByClassName("difficulty");
-
-// // let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
 
 //     });
-// }
 
 // // function runQuiz() {
 // //     startQuiz.classList.add('hide');
