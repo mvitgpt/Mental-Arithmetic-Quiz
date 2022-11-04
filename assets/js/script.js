@@ -158,6 +158,12 @@ let countTime = ()=> {
     } 
 };
 
+
+
+    // clearInterval(interval);
+    
+
+
 // Set the variables for score, question number, current question and all questions
 let userScored = 0;
 userScore.innerHTML = (`Score: ${userScored}/5`);
@@ -217,18 +223,25 @@ function optionClick(userAnswer) {
     else {
         checkAnswers(userAnswer).style.backgroundColor="red"
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green";
-        
     }
     
 };
+// Disable the option button
+// function disableOptions() {
+//     for(let btn of optionBtn) {
+//         btn.disabled = true;
+//     }
+// } 
 
-function disableOptions() {
-    for(let btn of optionBtn) {
-        btn.disabled = !optionBtn.disabled;
-    }
-} 
+// function removeAllOptions() {
+    
+//     for (let btn of optionBtn) {
+//       btn.classList.remove(active);
+//         // btn.style.display = "none"
+//     }
+//   }
 
-// Function check and return answer option, if answer is strictly equal to option's index
+// Function check and return answer option, if answer is strictly equal to option's index. Stops displaying the wrong answers the wrong questions
 function checkAnswers(answerId) {
     if(answerId === 0)
         return option1
@@ -263,14 +276,18 @@ function nextQuestion() {
 
     // disableOptions();
 
-    if(questionsCounter.innerText  == 5) {
-        quizEnd.innerHTML = `End of Questions.`;
+  // Count the total answer 
+    if(questionsCounter.innerText >= 5) {
+        console.log("finish quiz");
+        
+        // quizEnd.innerText = `End of Questions.`;
         questionBox.style.display = "none";
         showResults();
     }
 
 };
 
+// questionsCounter.innerText
 
 
 // playerName.style.pointerEvent = "none";
@@ -299,27 +316,33 @@ function shuffle(questionsArray) {
 
 // Show result
 function showResults(){
+    
     quizResultContainer.style.display = "block"; 
-    // resultText.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
+   
     const icon = document.getElementById("icon");
     
     if (userScored > 3){ 
         //creating template literals and passing the user name,score  and total questions 
         icon.innerHTML = `<i class="far fa-star" aria-hidden="true" id="star"></i>`;
         resultText.innerHTML = ` congrats!  You are a Star, ${playerName}. You scored ${userScored} out of 5. You're ready to move up a new level`;
-
       }
-
 
       else if(userScored > 1){  
         resultText.innerHTML = ` Nice, ${playerName}. You scored ${userScored} out of 5`;
         
       }
       else{ 
-        resultText.innerHTML = ` Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;
-        
+        resultText.innerHTML = ` Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;   
     }
 };
+// Restart quiz
+replayQuiz.addEventListener("click", function(){
+    // ruleBox.style.display = "block";
+    quizResultContainer.style.display = "none"; 
+    window.location.reload();
+
+    clearInterval(interval);
+ });
 
 
 
@@ -334,41 +357,12 @@ function showResults(){
 
 
 
-// function selectOptions(){            
-//     optionBtn[i].addEventListener("click", function() { 
-//             optionBtn[i].classList.add("active");
-//             if(currentQuestion.answer === currentQuestion.options[i]){
-//                 options[i].id = "correct";
-//                 userScored++;
-                
-//             } else{
-//                 questionsText.innerHTML = `Answer: ${currentQuestion.answer}`;
-//                 answer[i].id = "wrong";
-//                 userScored += 0;
-//             }
-//             clearInterval(interval);
-//         });  
-    
 
+// } nextQueBtn.click();
+// for(let i = 0; i < options.length; i++){
+//     options[i].classList.remove();
 // }
 
-
-//     // Conditional statement to execute difficulty Level Questions
-//     function displayLevelQuestions(selectDifficultyLevel) {
-//     let difficulty = ("easy, medium, hard");
-
-//     if (selectDifficultyLevel === 'easy') {
-//         quiz = questionsLevel1;
-//         showDifficultyL1Questions(difficulty);
-//     } else if (selectDifficultyLevel === "medium") {
-//         quiz= questionsLevel2;
-//         showDifficultyL2Questions(difficulty);
-//     } else {
-//         selectDifficultyLevel === "hard";
-//         quiz= questionsLevel3;
-//         showDifficultyL2Questions(difficulty);
-//     } 
-// }    
 
 //  // Set Questions Counter and display random Questions
 //     function makeRandomQuestions(){
@@ -394,7 +388,6 @@ function showResults(){
 //     // }
 
 
-
     //  let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectLevel);
     //  selectLevel = filteredQuestionsByDifficulty;
 
@@ -406,15 +399,6 @@ function showResults(){
     //     console.log(randomQuestions);
     // }
 
-//     // Function that loops through questions then Push questions into the selectedQuestions Array
-//     function availableQuestions() {
-//         // const totalQuestions = quiz.length
-//         for(let i = 0; i< quiz.length; i++) {
-//             selectedQuestions.push(quiz[i]) 
-//         }
-//         console.log(selectedQuestions);
-//     }
-
 //     // Set Questions Counter and display random Questions
 //     function selectRandomQuestions(){
 //         // Set Question counter
@@ -424,22 +408,14 @@ function showResults(){
 //         const questionsIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
 //         currentQuestion = questionsIndex;
 //         questionsText.innerHTML = currentQuestion.questions-txt;
-//         console.log(questionsIndex);
-
-
-//         // Set the options, loop through options Array and push it into the availabeOptions Array 
-//         const optionLen = currentQuestion.options.length;
-//         for(let i = 0; i < optionLen; i++){
-//             availableOptions.push(i);
-//         }
-
+//         console.log(questionsIndex)
 
 //     nextQueBtn.addEventListener("click", function() {
 //         if (questionsCounter === quiz.length){
 //             console.log("finish quiz");
 //         }
 //         else{
-//             selectNewQuestions();  
+//             showResult();  
 //         }
 //     });
 
