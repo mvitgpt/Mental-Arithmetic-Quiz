@@ -301,11 +301,16 @@ function shuffle(questionsArray) {
 function showResults(){
     quizResultContainer.style.display = "block"; 
     // resultText.innerHTML = `Welldone, ${playerName}. You scored ${userScored} out of 5`;
-
+    const icon = document.getElementById("icon");
+    
     if (userScored > 3){ 
-        //creating  new span element and passing the user score number and total question number
+        //creating template literals and passing the user name,score  and total questions 
+        icon.innerHTML = `<i class="far fa-star" aria-hidden="true" id="star"></i>`;
         resultText.innerHTML = ` congrats!  You are a Star, ${playerName}. You scored ${userScored} out of 5. You're ready to move up a new level`;
+
       }
+
+
       else if(userScored > 1){  
         resultText.innerHTML = ` Nice, ${playerName}. You scored ${userScored} out of 5`;
         
@@ -313,7 +318,7 @@ function showResults(){
       else{ 
         resultText.innerHTML = ` Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;
         
-      }
+    }
 };
 
 
