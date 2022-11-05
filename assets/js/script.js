@@ -298,7 +298,7 @@ function nextQuestion() {
         // resultBtn.style.pointerEvent = "none"
         resultBtn.addEventListener("click", () => {
             // nextQueBtn.style.display = 'none'
-            resultBtn.style.pointerEvent = "none"
+            // resultBtn.style.pointerEvent = "none"
             
         });
     };   
@@ -378,7 +378,7 @@ replayQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 
     window.location.reload();
 
-    
+
     // window.addEventListener('DOMContentLoaded', () => {  
     // $("ruleBox").reload(document.index.html + "ruleBox");
     // })
