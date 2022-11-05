@@ -460,11 +460,11 @@ input {
     text-align: center;
 }
 
-.quiz-end {
+.reset-quiz {
     display: flex;
 }
 
-.quiz-end button {
+.reset-quiz button {
     font-size: 1rem;
     font-weight: 500;
     width: 7rem;

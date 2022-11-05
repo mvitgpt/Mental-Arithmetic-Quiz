@@ -132,7 +132,6 @@
         </div>
         <div class="questions-counter-container" id="'questions-counter-container">
             <div class="questions-counter">
-                <!-- Question <span id="question-count">1</span> of 5 -->
                 Question <span id="questions-counter">1</span> of 5
             </div>
         </div>
@@ -157,19 +156,19 @@
             <button data-type="continue" class="next-ques-btn btn--white" id="next-ques-btn">Next
                 Question</button>
         </div>
-        <div id="quiz-end"></div>
+        <div id="quiz-end" class="quiz-end"></div>
     </section>
 
     <!------------------------- Quiz Result Box -->
     <section class="quiz-result hom-box hide" id="quiz-result">
         <h2>Quiz Result</h2>
         <div class="icon" id="icon">
-            <i class="far fa-star" aria-hidden="true" id="star"></i>
+            <!-- <i class="far fa-star" aria-hidden="true" id="star"></i> -->
         </div>
         <div class="result-text" id="result-text">
             <!-- <p>Great job, you scored <span></span> out of 5. You're a star!</p> -->
         </div>
-        <div class="quiz-end">
+        <div id="reset-quiz" class="reset-quiz">
             <button data-type="play" class="replay" id="replay">Play Again</button>
             <button data-type="quit" class="quit" id="quit">Quit Quiz </button>
         </div>

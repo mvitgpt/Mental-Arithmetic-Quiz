@@ -42,6 +42,7 @@ const quizEnd = document.getElementById("quiz-end");
 // Result Section
 const quizResultContainer = document.getElementById("quiz-result");
 const resultText = document.getElementById("result-text");
+const resetQuiz = document.getElementById("reset-quiz");
 const replayQuiz = document.getElementById("replay");
 const quitQuiz = document.getElementById("quit");
 
@@ -101,10 +102,6 @@ backHome.addEventListener("click", function(){
     startQuiz.style.display = "block";
 });
 
-nextQueBtn.addEventListener("click", function() {
-    nextQuestion();
-    
-});
 
 // Redirect user to question page for each level when a level is selected 
 let difficultyLevel = "";
@@ -113,7 +110,8 @@ let difficultyLevel = "";
  const levelTitle = document.getElementById("level");
 
  // Easy level
- window.addEventListener('DOMContentLoaded', () => {  
+window.addEventListener('DOMContentLoaded', () => {  
+
 level1.addEventListener("click", function(){
      selection.style.display = "none";      
      difficultyLevel = "easy";
@@ -133,6 +131,7 @@ level2.addEventListener("click", function(){
      questionStart();
      interval = setInterval(countTime, 1000);
 });
+
  // Hard level
 level3.addEventListener("click", function(){
      selection.style.display = "none";
@@ -142,7 +141,15 @@ level3.addEventListener("click", function(){
      questionStart();
      interval = setInterval(countTime, 1000);
 });
-});    
+
+});   
+
+
+nextQueBtn.addEventListener("click", function() {
+    nextQuestion();
+    // endOfQuestions();
+    
+});
 
 //  Set function for time counter     
 let timer = 0;
@@ -269,14 +276,19 @@ function nextQuestion() {
     questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
   // Count the total answer 
-    if(questionsCounter.innerText >= 5) {
+    
+    if(questionsCounter.innerText.length-1) {
         console.log("finish quiz");
-        
-        // quizEnd.innerText = `End of Questions.`;
+    
+        quizEnd.innerHTML = `End of Questions.`;
         questionBox.style.display = "none";
         showResults();
     }
 
+
+
+    // endOfQuestions();
+    // // showResults();
 };
 
 // playerName.style.pointerEvent = "none";
@@ -303,8 +315,31 @@ function shuffle(questionsArray) {
     return questionsArray;
 };
 
+
+
+// function endOfQuestions(){
+//     let questionsCounter = 0;
+
+//     if(questionsCounter === 5) {
+             
+//         for(let i=0; i<options.length; i++) {
+//             options[i].style.display = "none";
+ 
+//         }
+//         // nextQueBtn.style.display = "none"; 
+//         showResults();
+// }
+ 
+// }
+
+// endOfQuestions();
+// showResults();
+
+
+
 // Show result
 function showResults(){
+    // endOfQuestions();
     
     quizResultContainer.style.display = "block"; 
    
@@ -329,11 +364,19 @@ function showResults(){
 replayQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 
     window.location.reload();
+    // window.addEventListener('DOMContentLoaded', () => {  
+    // $("ruleBox").reload(document.index.html + "ruleBox");
+    // })
+    
 
     clearInterval(interval);
  });
 
+ quitQuiz.addEventListener("click", function(){
+    window.location.reload();
 
+    // clearInterval(interval);
+ });
 
 
 
@@ -353,8 +396,6 @@ replayQuiz.addEventListener("click", function(){
 // }
 
 //  // Set Questions Counter and display random Questions
-//     function makeRandomQuestions(){
-//      questionsCounter.innerHTML = (`Question ${questionsCounter} of 10`);
 
 //     let randomQuestions = Math.floor(Math.random() * quiz.length );
 //     currentQuestion = quiz[randomQuestions];
@@ -382,14 +423,8 @@ replayQuiz.addEventListener("click", function(){
     //     const randomQuestions = selectedQuestions[Math.floor(Math.random() * selectedQuestions.length)];
     //     currentQuestion = randomQuestions;
     //     questionsText.innerHTML = currentQuestion.questions-txt;
-    //     console.log(randomQuestions);
+  
     // }
-
-//     // Set Questions Counter and display random Questions
-//     function selectRandomQuestions(){
-//         // Set Question counter
-//         questionsCounter.innerHTML = "Question " + (questionsCounterIndex + 1) + " of " +
-//         quiz.length;
 //         // Set Question text
 //         const questionsIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
 //         currentQuestion = questionsIndex;
@@ -407,11 +442,8 @@ replayQuiz.addEventListener("click", function(){
 
 //       window.onload = ()=> {
 
-//     });
-
 // // function runQuiz() {
 // //     startQuiz.classList.add('hide');
-// //     ruleBox.classList.add.remove('hide');
 // //     selection.classList.remove('hide')
 // // };
 //  // homeBtn.onclick = ()=>{
