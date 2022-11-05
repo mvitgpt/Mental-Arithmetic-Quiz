@@ -38,6 +38,7 @@ const optionBtn = document.getElementsByClassName("option-btn");
 // Next question button
 const nextQueBtn = document.getElementById("next-ques-btn");
 const quizEnd = document.getElementById("quiz-end");
+const resultBtn = document.getElementById("result-btn");
 
 // Result Section
 const quizResultContainer = document.getElementById("quiz-result");
@@ -211,6 +212,7 @@ function renderQuestions() {
 
 // Function to check if user answer is coreect, option button changes to green and vice visa
 function optionClick(userAnswer) {
+    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
     if(userAnswer == allQuestions[questionNum].answer) {
         userScored++;
         userScore.innerHTML = `${userScored}/5`;
@@ -244,6 +246,7 @@ function optionClick(userAnswer) {
 *Stops displaying the wrong answers the wrong questions
 */
 function checkAnswers(answerId) {
+
     if(answerId === 0)
         return option1
     else if(answerId === 1)
@@ -253,6 +256,7 @@ function checkAnswers(answerId) {
     else if(answerId === 3)
         return option4
 };
+
 
 // Function to display next question and answer options 
 function nextQuestion() {
@@ -273,23 +277,39 @@ function nextQuestion() {
     timer = 0;  
     
     // Increase question count on the click of next button
-    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+//    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
-  // Count the total answer 
+  // Count the total questions
     
-    if(questionsCounter.innerText.length-1) {
-        console.log("finish quiz");
-    
+  console.log(questionsCounter.innerText, "questionsCounter")
+    if(questionsCounter.innerText == 5) {
+        // console.log("finish quiz");
+         console.log(quizEnd, "quizend")
         quizEnd.innerHTML = `End of Questions.`;
-        questionBox.style.display = "none";
-        showResults();
-    }
+        resultBtn.style.display = "block"
+        
+        //  
+         
+         questionBox.style.display = "none";
+         showResults();
 
+    }else{ 
 
-
-    // endOfQuestions();
-    // // showResults();
+        resultBtn.style.display = "block"
+        // resultBtn.style.pointerEvent = "none"
+        resultBtn.addEventListener("click", () => {
+            // nextQueBtn.style.display = 'none'
+            resultBtn.style.pointerEvent = "none"
+            
+        });
+       // 
+     
+        // questionBox.style.display = "none";
+            // nextQueBtn.style.display = "none"; 
+    };   
+    
 };
+
 
 // playerName.style.pointerEvent = "none";
 
@@ -332,8 +352,6 @@ function shuffle(questionsArray) {
  
 // }
 
-// endOfQuestions();
-// showResults();
 
 
 
