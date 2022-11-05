@@ -280,7 +280,6 @@ function nextQuestion() {
 //    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
 
   // Count the total questions
-    
   console.log(questionsCounter.innerText, "questionsCounter")
     if(questionsCounter.innerText == 5) {
         // console.log("finish quiz");
@@ -302,10 +301,6 @@ function nextQuestion() {
             resultBtn.style.pointerEvent = "none"
             
         });
-       // 
-     
-        // questionBox.style.display = "none";
-            // nextQueBtn.style.display = "none"; 
     };   
     
 };
@@ -382,6 +377,8 @@ function showResults(){
 replayQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 
     window.location.reload();
+
+    
     // window.addEventListener('DOMContentLoaded', () => {  
     // $("ruleBox").reload(document.index.html + "ruleBox");
     // })
@@ -391,6 +388,7 @@ replayQuiz.addEventListener("click", function(){
  });
 
  quitQuiz.addEventListener("click", function(){
+    quizResultContainer.style.display = "none"; 
     window.location.reload();
 
     // clearInterval(interval);
