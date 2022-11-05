@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
 
 /* --------- Global style */
@@ -113,13 +112,26 @@ color: #050505;
     margin-top: 1rem;
 }
 
-input {
+input[type = 'text'] {
     width: 12rem;
     height: 3rem;
     border-radius: 8px;
     margin-bottom: 2rem;
     border: 1px solid #3F13A4;
+    font-size: 1.1rem;
+    text-align: center;
 }
+
+input[type = 'text']:hover, 
+input[type = 'text']:focus {
+    background: rgba(118, 69, 223, 0.168);
+    border: none;
+}
+
+label {
+    font-size: 1.2rem;
+    background: transparent;
+}    
 
 .initiate-quiz-btn {
     text-align: center;
