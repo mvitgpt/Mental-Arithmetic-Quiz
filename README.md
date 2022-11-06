@@ -2,7 +2,7 @@
 
 View the online quiz here [Mental Arithmetic Quiz]()
 
-Welcome to Mental Arithmetic Quiz. Mental Arithmetic Quiz is an online quiz which test your 
+Welcome to Mental Arithmetic Quiz. Mental Arithmetic Quiz is an online quiz where users can take part in randomly generated mental arithmetic quiz with the aim for learning or just a great way to exercise the brain and in so doing keeping the mind sharp.
 
 This quiz is targeted towards individuals
 
@@ -49,10 +49,40 @@ This quiz is targeted towards individuals
 # 3. User Experience
 
 ## Site Goals
+   + To be able to view site on range of device sizes.
 
+   + To allow the user to take part in a randomly generated mental arithmetic quiz and specifying the rules for the quiz.
+
+   + To provide a score for the quiz within the allotted time.
+
+   + To allow a fun and enjoyable user experience which will entice users to have multiple sessions.
 
 ## User Stories
++  First Time Visitor Goal:
 
+   + I want to sharpen my mental arithmetic skills.
+
+   + I want a fun way to keep my mind sharp and to exercise my brain.
+
+   + I want the rules of the quiz to be clearly stated.
+
+   + I want the quiz to be challenging moving up and tackling the next level.
+
++ Returning Visitor Goal:
+
+   + I want to be able to improve my score.
+
+   + I want to be able answer questions in record time.
+
+   + I want to be able to challenge myself answering questions in all level.
+
+   + I want to be able to be in contact and make suggestions for improvement.
+
++  Frequent Visitor Goal:
+
+   + I want to see newly generated questions to answer.
+
+   + I want to see enhancement of user experience.
 
 ## Design Structure 
 
