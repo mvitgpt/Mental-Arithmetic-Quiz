@@ -43,7 +43,7 @@ body {
     width: 100%;
     margin-top: 2rem;
     text-align: justify;
-    }
+}
 
 /* .header-icon .game-rule-icon {
 background-color:#FAFAFA;
@@ -367,6 +367,24 @@ label {
  #user-score {
     color: #3F13A4;
  }
+
+ #level {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0.5rem 0 1rem 0;
+ }
+
+ .questions-counter-container {
+    color: #3F13A4;
+    font-weight: 600; 
+    font-size: 1.1rem;
+    margin: 0 1rem 1.5rem 1rem;
+}
+
+ .question-box-area .questions-txt {
+    font-size: 1.2rem;
+    font-weight: 600;  
+}
  
 .option-buttons {
     display: grid;
@@ -395,6 +413,7 @@ label {
  .option-btn:hover {
      border-color: #050505;
  }
+
  .option-btn .active {
     background: #6B35E8;
  }
@@ -409,19 +428,6 @@ label {
      color: #FAFAFA;
  }
 
- #level {
-    font-size: 1.2rem;
-    font-weight: 800;
-    margin: 0.5rem 0 1rem 0;
- }
-
- .questions-counter-container {
-     color: #3F13A4;
-     font-weight: 600; 
-     font-size: 1.1rem;
-     margin: 0 1rem 1.5rem 1rem;
-} 
- 
 /* .questions-counter p {
      display: flex;
      font-weight: 700; 
@@ -430,18 +436,13 @@ label {
     margin-bottom: 2rem;
 } */
 
-.question-box-area .questions-txt {
-    font-size: 1.3rem;
-    font-weight: 700;  
-}
-
 .next-question-container {
     border-top: 1px solid #595959;
     margin-bottom: 1rem;
     line-height: 1.2rem;
 }
 
-.next-question-container button {
+.next-ques-btn {
     font-size: 1.1rem;
     font-weight: 500;
     width: 8.5rem;
@@ -454,29 +455,29 @@ label {
     margin: 0 auto;
     margin-top: 1rem;
     cursor: pointer;
-};
+}
 
-.next-question-container button:hover {
+.next-ques-btn:hover {
     transform: scale(1.1);
     transition: transform 250ms;
     box-shadow: o 3px 15px rgba(67, 41, 139, 0.833);
-};
+}
 
-.result-btn {
+ .result-btn {
     font-size: 1.1rem;
     font-weight: 500;
     width: 8.5rem;
      height: 3rem;
     border-radius: 5px;
     border: none;
-    /* display:inline-flex; */
+    display:inline-flex;
     color: #FAFAFA;
     background-color: #3F13A4;
     margin: 0 auto;
     margin-top: 1rem;
     cursor: pointer; 
-    /* display: none; */
-}
+    display: none; 
+} 
 
 .result-btn:hover{
     transform: scale(1.1);
@@ -493,12 +494,13 @@ label {
     flex-direction: column;
     justify-content: center;
     justify-items: center;
-    /* display: none; */
+    display: none;
     max-width: 80%;
     height: 70vh;
     margin: 5rem auto;
     border-style: ridge
 }
+
 .quiz-result h2 {
     margin-top: 1.5rem;
     color: #3F13A4;
@@ -516,11 +518,11 @@ label {
 .quiz-result .icon:hover {
     width: 80px;
     height: 120px;
-    transform: rotate(230deg);
-  }
+    transform: rotate(160deg);
+ }
 
 .result-text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0 2rem 4rem 2rem;
     text-align: center;
     display: flex;
@@ -552,7 +554,7 @@ label {
     transform: scale(1.1);
     transition: transform 250ms;
     box-shadow: o 3px 15px rgba(67, 41, 139, 0.833);
-};
+}
 
 footer {
     color: #050505;

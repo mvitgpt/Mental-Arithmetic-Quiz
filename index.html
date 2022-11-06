@@ -20,19 +20,21 @@
         <!-- <div class="game-rule-icon" id="game-rule-icon">
             <i class="fas fa-info" style="display: block;"></i>
         </div> -->
-        <div class="social-icon"> 
-                <a href="https://github.com/Shida18719" target="_blank" rel="noopener" aria-label="visit our Face book page (opens in a new tab)">
-                    <i class="fab fa-github"></i></a>
-            
-                <a href="https://www.linkedin.com/in/rashidat-adekoya-668843245/" target="_blank" rel="noopener" aria-label="visit our Face book page (opens in a new tab)">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+        <div class="social-icon">
+            <a href="https://github.com/Shida18719" target="_blank" rel="noopener"
+                aria-label="visit our Face book page (opens in a new tab)">
+                <i class="fab fa-github"></i></a>
+
+            <a href="https://www.linkedin.com/in/rashidat-adekoya-668843245/" target="_blank" rel="noopener"
+                aria-label="visit our Face book page (opens in a new tab)">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
     </div>
 
     <div class="start-quiz-home home-box" id="start-quiz-home">
         <header>
-           
+
             <h1 class="heading">
                 <img class="logo" src="assets/images/mental_logo.webp" alt="logo"> Mental Arithmetic Quiz
             </h1>
@@ -114,7 +116,7 @@
                 <i class="far fa-user"></i>
                 <h3 id="player-name" class="player-name"></h3>
             </div>
-            
+
             <div id="time">
                 <div class="timer-icon">
                     <i class="fas fa-stopwatch" aria-label="Timer Icon" style="display: block;"></i>
@@ -139,14 +141,18 @@
         </div>`
 
         <div class="option-buttons" id="option-buttons">
-             <!------------ set onclick attribute to all available options -->
-            <button class="option-btn" id="option1" aria-label="Anwser Option Button 1" onclick="optionClick(0)"></button>
-            <button class="option-btn" id="option2" aria-label="Anwser Option Button 2"  onclick="optionClick(1)"></button>
-            <button class="option-btn" id="option3" aria-label="Anwser Option Button 3"  onclick="optionClick(2)"></button>
-            <button class="option-btn" id="option4" aria-label="Anwser Option Button 4"  onclick="optionClick(3)"></button>
+            <!------------ set onclick attribute to all available options -->
+            <button class="option-btn" id="option1" aria-label="Anwser Option Button 1"
+                onclick="optionClick(0)"></button>
+            <button class="option-btn" id="option2" aria-label="Anwser Option Button 2"
+                onclick="optionClick(1)"></button>
+            <button class="option-btn" id="option3" aria-label="Anwser Option Button 3"
+                onclick="optionClick(2)"></button>
+            <button class="option-btn" id="option4" aria-label="Anwser Option Button 4"
+                onclick="optionClick(3)"></button>
         </div>
         <div id="correct"></div>
-        <div id="wrong"></div>
+        <div id="incorrect"></div>
         <!-- <div class="questions-counter">
             <div class="questions-counter-txt">
                 <p>Question <span> 2 of 5 </span></p>
@@ -155,9 +161,9 @@
         <div class="next-question-container">
             <button data-type="continue" class="next-ques-btn btn--white" id="next-ques-btn">Next
                 Question</button>
-        </div>
-        <div id="quiz-end" class="quiz-end">
-        <button data-type="result" class="result-btn" id="result-btn">Result</button>
+
+            <div id="quiz-end" class="quiz-end"></div>
+            <button data-type="result" class="result-btn" id="result-btn">Result</button>
         </div>
     </section>
 
@@ -186,4 +192,5 @@
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
