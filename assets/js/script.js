@@ -45,7 +45,7 @@ const quizResultContainer = document.getElementById("quiz-result");
 const resultText = document.getElementById("result-text");
 const resetQuiz = document.getElementById("reset-quiz");
 const replayQuiz = document.getElementById("replay");
-const quitQuiz = document.getElementById("quit");
+// const quitQuiz = document.getElementById("quit");
 
 /** Function to Check UserName input and display error message if invalid or empty
     User name display when the next button is clicked (onload) 
@@ -147,9 +147,7 @@ level3.addEventListener("click", function(){
 
 
 nextQueBtn.addEventListener("click", function() {
-    nextQuestion();
-    // endOfQuestions();
-    
+    nextQuestion(); 
 });
 
 //  Set function for time counter     
@@ -166,7 +164,7 @@ let countTime = ()=> {
     } 
 };
 
-// Set the variables for score, question number, current question and all questions
+// Set the variables for user score, question number and all questions in the array
 let userScored = 0;
 userScore.innerHTML = (`Score: ${userScored}/5`);
 let questionNum = 0;
@@ -212,9 +210,9 @@ function renderQuestions() {
 
 // Function to check if user answer is coreect, option button changes to green and vice visa
 function optionClick(userAnswer) {
-    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+    // questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
     if(userAnswer == allQuestions[questionNum].answer) {
-        userScored++;
+        ++userScored;
         userScore.innerHTML = `${userScored}/5`;
 
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
@@ -226,21 +224,6 @@ function optionClick(userAnswer) {
     }
     
 };
-// Disable the option button
-// function disableOptions() {
-//     for(let btn of optionBtn) {
-//         btn.disabled = true;
-//     }
-// } 
-
-// function removeAllOptions() {
-    
-//     for (let btn of optionBtn) {
-//       btn.classList.remove(active);
-//         // btn.style.display = "none"
-//     }
-//   }
-
 
 /**  Function check and return answer option, if answer is strictly equal to option's index. 
 *Stops displaying the wrong answers the wrong questions
@@ -261,52 +244,35 @@ function checkAnswers(answerId) {
 // Function to display next question and answer options 
 function nextQuestion() {
     questionNum+=1;
-    questionsText.innerHTML = allQuestions[questionNum].question;
-
-    option1.innerHTML = allQuestions[questionNum].options[0];
-    option2.innerHTML = allQuestions[questionNum].options[1];
-    option3.innerHTML = allQuestions[questionNum].options[2];
-    option4.innerHTML = allQuestions[questionNum].options[3];
-
-    option1.style.backgroundColor = "#3f13a4";
-    option2.style.backgroundColor = "#3f13a4";
-    option3.style.backgroundColor = "#3f13a4";
-    option4.style.backgroundColor = "#3f13a4";
-
-    // Start timer
-    timer = 0;  
-    
-    // Increase question count on the click of next button
-//    questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
-
-  // Count the total questions
-  console.log(questionsCounter.innerText, "questionsCounter")
-    if(questionsCounter.innerText == 5) {
-        // console.log("finish quiz");
-         console.log(quizEnd, "quizend")
+     if(questionNum == 5){
+        // console.log(quizEnd, "quizend")
         quizEnd.innerHTML = `End of Questions.`;
-        resultBtn.style.display = "block"
-        
-        //  
-         
-         questionBox.style.display = "none";
-         showResults();
+        resultBtn.style.display = "block";
+        nextQueBtn.style.display = "none";
 
-    }else{ 
-
-        resultBtn.style.display = "block"
-        // resultBtn.style.pointerEvent = "none"
-        resultBtn.addEventListener("click", () => {
-            // nextQueBtn.style.display = 'none'
-            // resultBtn.style.pointerEvent = "none"
-            
-        });
-    };   
+     }else {
+        questionsText.innerHTML = allQuestions[questionNum].question;
+        questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+        option1.innerHTML = allQuestions[questionNum].options[0];
+        option2.innerHTML = allQuestions[questionNum].options[1];
+        option3.innerHTML = allQuestions[questionNum].options[2];
+        option4.innerHTML = allQuestions[questionNum].options[3];
     
+        option1.style.backgroundColor = "#3f13a4";
+        option2.style.backgroundColor = "#3f13a4";
+        option3.style.backgroundColor = "#3f13a4";
+        option4.style.backgroundColor = "#3f13a4";
+    
+        // Start timer
+        timer = 0;  
+     };   
 };
 
 
-// playerName.style.pointerEvent = "none";
+resultBtn.addEventListener("click", () =>{
+    questionBox.style.display = "none";
+    showResults();
+});
 
  /**
  * Function to randomly display quiz with level of difficulty using the Math.random() to Swap an item with another
@@ -331,31 +297,9 @@ function shuffle(questionsArray) {
 };
 
 
-
-// function endOfQuestions(){
-//     let questionsCounter = 0;
-
-//     if(questionsCounter === 5) {
-             
-//         for(let i=0; i<options.length; i++) {
-//             options[i].style.display = "none";
- 
-//         }
-//         // nextQueBtn.style.display = "none"; 
-//         showResults();
-// }
- 
-// }
-
-
-
-
 // Show result
 function showResults(){
-    // endOfQuestions();
-    
     quizResultContainer.style.display = "block"; 
-   
     const icon = document.getElementById("icon");
     
     if (userScored > 3){ 
@@ -373,26 +317,31 @@ function showResults(){
     }
 };
 
-   // Restart quiz page
+// Restart quiz page
 replayQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 
-    location.href ="index.html";
-    
+    window.location.reload();
 
-    // window.addEventListener('DOMContentLoaded', () => {  
-    // $("ruleBox").reload(document.index.html + "ruleBox");
-    // })
+
+//     ruleBox.style.display = "block";
+//      userScored = 0;
+// userScore.innerHTML = (`Score: ${userScored}/5`);
+//  questionNum = 0;
+// difficultyLevel = "";
+//  allQuestions = [];
+//  questionsCounter.innerText = 1;
+
     
     clearInterval(interval);
  });
 
 
- quitQuiz.addEventListener("click", function(){
-    quizResultContainer.style.display = "none"; 
-    window.location.reload();
+//  quitQuiz.addEventListener("click", function(){
+//     quizResultContainer.style.display = "none"; 
+//     window.location.reload();
 
-    // clearInterval(interval);
- });
+//     // clearInterval(interval);
+//  });
 
 
 
