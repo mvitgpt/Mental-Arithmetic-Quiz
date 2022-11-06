@@ -376,16 +376,16 @@ function showResults(){
    // Restart quiz page
 replayQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 
-    window.location.reload();
-
+    location.href ="index.html";
+    
 
     // window.addEventListener('DOMContentLoaded', () => {  
     // $("ruleBox").reload(document.index.html + "ruleBox");
     // })
     
-
     clearInterval(interval);
  });
+
 
  quitQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 

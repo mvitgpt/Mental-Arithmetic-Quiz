@@ -30,8 +30,8 @@ body {
 }
 
 .logo {
-    height: 2.5rem;
-    width: 4rem;
+    height: 4.25rem;
+    width: 4.8rem;
     margin: 0 auto;
     margin-top: 2.5rem;
 }
@@ -113,12 +113,12 @@ color: #050505;
 }
 
 input[type = 'text'] {
-    width: 12rem;
+    width: 10rem;
     height: 3rem;
     border-radius: 8px;
     margin-bottom: 2rem;
     border: 1px solid #3F13A4;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
