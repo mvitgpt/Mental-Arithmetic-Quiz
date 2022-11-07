@@ -64,7 +64,8 @@ This quiz is targeted towards individuals with the aim for learning or just a gr
 + ## Home Page
 
 
-![Home Page](./READMEimages/mobile-arithmetic-quiz-home-page.png)
+![Mobile Home Page](./READMEimages/mobile-arithmetic-quiz-home-page.png)
+![Desktop Home Page](./READMEimages/desktop-home-page-imge.png)
 
 The home page consists of the following features:
 
@@ -104,9 +105,14 @@ The home page consists of the following features:
 + ### Footer
   + The footer is located at the buttom center of the pages, it displays the copyright and th developer information
 
+
   
++ ## Quiz Rule Page
 
+  + The quiz rule page consists of the quiz rules and two other buttons, the Start Quiz button and the Home button.
+  + The Start Quiz button 
 
+![Quiz Rule](./READMEimages/quiz-rule-page-image.png)
 
 
 
