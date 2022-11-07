@@ -208,14 +208,14 @@ function renderQuestions() {
     
 };
 
-// Function to check if user answer is coreect, option button changes to green and vice visa
+// Function to check if user answer is coreect, option button changes to green and vice visa and increases score.
 function optionClick(userAnswer) {
-    // questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+    
     if(userAnswer == allQuestions[questionNum].answer) {
         ++userScored;
         userScore.innerHTML = `${userScored}/5`;
 
-        checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green"
+        checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green";
 
     }
     else {
@@ -226,7 +226,7 @@ function optionClick(userAnswer) {
 };
 
 /**  Function check and return answer option, if answer is strictly equal to option's index. 
-*Stops displaying the wrong answers the wrong questions
+*Stops displaying the wrong answers to the wrong questions
 */
 function checkAnswers(answerId) {
 
@@ -240,10 +240,10 @@ function checkAnswers(answerId) {
         return option4
 };
 
-
 // Function to display next question and answer options 
 function nextQuestion() {
     questionNum+=1;
+    
      if(questionNum == 5){
         // console.log(quizEnd, "quizend")
         quizEnd.innerHTML = `End of Questions.`;
@@ -253,11 +253,12 @@ function nextQuestion() {
      }else {
         questionsText.innerHTML = allQuestions[questionNum].question;
         questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+
         option1.innerHTML = allQuestions[questionNum].options[0];
         option2.innerHTML = allQuestions[questionNum].options[1];
         option3.innerHTML = allQuestions[questionNum].options[2];
         option4.innerHTML = allQuestions[questionNum].options[3];
-    
+
         option1.style.backgroundColor = "#3f13a4";
         option2.style.backgroundColor = "#3f13a4";
         option3.style.backgroundColor = "#3f13a4";
@@ -267,6 +268,19 @@ function nextQuestion() {
         timer = 0;  
      };   
 };
+
+// let answerId = 0;
+// function disableOptions(){
+// for(let i = 0; i < 4; i++){
+//      answerId[i].disabled = true;
+//     }
+// };
+
+
+// options.addEventListener("click", (e) =>{
+//     option.disabled = ! e.target;}, false
+    
+// );
 
 
 resultBtn.addEventListener("click", () =>{
@@ -290,14 +304,14 @@ function shuffle(questionsArray) {
 
         // And swap it with the current .
         [questionsArray[currentQuestionIndex], questionsArray[randomise]] = [
-         questionsArray[randomise], questionsArray[currentQuestionIndex]];
+        questionsArray[randomise], questionsArray[currentQuestionIndex]];
     }
 
     return questionsArray;
 };
 
 
-// Show result
+// Show result at the end of the question when the showResults function is called 
 function showResults(){
     quizResultContainer.style.display = "block"; 
     const icon = document.getElementById("icon");
@@ -320,28 +334,13 @@ function showResults(){
 // Restart quiz page
 replayQuiz.addEventListener("click", function(){
     quizResultContainer.style.display = "none"; 
-    window.location.reload();
 
-
-//     ruleBox.style.display = "block";
-//      userScored = 0;
-// userScore.innerHTML = (`Score: ${userScored}/5`);
-//  questionNum = 0;
-// difficultyLevel = "";
-//  allQuestions = [];
-//  questionsCounter.innerText = 1;
-
-    
+    //reload the current window
+    window.location.reload(); 
     clearInterval(interval);
  });
 
 
-//  quitQuiz.addEventListener("click", function(){
-//     quizResultContainer.style.display = "none"; 
-//     window.location.reload();
-
-//     // clearInterval(interval);
-//  });
 
 
 
@@ -354,11 +353,10 @@ replayQuiz.addEventListener("click", function(){
 
 
 
-
-// } nextQueBtn.click();
-// for(let i = 0; i < options.length; i++){
-//     options[i].classList.remove();
-// }
+//  nextQueBtn.click();
+// // for(let i = 0; i < options.length; i++){
+// //     options[i].classList.remove();
+// // }
 
 //  // Set Questions Counter and display random Questions
 
@@ -369,48 +367,3 @@ replayQuiz.addEventListener("click", function(){
 //     function setNextQuestions(){
 //         // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
 //     };
-
-//     // function correctAnswer(){
-//     //     const correctBtn = document.createElement("correct-Btn");
-//     //     correctBtn.innerText = answer.text;
-//     //     correctBtn.classList.add("optionBtn");
-//     //     if(answer.correct) {
-//     //         correctBtn.dataset.correct = answer.correct;
-//     //     }
-//     //     questionBox.style.backgroundColor = "green";
-//     // }
-
-    //  let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectLevel);
-    //  selectLevel = filteredQuestionsByDifficulty;
-
-    // function selectRandomQuestions(){
-    //     // Set Question text
-    //     const randomQuestions = selectedQuestions[Math.floor(Math.random() * selectedQuestions.length)];
-    //     currentQuestion = randomQuestions;
-    //     questionsText.innerHTML = currentQuestion.questions-txt;
-  
-    // }
-//         // Set Question text
-//         const questionsIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
-//         currentQuestion = questionsIndex;
-//         questionsText.innerHTML = currentQuestion.questions-txt;
-//         console.log(questionsIndex)
-
-//     nextQueBtn.addEventListener("click", function() {
-//         if (questionsCounter === quiz.length){
-//             console.log("finish quiz");
-//         }
-//         else{
-//             showResult();  
-//         }
-//     });
-
-//       window.onload = ()=> {
-
-// // function runQuiz() {
-// //     startQuiz.classList.add('hide');
-// //     selection.classList.remove('hide')
-// // };
-//  // homeBtn.onclick = ()=>{
-//     //     window.location.reload(); //reload the current window
-    // };
