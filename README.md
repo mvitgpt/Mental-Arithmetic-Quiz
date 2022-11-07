@@ -61,14 +61,23 @@ This quiz is targeted towards individuals with the aim for learning or just a gr
 
 ## Existing Features
 ***
-
-The home page consists of the following features:
-
 + ## Home Page
 
 
 
 ![Home Page](./READMEimages/mobile-arithmetic-quiz-home-page.png)
+
+The home page consists of the following features:
+
++ Logo  
+  + The logo, featured on the home page is displayed on the main area of the Home Page.
+  + It displays an image which denotes an impression of the brain thinking, learning or problem solving.  
+
++ Heading
+  + featured on the home page is the quiz name, which is displayed on the main area of the Home Page. 
+  + This section introduces the user to the goal of the website  
+
+![Logo and Heading](./READMEimages/mental-arithmetic-quiz-logo-and-heading.png)
 
 # 3. User Experience
 
