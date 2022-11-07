@@ -43,7 +43,6 @@ const resultBtn = document.getElementById("result-btn");
 // Result Section
 const quizResultContainer = document.getElementById("quiz-result");
 const resultText = document.getElementById("result-text");
-const resetQuiz = document.getElementById("reset-quiz");
 const replayQuiz = document.getElementById("replay");
 // const quitQuiz = document.getElementById("quit");
 
@@ -210,13 +209,25 @@ function renderQuestions() {
     
 };
 
+function disableOptions(){
+    for(let i = 0; i < optionBtn.length; i++){
+        optionBtn[i].disabled = true;
+        }
+};
+
+function enableOptions(){
+    for(let i = 0; i < optionBtn.length; i++){
+        optionBtn[i].disabled = false;
+        }
+};
+
+
 // Function to check if user answer is coreect, option button changes to green and vice visa and increases score.
 function optionClick(userAnswer) {
-    
+    console.log(optionBtn, "<==optionBtn")
     if(userAnswer == allQuestions[questionNum].answer) {
         ++userScored;
         userScore.innerHTML = `${userScored}/5`;
-
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green";
 
     }
@@ -224,7 +235,8 @@ function optionClick(userAnswer) {
         checkAnswers(userAnswer).style.backgroundColor="red"
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green";
     }
-    
+
+    disableOptions()
 };
 
 /**  Function check and return answer option, if answer is strictly equal to option's index. 
@@ -272,20 +284,10 @@ function nextQuestion() {
         // Start timer
         timer = 0;  
      };   
+     enableOptions()
+    
 };
 
-// let answerId = 0;
-// function disableOptions(){
-// for(let i = 0; i < 4; i++){
-//      answerId[i].disabled = true;
-//     }
-// };
-
-
-// options.addEventListener("click", (e) =>{
-//     option.disabled = ! e.target;}, false
-    
-// );
 
 // Hide question box and show result
 resultBtn.addEventListener("click", () =>{
