@@ -146,9 +146,11 @@ level3.addEventListener("click", function(){
 });   
 
 
+// Set the next question
 nextQueBtn.addEventListener("click", function() {
     nextQuestion(); 
 });
+
 
 //  Set function for time counter     
 let timer = 0;
@@ -174,7 +176,7 @@ let currentQuestion;
 let allQuestions = [];
 
 
- // Function to execute each difficulty Level Questions
+// Function to execute each difficulty Level Questions
 function questionStart() {
     // Show questions box
     questionBox.style.display = "block"; 
@@ -240,12 +242,15 @@ function checkAnswers(answerId) {
         return option4
 };
 
-// Function to display next question and answer options 
+
+/** Function to display next question, answer options and display end of question when questionCounter is qual to 5, 
+* then swap the Next Question button with Result 
+*/
 function nextQuestion() {
     questionNum+=1;
     
      if(questionNum == 5){
-        // console.log(quizEnd, "quizend")
+    
         quizEnd.innerHTML = `End of Questions.`;
         resultBtn.style.display = "block";
         nextQueBtn.style.display = "none";
@@ -282,14 +287,16 @@ function nextQuestion() {
     
 // );
 
-
+// Hide question box and show result
 resultBtn.addEventListener("click", () =>{
     questionBox.style.display = "none";
     showResults();
 });
 
+
  /**
- * Function to randomly display quiz with level of difficulty using the Math.random() to Swap an item with another
+ * Function to randomly display quiz with level of difficulty
+ *  using the Math.random() to Swap an item with another
 */
 function shuffle(questionsArray) {
     //Code from jsfiddle.net/gautamz07/zotsc64e/
@@ -311,7 +318,7 @@ function shuffle(questionsArray) {
 };
 
 
-// Show result at the end of the question when the showResults function is called 
+// Show result at the end of the question when the showResults function is called on the click of result button
 function showResults(){
     quizResultContainer.style.display = "block"; 
     const icon = document.getElementById("icon");
