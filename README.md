@@ -58,9 +58,17 @@ This quiz is targeted towards individuals with the aim for learning or just a gr
  This Quiz was developed mobile first and responsive on tablet and desktop.
 
 # 2. Features
+
 ## Existing Features
+***
 
 The home page consists of the following features:
+
++ ## Home Page
+
+
+
+![Home Page](./READMEimages/mobile-arithmetic-quiz-home-page.png)
 
 # 3. User Experience
 
