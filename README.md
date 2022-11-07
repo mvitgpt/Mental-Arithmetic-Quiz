@@ -207,7 +207,21 @@ The home page consists of the following features:
 ***
 
 
+## 7. Deployment
 
++ Github Pages
+
+This online quiz was deployed to GitHub Pages. The steps taken in deploying this project are as follows:
+
++ Log on to GitHub and select 'MentalArithmetic-Quiz' from the list of repositories.
++ Click on 'Settings' on the menu just below the repository's name.
++ Navigate to the left side menu and click on 'Pages' in the 'Code and Automation' section.
++ In the Main area under 'Build and Deployment', click on the source dropdown menu and select the 'Deploy from Branch' selection.
++ In the 'Branch' section select the main branch and the /(root) folder.
+Click 'Save'.
++ A message that the site is ready to be deployed appears just under the 'GitHub Pages' heading. After refreshing the page, the link to the deployed sit appears.
++ Your live GitHub pages site is now deployed and the URL shown at the top of the page.
++ Click on the link to go to the live deployed page.
 
 
 
@@ -223,15 +237,6 @@ The home page consists of the following features:
 
 
 
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
 **So….?**
 
