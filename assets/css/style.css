@@ -115,12 +115,12 @@ color: #050505;
 }
 
 input[type = 'text'] {
-    width: 10rem;
+    width: 11rem;
     height: 3rem;
     border-radius: 8px;
     margin-bottom: 2rem;
     border: 1px solid #3F13A4;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -134,6 +134,11 @@ label {
     font-size: 1.2rem;
     background: transparent;
 }    
+
+.error-msg {
+    margin-bottom: 1rem;
+    color: #6B35E8;
+}
 
 .initiate-quiz-btn {
     text-align: center;
