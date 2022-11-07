@@ -68,17 +68,17 @@ This quiz is targeted towards individuals with the aim for learning or just a gr
 
 The home page consists of the following features:
 
-+ Logo  
++ ### Logo  
   + The logo, featured on the home page is displayed on the main area of the Home Page.
   + It displays an image which denotes an impression of the brain thinking, learning or problem solving.  
 
-+ Heading
++ ### Heading
   + featured on the home page is the quiz name, which is displayed on the main area of the Home Page. 
   + This section introduces the user to the goal of the website  
 
 ![Logo and Heading](./READMEimages/mental-arithmetic-quiz-logo-and-heading.png)
 
-+ User Input Error Message
++ ### User Input Error Message
   + User Input field which takes and stores the name of the user. 
   + User is prompted to enter a username in order to start the game.  
   + An error message is displayed under the input field if the user tries to start the game without inserting username. 
@@ -87,13 +87,24 @@ The home page consists of the following features:
 
 ![User Input Error Message](./READMEimages/user-input-errormsg-home-page-image.png)
 
-+ Username Character Length Error Message
++ ### Username Character Length Error Message
   + An error message is displayed if the username is not valid.
   + The user can press the 'Next' button to go to the rules of the quiz.
 
 ![Username Character Length Error Message](./READMEimages/username-character-length-errormsg-image.png)
 
++ ### Next Button
+  + Next Button is an integral part of the quiz. The text is Capitalised, with white contrasting color to the background with hover effect and highlights the next line of action. 
 
++ ### Social Icon
+  + The social media icons are featured on the pages of the website. It has a hover effect that changes color
+  +  It includes links to the relevant social media sites, on the top left corner side. The links will open to a new tab to allow easy navigation for the user.
+  * The social media is valuable to the user as they can communicate with the developver via social.
+
++ ### Footer
+  + The footer is located at the buttom center of the pages, it displays the copyright and th developer information
+
+  
 
 
 
