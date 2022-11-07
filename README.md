@@ -64,7 +64,6 @@ This quiz is targeted towards individuals with the aim for learning or just a gr
 + ## Home Page
 
 
-
 ![Home Page](./READMEimages/mobile-arithmetic-quiz-home-page.png)
 
 The home page consists of the following features:
@@ -78,6 +77,30 @@ The home page consists of the following features:
   + This section introduces the user to the goal of the website  
 
 ![Logo and Heading](./READMEimages/mental-arithmetic-quiz-logo-and-heading.png)
+
++ User Input Error Message
+  + User Input field which takes and stores the name of the user. 
+  + User is prompted to enter a username in order to start the game.  
+  + An error message is displayed under the input field if the user tries to start the game without inserting username. 
+  + An error message is displayed if the username field is empty.
+  + The user can press the 'Next' button to go to the rules of the quiz.
+
+![User Input Error Message](./READMEimages/user-input-errormsg-home-page-image.png)
+
++ Username Character Length Error Message
+  + An error message is displayed if the username is not valid.
+  + The user can press the 'Next' button to go to the rules of the quiz.
+
+![Username Character Length Error Message](./READMEimages/username-character-length-errormsg-image.png)
+
+
+
+
+
+
+
+
+
 
 # 3. User Experience
 
