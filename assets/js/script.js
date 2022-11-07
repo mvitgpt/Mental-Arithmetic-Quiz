@@ -14,7 +14,6 @@ const backHome = document.getElementById("back-home-btn");
 
 // Select Level of Difficulty Section
 const selection = document.getElementById("selection-area");
-const selectLevel = document.getElementsByClassName("difficulty");
 const level1 = document.getElementById("difficulty-level1");
 const level2 = document.getElementById("difficulty-level2");
 const level3 = document.getElementById("difficulty-level3");
@@ -26,7 +25,6 @@ let questionsCounter = document.getElementById("questions-counter");
 const questionsText = document.getElementById("questions-txt");
 const timeCounter = document.getElementById("time-counter");
 let userScore = document.getElementById("user-score");
-const totalScore = document.getElementById("total-score");
 
 // Answer options Section
 const option1 = document.getElementById("option1");
@@ -35,7 +33,7 @@ const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
 const optionBtn = document.getElementsByClassName("option-btn");
 
-// Next question button
+// Next question 
 const nextQueBtn = document.getElementById("next-ques-btn");
 const quizEnd = document.getElementById("quiz-end");
 const resultBtn = document.getElementById("result-btn");
@@ -44,7 +42,8 @@ const resultBtn = document.getElementById("result-btn");
 const quizResultContainer = document.getElementById("quiz-result");
 const resultText = document.getElementById("result-text");
 const replayQuiz = document.getElementById("replay");
-// const quitQuiz = document.getElementById("quit");
+
+
 
 /** Function to Check UserName input and display error message if invalid or empty
     User name display when the next button is clicked (onload) 
@@ -55,7 +54,6 @@ window.addEventListener('DOMContentLoaded', () => {
     playerName = userNameInput.value;
     for(let i = 0; i < playerNameTxt.length; i++){
         playerNameTxt[i].innerHTML= userNameInput.value;
-
     }
 
 let errorTxt = '';
@@ -132,6 +130,7 @@ level2.addEventListener("click", function(){
      interval = setInterval(countTime, 1000);
 });
 
+
  // Hard level
 level3.addEventListener("click", function(){
      selection.style.display = "none";
@@ -192,7 +191,8 @@ function questionStart() {
     }
 
     renderQuestions();
-};
+}
+
 
 // Render first question
 function renderQuestions() {
@@ -207,24 +207,26 @@ function renderQuestions() {
     option3.innerHTML = allQuestions[questionNum].options[2];
     option4.innerHTML = allQuestions[questionNum].options[3];  
     
-};
+}
 
+// disable options
 function disableOptions(){
     for(let i = 0; i < optionBtn.length; i++){
         optionBtn[i].disabled = true;
         }
-};
+}
 
+// enable options
 function enableOptions(){
     for(let i = 0; i < optionBtn.length; i++){
         optionBtn[i].disabled = false;
         }
-};
+}
 
 
 // Function to check if user answer is coreect, option button changes to green and vice visa and increases score.
 function optionClick(userAnswer) {
-    console.log(optionBtn, "<==optionBtn")
+    // console.log(optionBtn, "<==optionBtn")
     if(userAnswer == allQuestions[questionNum].answer) {
         ++userScored;
         userScore.innerHTML = `${userScored}/5`;
@@ -232,12 +234,13 @@ function optionClick(userAnswer) {
 
     }
     else {
-        checkAnswers(userAnswer).style.backgroundColor="red"
+        checkAnswers(userAnswer).style.backgroundColor="red";
         checkAnswers(allQuestions[questionNum].answer).style.backgroundColor="Green";
     }
 
-    disableOptions()
-};
+    disableOptions();
+}
+
 
 /**  Function check and return answer option, if answer is strictly equal to option's index. 
 *Stops displaying the wrong answers to the wrong questions
@@ -245,14 +248,14 @@ function optionClick(userAnswer) {
 function checkAnswers(answerId) {
 
     if(answerId === 0)
-        return option1
+        return option1;
     else if(answerId === 1)
-        return option2
+        return option2;
     else if(answerId === 2)
-        return option3
+        return option3;
     else if(answerId === 3)
-        return option4
-};
+        return option4;
+}
 
 
 /** Function to display next question, answer options and display end of question when questionCounter is qual to 5, 
@@ -283,10 +286,10 @@ function nextQuestion() {
     
         // Start timer
         timer = 0;  
-     };   
-     enableOptions()
+     }   
+     enableOptions();
     
-};
+}
 
 
 // Hide question box and show result
@@ -317,7 +320,7 @@ function shuffle(questionsArray) {
     }
 
     return questionsArray;
-};
+}
 
 
 // Show result at the end of the question when the showResults function is called on the click of result button
@@ -338,7 +341,7 @@ function showResults(){
       else{ 
         resultText.innerHTML = `Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;   
     }
-};
+}
 
 // Restart quiz page
 replayQuiz.addEventListener("click", function(){
@@ -349,6 +352,7 @@ replayQuiz.addEventListener("click", function(){
     clearInterval(interval);
  });
 
+ optionClick();
 
 
 
@@ -356,23 +360,6 @@ replayQuiz.addEventListener("click", function(){
 
 
 
+// Set Questions Counter and display random Questions
 
 
-
-
-
-
-//  nextQueBtn.click();
-// // for(let i = 0; i < options.length; i++){
-// //     options[i].classList.remove();
-// // }
-
-//  // Set Questions Counter and display random Questions
-
-//     let randomQuestions = Math.floor(Math.random() * quiz.length );
-//     currentQuestion = quiz[randomQuestions];
-//     quiz.splice(randomQuestions, 1);
-
-//     function setNextQuestions(){
-//         // displayQuestionsLevel(shuffledQuestions[currentQuestion]);
-//     };
