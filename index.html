@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <!--------------------- Start Quiz -->
+    <!-- Start Quiz -->
     <div class="header-icon">
         <div class="social-icon">
             <a href="https://github.com/Shida18719" target="_blank" rel="noopener"
@@ -40,24 +40,24 @@
             <p class="quiz-intro-txt">How quick can you solve the questions?</p>
         </div>
 
-        <!-------- User name input area -->
+        <!-- User name input area -->
         <div class="user-input-area">
             <label for="user-name-input"></label>
             <input type="text" id="user-name-input" name="user-name" placeholder="Please Enter Your Name" maxlength="8"
                 aria-label="user-name-input" required>
-            <!----------- Error Message for Username Validation -->
+            <!-- Error Message for Username Validation -->
             <div id="error" class="error-msg">
-                <p id="error"></p>
+                <!-- <p id="error"></p> -->
             </div>
 
-            <!------------ Proceed button to Quiz Rules -->
+            <!-- Proceed button to Quiz Rules -->
             <div class="initiate-quiz-btn">
                 <button id="next-btn" data-type="next" class="next-btn">Next</button>
             </div>
         </div>
     </div>
 
-    <!------------ Quiz Rule Box Section-->
+    <!-- Quiz Rule Box Section-->
     <section class="rule-box hide" id="rule-box">
         <h2 class="rule-title"> Quiz Rules</h2>
         <div class="instructions">
@@ -74,19 +74,19 @@
             <div class="rule">8. Click next to move on to the next question.</div>
         </div>
 
-        <!---------- Quiz Rule Box Buttons-->
+        <!-- Quiz Rule Box Buttons-->
         <div class="start-buttons-container">
             <button data-type="start" class="start-quiz-btn" id="start-quiz-btn">Start Quiz</button>
             <button data-type="home" class="home-btn" id="back-home-btn">Home</button>
         </div>
     </section>
 
-    <!---------------- Select Level of Difficulty Section-->
+    <!-- Select Level of Difficulty Section-->
     <section id="selection-area" class="selection-area hide">
         <div class="header-icon">
-            <div class="user-icon" aria-label="User Icon" style="display: block;">
+            <div class="user-icon" aria-hidden="true" style="display: block;">
                 <i class="far fa-user"></i>
-                <h3 id="player-name" class="player-name"></h3>
+                <div id="player-name" class="player-name"></div>
             </div>
         </div>
         <h2 class="select-quiz">Select Quiz Level</h2>
@@ -106,17 +106,17 @@
         </div>
     </section>
 
-    <!---------------- Quiz - Questions Section Area, Questions display with header icons -->
-    <section class="question-box-area hide" id="question-box-area">
+    <!-- Quiz - Questions Section Area, Questions display with header icons -->
+    <div class="question-box-area hide" id="question-box-area">
         <div class="header-icon">
-            <div class="user-icon" aria-label="User Icon">
-                <i class="far fa-user"></i>
-                <h3 id="player-name" class="player-name"></h3>
+            <div class="user-icon">
+                <i class="far fa-user" aria-hidden="true"></i>
+                <div id="player-name" class="player-name"></div>
             </div>
 
             <div id="time">
                 <div class="timer-icon">
-                    <i class="fas fa-stopwatch" aria-label="Timer Icon" style="display: block;"></i>
+                    <i class="fas fa-stopwatch" aria-hidden="true" style="display: block;"></i>
                 </div>
                 <div id="time-counter" class="time-counter" style="color: orange;">:0</div>
             </div>
@@ -125,7 +125,7 @@
             </div>
         </div>
 
-        <!------------ Questions display area -->
+        <!-- Questions display area -->
         <div class="show-level">
             <div id="level">Level 1</div>
         </div>
@@ -138,7 +138,7 @@
         </div>`
 
         <div class="option-buttons" id="option-buttons">
-            <!------------ set onclick attribute to all available options -->
+            <!-- set onclick attribute to all available options -->
             <button class="option-btn" id="option1" aria-label="Anwser Option Button 1"
                 onclick="optionClick(0)"></button>
             <button class="option-btn" id="option2" aria-label="Anwser Option Button 2"
@@ -157,9 +157,9 @@
             <div id="quiz-end" class="quiz-end"></div>
             <button data-type="result" class="result-btn" id="result-btn">Result</button>
         </div>
-    </section>
+    </div>
 
-    <!------------------------- Quiz Result Box -->
+    <!-- Quiz Result Box -->
     <section class="quiz-result home-box" id="quiz-result">
         <h2>Quiz Result</h2>
         <div class="icon" id="icon">

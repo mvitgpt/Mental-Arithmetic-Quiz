@@ -5,7 +5,7 @@ const userNameInput = document.getElementById("user-name-input");
 const usernameBtn = document.getElementById("next-btn");
 const errorMsg = document.getElementById("error");
 let playerName  =  userNameInput.value;
-const playerNameTxt = document.querySelectorAll("#player-name");
+const playerNameTxt = document.querySelectorAll(".player-name");
 
 // Quiz Rule Box Section
 const ruleBox = document.getElementById('rule-box');
@@ -61,7 +61,6 @@ let errorTxt = '';
 if (playerName == '') {
     errorTxt = "Please enter a Username";
     ruleBox.style.display = "none";
-    // playerName.style.pointerEvent = "none";
 
 // if username input is less than 8 characters 
 } else if (playerName.length >= 8) {
