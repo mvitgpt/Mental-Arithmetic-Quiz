@@ -272,6 +272,7 @@ function nextQuestion() {
      }else {
         questionsText.innerHTML = allQuestions[questionNum].question;
         questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+        enableOptions();
 
         option1.innerHTML = allQuestions[questionNum].options[0];
         option2.innerHTML = allQuestions[questionNum].options[1];
@@ -286,8 +287,7 @@ function nextQuestion() {
         // Start timer
         timer = 0;  
      }   
-     enableOptions();
-    
+    //  enableOptions();  
 }
 
 
@@ -351,7 +351,7 @@ replayQuiz.addEventListener("click", function(){
     clearInterval(interval);
  });
 
- optionClick();
+ 
 
 
 
