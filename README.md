@@ -96,21 +96,31 @@ The home page consists of the following features:
 
 + ### Next Button
   + Next Button is an integral part of the quiz. The text is Capitalised, with white contrasting color to the background with hover effect and highlights the next line of action. 
+  + The next Button takes user to the quiz rule page when clicked.
 
 + ### Social Icon
-  + The social media icons are featured on the pages of the website. It has a hover effect that changes color
+  + The social media icons are featured on the all pages of the website. It has a hover effect that changes color
   +  It includes links to the relevant social media sites, on the top left corner side. The links will open to a new tab to allow easy navigation for the user.
   * The social media is valuable to the user as they can communicate with the developver via social.
 
 + ### Footer
-  + The footer is located at the buttom center of the pages, it displays the copyright and th developer information
+  + The footer is located at the buttom center of all the pages, it displays the copyright and the developer information.
 
 
   
 + ## Quiz Rule Page
 
-  + The quiz rule page consists of the quiz rules and two other buttons, the Start Quiz button and the Home button.
-  + The Start Quiz button 
+
+  + The quiz rule page consists of the quiz rules, social medial icon at the top left, the footer at the bottom center and two other buttons, the Start Quiz button and the Home button.
+  + User is able to read the instructions about the quiz before starting.
+
+  + ### The Start Quiz button
+    + The Start Button is an important feature on the Quiz Rule Page. It has white text and contrasting color to the background with hover effect. 
+    + After user finish reading the rules of the quiz, user click the start Quiz Button to go to the quiz level selection page.
+
+  + ### Home button
+    + The home button with a white text and contrasting color to the background and a hover effect, is featured on the quiz rule page. 
+    + If user choose to click on the Home button, It takes the user back to the homepage.
 
 ![Quiz Rule](./READMEimages/quiz-rule-page-image.png)
 
@@ -132,6 +142,13 @@ The home page consists of the following features:
 
 ## User Stories
 +  First Time Visitor Goal:
+   + I want easily understand the goals of the website.
+
+   + I want to easily navigate the website on any device and on different screen size.
+
+   + I want to open external links in a new tab so they don't have to find their way back to the home page.
+
+   + I want to easily go back to home page. 
 
    + I want to sharpen my mental arithmetic skills.
 
