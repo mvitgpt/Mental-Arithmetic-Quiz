@@ -141,36 +141,73 @@ The home page consists of the following features:
   + It display the social media icon at the top left of the page and the footer at the buttom center of the page.
   + User Name
     + The username is also displayed at the top left.
-  + Timer  
+  + ## Timer  
     + A 20 seconds timer, displayed in orange color for setting it apart.It timed the user to answer the questions before timer ends.
     + It restart from 1 when the user clicks on Next Question.
-  + Socres
+  + ## Socres
     + The score counter counts a user score out of 5 random questions.
     + Score increases or decreases with the amount of correct or incorrect answer.
-  + Difficulty Level
+
+    ![Username, Timer and Score](./READMEimages/username-timer-and-score-image.png)
+  + ## Difficulty Level
     + Displays the level a player has chosen (Level 1, Level 2, or Level 3) at the center top.
-  + Question Counter
+  + ## Question Counter
     + Displayed at the center top, just below the difficulty Level, and styled in color . It Counts the questions has user clicks the Next Question Button.
   + Question 
     + Question is displayed one at a time, allowing user to read through the questions before choosing an answer within the time limit.
-  + Answer Options  
+
+    ![Level, Question Counter and Question](./READMEimages/level-question-counter-and-question-image.png)
+  + ## Answer Options  
     + Set of four multiple choice answer is displayed as buttons along with each question for user to make a choice of one.
     + The correct choice turns green, while the wrong choice is red, but highlights a green button to indicate the correct answer to the user.
-  + Next Question Buton
+
+  ![Correct Option](./READMEimages/correct-option-image.png)
+    
+  ![Incorrect Option](./READMEimages/incorrect-option-image.png)
+
+  ![Question and Aswer Options](./READMEimages/question-and-answer-choice-image.png)
+
+  + ## Next Question Buton
+    + User use it to navigate to the next question. It's displayed at the bottom center of the question page.
     + User click the Next Button to go to the next question.
     + End of question is displayed on the last question.
     + Next Question Button is swapped with a Result Button
-  + Result Button
-    + Result Button is displayed when user is on the last question.
-    + Result Button displays the Result when clicked
+
+![Next Question Button](./READMEimages/next-question-button-image.png)
+
+    
+  + ## Result Button
+    + Result Button is displayed in the same position of the Next Question Button when user is on the last question.
+    + Result Button displays the Result page when clicked.
+
+![End of Questions and Result Button](./READMEimages/end-of-questions-image.png)
+
+![ipad Question Page](./READMEimages/ipad-questions-page-image.png)
+
+![Mobile Question Page](./READMEimages/mobile-question-page-image.png)
+
++ ## Result Page
+  + The result page display the user score. The page consists of a star icon, user's name, with a personalised feedback of user's total score and the Play Again Button.
+  + There are three different feedback remark together with one presenting a star icon depending on the user's score. 
+  + The icon is meant as a visual reward and to encourage user for their effort and also improve their score at all levels.
 
 
+![ipad Result Page](./READMEimages/ipad-result-page-image.png)
+![Mobile Result Sreen Size Page](./READMEimages/less-score-result-image.png)
 
++ ## Play Again Button
+  + The button is to encourage user to play the quiz again. 
+  + The button refreshes the quiz and take player bak to the home page.
 
+## Future Features
 
+The following features can be added at a later date in order to improve user experience: 
 
++ Add more questions, that will give user different experience everytime.
 
-
++ Include a leader board. Where user's data e.g (username, score, time and date) are stored. Making the the quiz more competitive as users will like to be at the top of the list, beating the top score.
++ Create a reward chart to encourage user
++ Give user option to share their performance on social media. This will get more user interested in playing the quiz.  
 
 # 3. User Experience
 
