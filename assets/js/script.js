@@ -165,7 +165,7 @@ let countTime = ()=> {
 
 // Set the variables for user score, question number and all questions in the array
 let userScored = 0;
-userScore.innerHTML = (`Score: ${userScored}/5`);
+userScore.innerHTML = (`${userScored}/5`);
 let questionNum = 0;
 
 let currentQuestion;
