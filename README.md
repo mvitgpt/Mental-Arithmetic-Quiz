@@ -185,6 +185,8 @@ The home page consists of the following features:
 + Open sans is used for the body text on this site for user experience readability, with a secondary sans-serif font.
 + Montserrat is used for headings on the site for readability, simple and clean looking, with a secondary of serif font.
 
+## Icons
+
 ## Color Scheme
 
 + Mental Arithmetic Quiz uses cold color palette, which is a color that can calm and soothe. The color palette was created using the [Coolors](https://coolors.co/palette/6b35e8-3f13a4-050505-595959-fafafa) website.
@@ -194,6 +196,10 @@ The home page consists of the following features:
 
 ## Wireframes 
 ***
+
+The Wireframes were first sketched out with pen and paper, in order to have a preview and work out what's possible and what's not, before transfering the idea to a digital wireframe on Balsamiq. Which give a closer feel of the proposed design. 
+
+
 [Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
 
 [Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
