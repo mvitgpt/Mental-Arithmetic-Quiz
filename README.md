@@ -157,7 +157,9 @@ The home page consists of the following features:
     + Question is displayed one at a time, allowing user to read through the questions before choosing an answer within the time limit.
 
     ![Level, Question Counter and Question](./READMEimages/level-question-counter-and-question-image.png)
+
   + ## Answer Options  
+  
     + Set of four multiple choice answer is displayed as buttons along with each question for user to make a choice of one.
     + The correct choice turns green, while the wrong choice is red, but highlights a green button to indicate the correct answer to the user.
 
@@ -193,6 +195,7 @@ The home page consists of the following features:
 
 
 ![ipad Result Page](./READMEimages/ipad-result-page-image.png)
+
 ![Mobile Result Sreen Size Page](./READMEimages/less-score-result-image.png)
 
 + ## Play Again Button
@@ -260,7 +263,10 @@ This quiz is designed with a simple structured layout of simple colors across th
 All pages are clearly displayed with easy to read fonts. The pages are easily navigated with buttons.
 
 The main quiz page, display the questions and options clearly, with one question displayed at a time to help user focus.
-The 
+
+End of questions is displayed on the last question to inform user it the end of quiz. While the Next question hides away and replaced with Result Button. 
+
+The Score Result display at the end of the question give the user some visual feedback as well as a more personalised feel with the use of their username in the feedback comment.
 
 ## Typography and Color Scheme
 ***
@@ -270,7 +276,6 @@ The
 + Open sans is used for the body text on this site for user experience readability, with a secondary sans-serif font.
 + Montserrat is used for headings on the site for readability, simple and clean looking, with a secondary of serif font.
 
-## Icons
 
 ## Color Scheme
 
@@ -335,8 +340,44 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 * [Favicon](http://faviconer.com/) - Was used to create favicon logo used on the website browser.
 
 
-## HTML
+# 5. Testing
 
+## Code Validator Testing
+
++ HTML
+
+  + No errors or warnings were returned when passing through the [official  W3C validator](https://validator.w3.org/) 
+
+  + Document checking completed. No errors or warnings to show.
+
++ CSS
+  + No errors were returned when passing through the official [jigsaw validator](https://jigsaw.w3.org/css-validator/) 
+
+  + Congratulations! No Error Found.
+
++ JavaScript
+
+  + No errors were returned when passing through the official [Official Jshint Validator](https://jshint.com/) 
+
++ The following metrics were returned:
+
+  + There are 22 functions in this file.
+
+  + Function with the largest signature take 1 arguments, while the median is 0.
+
+  + Largest function has 17 statements in it, while the median is 4.
+
+  + 
+The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+
+
+
+Three undefined variables
+198	questionsLevel1
+200	questionsLevel2
+202	questionsLevel3
+One unused variable
+240	optionClick
 ***
 
 
@@ -362,11 +403,32 @@ Click 'Save'.
 
 
 
+ ## Acknowledgments
+
+  I would like to acknowledge the following people who helped me along the way in completing my first milestone project:
+
+  + My family, for their uderstanding.
+  + The slack community, for always being there.
+  + [MiaRasmussen_5P](https://github.com/MiaRasmussen05), for her great support and time looking into the project all through.
+  + [](https://github.com/Chr15w1986), for the time spent figuring out why the images on the site are not displayed on the browser.
+  + My mentor jubril_mentor, for helping me understand where I was going wrong
+  + [Okurut_5p](https://github.com/kedi1991/), for is advice and suggestions during this projects. 
+
+
+
+
+
+
+
+
+
+
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-------
+-----
+
 
 
 
@@ -377,7 +439,6 @@ We want to tell you this so that we are being completely transparent about the d
 
 **Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
 
 ```
 pkill uptime.sh
@@ -390,4 +451,4 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 
 ---
 
-Happy coding!
+
