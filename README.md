@@ -128,6 +128,7 @@ The home page consists of the following features:
 
 + ## Difficulty Selection Level Page
   + The Level selection page displays the username and the purpose of the page at the top center.
+  + It display the social media icon at the top left of the page.
   + This page consists of three difficulty levels buttons, where user can choose which ever levels they which to test themself.
   + Each of the level a user choose takes user to the question page.
   + The page also feature the Home Button, which takes user back to home page if a user decided not to continue.
@@ -136,8 +137,33 @@ The home page consists of the following features:
   ![Mobile Level Selection Page](./READMEimages/mobile-level-selection-page-image.png)
   ![ipad Level Selection Page](./READMEimages/ipad-level-selection-page-image.png)
 
-  ## Questions Page
-  + 
+  ## Quiz Page
+  + It display the social media icon at the top left of the page and the footer at the buttom center of the page.
+  + User Name
+    + The username is also displayed at the top left.
+  + Timer  
+    + A 20 seconds timer, displayed in orange color for setting it apart.It timed the user to answer the questions before timer ends.
+    + It restart from 1 when the user clicks on Next Question.
+  + Socres
+    + The score counter counts a user score out of 5 random questions.
+    + Score increases or decreases with the amount of correct or incorrect answer.
+  + Difficulty Level
+    + Displays the level a player has chosen (Level 1, Level 2, or Level 3) at the center top.
+  + Question Counter
+    + Displayed at the center top, just below the difficulty Level, and styled in color . It Counts the questions has user clicks the Next Question Button.
+  + Question 
+    + Question is displayed one at a time, allowing user to read through the questions before choosing an answer within the time limit.
+  + Answer Options  
+    + Set of four multiple choice answer is displayed as buttons along with each question for user to make a choice of one.
+    + The correct choice turns green, while the wrong choice is red, but highlights a green button to indicate the correct answer to the user.
+  + Next Question Buton
+    + User click the Next Button to go to the next question.
+    + End of question is displayed on the last question.
+    + Next Question Button is swapped with a Result Button
+  + Result Button
+    + Result Button is displayed when user is on the last question.
+    + Result Button displays the Result when clicked
+
 
 
 
