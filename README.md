@@ -119,14 +119,19 @@ The home page consists of the following features:
     + After user finish reading the rules of the quiz, user click the start Quiz Button to go to the quiz level selection page.
 
   + ### Home button
-    + The home button with a white text and contrasting color to the background and a hover effect, is featured on the quiz rule page. 
+    + The home button with a white text and contrasting color to the background and a hover effect that scales up, is featured on the quiz rule page. 
     + If user choose to click on the Home button, It takes the user back to the homepage.
 
 ![Quiz Rule](./READMEimages/quiz-rule-page-image.png)
-![Ipad Quiz Rule](./READMEimages/ipad-quiz-rule-page-image.png)
+![Ipad Quiz Rule - 1024px](./READMEimages/ipad-quiz-rule-page-image.png)
+![Mobile Quiz Rule - Iphone 6/7/8](./READMEimages/mobile-quiz-rule-page-image.png)
 
-+ ## Difficulty Selection Level
-  + 
++ ## Difficulty Selection Level Page
+  + The Level selection page displays the username and the purpose of the page at the top center.
+  + This page consists of three difficulty levels buttons, where user can choose which ever levels they which to test themself.
+  + Each of the level a user choose takes user to the question page.
+  + The page also feature the Home Button, which takes user back to home page if a user decided not to continue.
+  + All buttons have a white text and contrasting color to the background and a hover effect that scale up when hovered.
 
 
 
