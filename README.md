@@ -255,7 +255,12 @@ The following features can be added at a later date in order to improve user exp
    + I want to see enhancement of user experience.
 
 ## Design Structure 
+***
+This quiz is designed with a simple structured layout of simple colors across the pages.
+All pages are clearly displayed with easy to read fonts. The pages are easily navigated with buttons.
 
+The main quiz page, display the questions and options clearly, with one question displayed at a time to help user focus.
+The 
 
 ## Typography and Color Scheme
 ***
