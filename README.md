@@ -225,6 +225,31 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 ### 3. JavaScript
 
 
+## Programs Used
+
+* Git - Was used for version control, the Gitpod terminal to commit and push to GitHub.
+
+* [GitHub](https://github.com/) - Was used to store the project code and display the project in GitHub Pages.
+
+* [Balsamiq](https://balsamiq.com/) - is a mockup software that was used to create the wireframes.
+
+* [TinyPNG](https://tinypng.com/) - Was used for compressing images to a smaller size.
+
+* [Coolors](https://coolors.co/) - Was used for creating a pallet of the colors used.
+
+* [Am I Responsive?](https://ui.dev/amiresponsive) - Was used for showing how responsive design looks on different screen sizes.
+
+* [Font Awesome](https://fontawesome.com/) - Was used to add icons to the social links in the header.
+
+* Google Dev Tools and Lighthouse- Were used to test and troubleshoot the webpage as well as fix problems with responsive design and styling.
+
+* [Google Fonts](https://fonts.google.com/) - Where used to import the fonts used on the website.
+
+* [WebAIM](https://webaim.org/resources/contrastchecker/)- Was used for checking color contrast for accessibility.
+
+* [Favicon](http://faviconer.com/) - Was used to create favicon logo used on the website browser.
+
+
 ## HTML
 
 ***
