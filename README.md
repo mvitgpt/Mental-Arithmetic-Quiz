@@ -133,6 +133,12 @@ The home page consists of the following features:
   + The page also feature the Home Button, which takes user back to home page if a user decided not to continue.
   + All buttons have a white text and contrasting color to the background and a hover effect that scale up when hovered.
 
+  ![Mobile Level Selection Page](./READMEimages/mobile-level-selection-page-image.png)
+  ![ipad Level Selection Page](./READMEimages/ipad-level-selection-page-image.png)
+
+  ## Questions Page
+  + 
+
 
 
 
