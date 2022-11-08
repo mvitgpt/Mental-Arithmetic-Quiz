@@ -123,6 +123,12 @@ The home page consists of the following features:
     + If user choose to click on the Home button, It takes the user back to the homepage.
 
 ![Quiz Rule](./READMEimages/quiz-rule-page-image.png)
+![Ipad Quiz Rule](./READMEimages/ipad-quiz-rule-page-image.png)
+
++ ## Difficulty Selection Level
+  + 
+
+
 
 
 
