@@ -1,6 +1,5 @@
 # Mental Arithmetic Quiz
 
-View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/Mental-Arithmetic-Quiz/)
 
 Welcome to Mental Arithmetic Quiz. Mental Arithmetic Quiz is an online quiz that allow user test how quick they are able to solve maths problems mentally, if they are able to beat the time. Users can take part in randomly generated arithmetic quiz of 3 difficulties level, LEVEL 1, LEVEL 2 and LEVEL 3. Each question is presented with four answer options out of one correct answer. Both correct and incorrect answers are highlighted to allow them to learn from the experience. They are able to move up a level as a way of challenging themselves. User gets a feed back result of their score after anwsering the questions. The quiz was designed to be interactive and engaging for user, having user want to play again.
 
@@ -29,9 +28,9 @@ Welcome to Mental Arithmetic Quiz. Mental Arithmetic Quiz is an online quiz that
    + [Lighthouse]()
    + [Test case]()
 6. [Bugs]()
+   + [Manual Testing]()
    + [Fixed bugs]()
    + [Unknown bugs]()
-   + [Full Testing]()
 7. [Deployment]() 
 8. [Citation of Sources]() 
    + [Content]()
@@ -517,9 +516,40 @@ Click 'Save'.
 + Click on the link to go to the live deployed page.
 
 
+View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/Mental-Arithmetic-Quiz/)
+
+***
+
+# 8. Citation of Sources
+
++ [Code Institute Lesson Content](https://learn.codeinstitute.net/dashboard)
+
++ The Shuffle function was taken from [jsfiddle](http://jsfiddle.net/gautamz07/zotsc64e/)
+
++ Code used for the optionClick function was adapted from [Sitepoint](https://www.sitepoint.com/simple-javascript-quiz/)
+
++ The setInterval function was adapted from youtube video [Code Now](https://www.youtube.com/watch?v=3fbU4z7fPe4)
+
++ [sebhastian.com tutorials](https://sebhastian.com/javascript-clearinterval/)
+
++ [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+
++ [Grepper](https://www.codegrepper.com/code-examples/javascript/else+if+in+js)
 
 
-[Logo Image](https://pngtree.com/) - Used for the logo.
++ [WAI ARIA](https://w3c.github.io/aria/)
+
++ [Stack Overflow](https://stackoverflow.com/questions/53766944/simple-quiz-with-different-levels-divs)
+
++ [W3Schools](https://www.w3schools.com/js/default.asp)
+
+ + ## Media
+
+   + The logo imaged used for the home page was taken from [pngtree](https://pngtree.com/)
+
+
++ ## Content
+ + Quiz questions were taken from Schofields & Sims
 
 
  ## 9. Acknowledgments
@@ -528,7 +558,7 @@ Click 'Save'.
 
   + My family, for their uderstanding.
   + The slack community, for always being there.
-  + [MiaRasmussen_5P](https://github.com/MiaRasmussen05), for her great support and time looking into the project all through.
+  + [MiaRasmussen_5P](https://github.com/MiaRasmussen05), for her great support and time and for mixing the gradient colors.
   + [](https://github.com/Chr15w1986), for the time spent figuring out why the images on the site are not displayed on the browser.
   + My mentor jubril_mentor, for helping me understand where I was going wrong
   + [Okurut_5p](https://github.com/kedi1991/), for is advice and suggestions during this projects. 
