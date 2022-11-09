@@ -551,15 +551,18 @@ View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/
 + ## Content
  + Quiz questions were taken from Schofields & Sims
 
+ ***
 
- ## 9. Acknowledgments
+
+
+ # 9. Acknowledgments
 
   I would like to acknowledge the following people who helped me along the way in completing my first milestone project:
 
   + My family, for their uderstanding.
   + The slack community, for always being there.
   + [MiaRasmussen_5P](https://github.com/MiaRasmussen05), for her great support and time and for mixing the gradient colors.
-  + [](https://github.com/Chr15w1986), for the time spent figuring out why the images on the site are not displayed on the browser.
+  + Tutor - George-Alexandru Ciobanu, for the time spent figuring out .
   + My mentor jubril_mentor, for helping me understand where I was going wrong
   + [Okurut_5p](https://github.com/kedi1991/), for is advice and suggestions during this projects. 
 
