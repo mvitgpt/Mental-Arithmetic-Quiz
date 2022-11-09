@@ -19,11 +19,11 @@
     <div class="header-icon">
         <div class="social-icon">
             <a href="https://github.com/Shida18719" target="_blank" rel="noopener"
-                aria-label="visit our Face book page (opens in a new tab)">
+                aria-label="visit my Face book page (opens in a new tab)">
                 <i class="fab fa-github"></i></a>
 
             <a href="https://www.linkedin.com/in/rashidat-adekoya-668843245/" target="_blank" rel="noopener"
-                aria-label="visit our Face book page (opens in a new tab)">
+                aria-label="visit my Face book page (opens in a new tab)">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
@@ -47,7 +47,7 @@
                 aria-label="user-name-input" required>
 
             <!-- Error Message for Username Validation -->
-            <div id="error" class="error-msg">
+            <div id="error" class="error-msg" aria-live="assertive">
             </div>
 
             <!-- Proceed button to Quiz Rules -->
@@ -150,11 +150,11 @@
         <div id="correct"></div>
         <div id="incorrect"></div>
         <div class="next-question-container">
-            <button data-type="continue" class="next-ques-btn btn--white" id="next-ques-btn">Next
+            <button data-type="continue" class="next-ques-btn btn--white" id="next-ques-btn" aria-label="Next Question Button">Next
                 Question</button>
 
             <div id="quiz-end" class="quiz-end"></div>
-            <button data-type="result" class="result-btn" id="result-btn">Result</button>
+            <button data-type="result" class="result-btn" id="result-btn" aria-label="Result Button">Result</button>
         </div>
     </div>
 
@@ -168,7 +168,7 @@
             <!-- <p>Great job, you scored <span></span> out of 5. You're a star!</p> -->
         </div>
         <div id="reset-quiz" class="reset-quiz">
-            <button data-type="play" class="replay" id="replay">Play Again</button>
+            <button type="button" class="replay" id="replay" aria-label="Play Again">Play Again</button>
         </div>
     </section>
 
