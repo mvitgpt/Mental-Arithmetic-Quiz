@@ -385,17 +385,21 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 
   + Largest function has 17 statements in it, while the median is 4.
 
-  + 
-The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+  + The most complex function has a cyclomatic complexity value of 5 while the median is 1.
+  +  Warnings included;
+     + Missing Semicolons:  These were all corrected
+
+     + Three undefined variables: These are variables that have been defined in the (questions.js) file externally.
+      These are : (questionsLevel1, questionsLevel2, questionsLevel3)
+        	
+
+     + One Unused variable: These are functions that have been called internally from the HTML or from other functions. - (optionClick)
+
+## Lighthouse Testing
 
 
 
-Three undefined variables
-198	questionsLevel1
-200	questionsLevel2
-202	questionsLevel3
-One unused variable
-240	optionClick
+
 ***
 
 
@@ -421,7 +425,7 @@ Click 'Save'.
 
 
 
- ## Acknowledgments
+ ## 9. Acknowledgments
 
   I would like to acknowledge the following people who helped me along the way in completing my first milestone project:
 
