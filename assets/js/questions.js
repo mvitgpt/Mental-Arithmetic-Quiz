@@ -11,7 +11,7 @@ const questionsLevel1 = [
 {
     num: 2,
     question: "15 - 8",
-    options: ['13', '9', '7', '64'],
+    options: ['13', '9', '7', '8'],
     answer: 2,
      difficulty: "easy"
 },
@@ -246,7 +246,3 @@ let questionsLevel3 = [
     difficulty: "hard"
 },
 ]
-
-// let selectedLevel = document.getElementById("diffulty");
-
-// let filteredQuestionsByDifficulty = questions.filter(question => question.difficulty === selectedLevel);
