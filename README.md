@@ -441,6 +441,26 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 
 ![Result Page Desktop Lighthouse Test](./READMEimages/result-page-desktop-lighthouse-test.png)
 
+
+## Test Case
+
+## Manual Testing
+
++ Mental Arithmetic Quiz was tested manually and is compatible with the following browsers:
+
+ + Google Chrome
+ + Firefox
+ + Microsoft Edge
+ + Safari 
+ + Opera
+and on devices, such as (iPhone, android, surface and Apple ipad). No issues with either the functionality or responsiveness of the quiz.
+
++ I also went through each page using google chrome developer tools to ensure that they responsive on all different screen sizes.
+
++ Test the link on every page. Each worked as expected, and any links leading to external pages opened correctly in a seperate browser tab.
+
+
+## 6. Bugs
 ***
 
 
