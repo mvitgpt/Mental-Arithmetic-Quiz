@@ -68,6 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
         } 
         // if errorMsg is not empty
         if (errorTxt !== '') {
+            
             // display error message in the errorMsg div on home page
             errorMsg.innerHTML = errorTxt;
         } else{ 
