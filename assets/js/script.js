@@ -51,34 +51,35 @@ const replayQuiz = document.getElementById("replay");
 window.addEventListener('DOMContentLoaded', () => { 
     usernameBtn.addEventListener("click", function() {
 
-    playerName = userNameInput.value;
-    for(let i = 0; i < playerNameTxt.length; i++){
-        playerNameTxt[i].innerHTML= userNameInput.value;
-    }
+        playerName = userNameInput.value;
+        for(let i = 0; i < playerNameTxt.length; i++){
+            playerNameTxt[i].innerHTML= userNameInput.value;
+        }
 
-let errorTxt = '';
-    // if username input is empty
-if (playerName == '') {
-    errorTxt = "Please enter a Username";
-    ruleBox.style.display = "none";
+        let errorTxt = '';
+            // if username input is empty
+        if (playerName == '') {
+            errorTxt = "Please enter a Username";
+            ruleBox.style.display = "none";
 
-// if username input is less than 8 characters 
-} else if (playerName.length >= 8) {
-    errorTxt = "Username must have maximum of 8 characters";
-} 
-// if errorMsg is not empty
-if (errorTxt !== '') {
-    // display error message in the errorMsg div on home page
-    errorMsg.innerHTML = errorTxt;
-} else{ 
-    localStorage.setItem("player", playerName);
-    startQuiz.classList.add('hide');
-    ruleBox.style.display = "block";
-    }
+        // if username input is less than 8 characters 
+        } else if (playerName.length >= 8) {
+            errorTxt = "Username must have maximum of 8 characters";
+        } 
+        // if errorMsg is not empty
+        if (errorTxt !== '') {
+            // display error message in the errorMsg div on home page
+            errorMsg.innerHTML = errorTxt;
+        } else{ 
+            userNameInput.innerHTML = "";
+            localStorage.setItem("player", playerName);
+            startQuiz.classList.add('hide');
+            ruleBox.style.display = "block";
+            }
 
- });
+    });
 
- });
+});
 
 // Redirect user to quiz level selection box when start quiz button is clicked
  startBtn.addEventListener("click", function(){
@@ -89,14 +90,18 @@ if (errorTxt !== '') {
 
 // Redirect user to home page when home button is clicked on the difficulty level page
 homeBtn.addEventListener("click", function(){
-    selection.style.display = "none";
-    startQuiz.style.display = "block";
+    // selection.style.display = "none";
+    // startQuiz.style.display = "block";
+    // userNameInput.innerHTML = "";
+    window.location.reload();
 });
 
  // Redirect user to home page when home button is clicked on the quiz rule box
 backHome.addEventListener("click", function(){
-    ruleBox.style.display = "none";
-    startQuiz.style.display = "block";
+    // ruleBox.style.display = "none";
+    // startQuiz.style.display = "block";
+    window.location.reload();
+
 });
 
 
@@ -145,6 +150,7 @@ level3.addEventListener("click", function(){
 
 // Set the next question
 nextQueBtn.addEventListener("click", function() {
+    setInterval(countTime, 1000)
     nextQuestion(); 
 });
 
@@ -156,7 +162,8 @@ let interval = 0;
 let countTime = ()=> {
     if (timer === 20) {
         clearInterval(interval);
-        nextQueBtn.click();
+        nextQueBtn.click();  
+        timeCounter.innerText = 0    
     } else {
         timer++;
         timeCounter.innerText = timer;
@@ -268,24 +275,30 @@ function nextQuestion() {
         quizEnd.innerHTML = `End of Questions.`;
         resultBtn.style.display = "block";
         nextQueBtn.style.display = "none";
+        nextQueBtn.disabled = true;
 
      }else {
-        questionsText.innerHTML = allQuestions[questionNum].question;
-        questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
-        enableOptions();
-
-        option1.innerHTML = allQuestions[questionNum].options[0];
-        option2.innerHTML = allQuestions[questionNum].options[1];
-        option3.innerHTML = allQuestions[questionNum].options[2];
-        option4.innerHTML = allQuestions[questionNum].options[3];
-
-        option1.style.backgroundColor = "#3f13a4";
-        option2.style.backgroundColor = "#3f13a4";
-        option3.style.backgroundColor = "#3f13a4";
-        option4.style.backgroundColor = "#3f13a4";
+       
+            questionsText.innerHTML = allQuestions[questionNum].question;
+        
+            questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+            enableOptions();
     
-        // Start timer
-        timer = 0;  
+            option1.innerHTML = allQuestions[questionNum].options[0];
+            option2.innerHTML = allQuestions[questionNum].options[1];
+            option3.innerHTML = allQuestions[questionNum].options[2];
+            option4.innerHTML = allQuestions[questionNum].options[3];
+    
+            option1.style.backgroundColor = "#3f13a4";
+            option2.style.backgroundColor = "#3f13a4";
+            option3.style.backgroundColor = "#3f13a4";
+            option4.style.backgroundColor = "#3f13a4";
+        
+            // Start timer
+            timer = 0;  
+        
+    
+      
      }   
     //  enableOptions();  
 }
@@ -360,5 +373,3 @@ replayQuiz.addEventListener("click", function(){
 
 
 // Set Questions Counter and display random Questions
-
-
