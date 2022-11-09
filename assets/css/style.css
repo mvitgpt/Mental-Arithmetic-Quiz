@@ -81,7 +81,7 @@ body {
     border-style: ridge;
     border-radius: 10px;
     align-items: center; 
-    display: none; 
+    /* display: none;  */
     box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5); 
 } 
 
@@ -310,7 +310,7 @@ label {
     width: 80vw;
     margin: 5rem auto;
     border-style: ridge; 
-    /* display: none; */
+    display: none;
     box-shadow: 0 0 10px 2px;
    
     
@@ -498,9 +498,9 @@ label {
     background-color:#FAFAFA;
     border-radius: 10px;
     flex-direction: column;
-    /* justify-content: center; */
-    justify-items: center;
-    display: none;
+    
+    
+    /* display: none; */
     width: 70vw;
     max-width: 70%;
     margin: 5rem auto;
@@ -581,7 +581,7 @@ footer p {
 /* --------------- Media Queries */
 /* Screens wider than 480px */
 
- @media only screen and (min-width: 600px) {
+ @media only screen and (min-width: 400px) {
 
     .header-icon .social-icon {
         margin: 3rem 0 3rem;
@@ -627,75 +627,18 @@ footer p {
 
     .question-box-area {
         margin: 4rem auto;
-        /* align-items: center; */
+        align-items: center;
     }
 
     .quiz-result {
         margin: 8.5rem auto;
     } 
     
-
-    /* .user-input-area {
-        margin-bottom: 0.5rem;
-    } */
 } 
 
 
 
-/* @media (min-width: 760px) {
+/* @media (max-width: 760px) {
 
     /*----------- Question box */
-    /* .question-box-area {
-        width: 100%;
-    }
-}
-    .question-box-area .header-icon {
-        height: 3rem;
-        display: flex;
-        border-bottom: 1px solid #595959;
-        justify-content: space-around;  
-        margin: 0 1rem 0 0;
-    }
-
-    #time {
-        margin: 0;
-    }
-
-    .question-box-area .header-icon .timer-icon {
-        margin-right: 0.5rem;
-    }
-
-    #time .time-counter {
-        margin-right: 0.5rem 0.4rem 0 0;
-    }
     
-    .question-box-area .questions-txt {
-        font-size: 1rem;
-         
-    }
-
-    .option-buttons {
-        grid-template-columns: none;
-        margin-bottom: 0;
-        gap: 0;
-        
-    }
-
-    .option-btn {
-       transition: all 0.3s ease; 
-       font-size: 1.1rem;
-       margin-bottom: 2rem;
-       padding: 0 2.5em;
-    }
-
-
-@media (max-width: 400px) {
-    .question-box-area .user-icon i {
-        display: none;
-    } 
-
-    .question-box-area .header-icon {
-        justify-content: center;
-    }
-
-} */ 
