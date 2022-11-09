@@ -1,6 +1,6 @@
 # Mental Arithmetic Quiz
 
-View the online quiz here [Mental Arithmetic Quiz]()
+View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/Mental-Arithmetic-Quiz/)
 
 Welcome to Mental Arithmetic Quiz. Mental Arithmetic Quiz is an online quiz that allow user test how quick they are able to solve maths problems mentally, if they are able to beat the time. Users can take part in randomly generated arithmetic quiz of 3 difficulties level, LEVEL 1, LEVEL 2 and LEVEL 3. Each question is presented with four answer options out of one correct answer. Both correct and incorrect answers are highlighted to allow them to learn from the experience. They are able to move up a level as a way of challenging themselves. User gets a feed back result of their score after anwsering the questions. The quiz was designed to be interactive and engaging for user, having user want to play again.
 
@@ -358,6 +358,7 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 * [Favicon](http://faviconer.com/) - Was used to create favicon logo used on the website browser.
 
 
+
 # 5. Testing
 
 ## Code Validator Testing
@@ -462,6 +463,41 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 
 ## 6. Bugs
 ***
+## Fixed bugs
+
++ During the Chrome lighthouse test on the quiz rules page, an error extension error pop up.
+
+
+
++ When checking the User Input for validation to check if the function was working, I realised user can actually start without any user name input as the quiz rules can be displayed. So, this will allow user to start the quiz without a log in.
+
++ This Bug nullified the error messages (please enter a username / Username must have maximum of 8 characters), as the messages get displayed but user can still start the quiz without obeying the userInput function. While, the Home Page is also displayed with the Rule Page.
+
+
+### Solution:
+   + This was resolved by using :
+
+   The if statment and the character index was change to greater than or equal to from less than 6.
+
+    else if (playerName.length >= 8)  
+    ruleBox.style.display = "none"; 
+
+    To hide the Quiz rule and another if statement : (errorTxt !== ''), to display the error message. 
+
++ When the levelTitle.innerHTML was added to the event listener, the page goes blank each time the level is cliked from the select level page. Google Search and [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event) helped figure this out.
+
+
+### Solution:
+   + This was resolved by using :
+
+   addEventListener('DOMContentLoaded', () => {});
+
+
+## UnKnown Bugs
+
+
+
+
 
 
 ## 7. Deployment
@@ -483,7 +519,7 @@ Click 'Save'.
 
 
 
-
+[Logo Image](https://pngtree.com/) - Used for the logo.
 
 
  ## 9. Acknowledgments
