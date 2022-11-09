@@ -397,6 +397,19 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 
 ## Lighthouse Testing
 
+## Chrome DevTools Lighthouse
+
+### Home Page - Mobile Test
+
+
+![Home Page Mobile Lighthouse Test](./READMEimages/home-page-mobile-lighthouse-test.png)
+
+
+### Home Page - Desktop Test
+
+![Home Page Desktop Lighthouse Test](./READMEimages/home-page-desktop-lighthouse-test.png)
+
+
 
 
 
