@@ -81,7 +81,7 @@ body {
     border-style: ridge;
     border-radius: 10px;
     align-items: center; 
-    display: none; 
+    /* display: none;  */
     /* box-shadow: 0 0 9px 4px; */
     box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
     
@@ -302,7 +302,7 @@ label {
     width: 80%;
     margin: 5rem auto;
     border-style: ridge; 
-    /* display: none; */
+    display: none;
     box-shadow: 0 0 10px 2px;
 }
 
@@ -348,7 +348,7 @@ label {
 }
 
  #time .time-counter{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0 1rem 0.5rem;
     height: 1.7rem;
     font-weight: bold;
