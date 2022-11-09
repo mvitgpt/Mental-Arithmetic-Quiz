@@ -62,9 +62,12 @@ This quiz is targeted towards individuals with the aim for learning or just a gr
 ## Existing Features
 ***
 + ## Home Page
+***
 
++ ## Home Page on Mobile and larger screens
 
 ![Mobile Home Page](./READMEimages/mobile-arithmetic-quiz-home-page.png)
+
 ![Desktop Home Page](./READMEimages/desktop-home-page-imge.png)
 
 The home page consists of the following features:
@@ -109,7 +112,7 @@ The home page consists of the following features:
 
   
 + ## Quiz Rule Page
-
+***
 
   + The quiz rule page consists of the quiz rules, social medial icon at the top left, the footer at the bottom center and two other buttons, the Start Quiz button and the Home button.
   + User is able to read the instructions about the quiz before starting.
@@ -122,11 +125,17 @@ The home page consists of the following features:
     + The home button with a white text and contrasting color to the background and a hover effect that scales up, is featured on the quiz rule page. 
     + If user choose to click on the Home button, It takes the user back to the homepage.
 
+  + ## Quiz Rule Page on Mobile and larger screens
 ![Quiz Rule](./READMEimages/quiz-rule-page-image.png)
+
+
 ![Ipad Quiz Rule - 1024px](./READMEimages/ipad-quiz-rule-page-image.png)
+
 ![Mobile Quiz Rule - Iphone 6/7/8](./READMEimages/mobile-quiz-rule-page-image.png)
 
-+ ## Difficulty Selection Level Page
++ ## Difficulty Level Selection Page
+***
+
   + The Level selection page displays the username and the purpose of the page at the top center.
   + It display the social media icon at the top left of the page.
   + This page consists of three difficulty levels buttons, where user can choose which ever levels they which to test themself.
@@ -134,10 +143,14 @@ The home page consists of the following features:
   + The page also feature the Home Button, which takes user back to home page if a user decided not to continue.
   + All buttons have a white text and contrasting color to the background and a hover effect that scale up when hovered.
 
+  + ## Difficulty Level Selection Page on Mobile and larger screens
+
   ![Mobile Level Selection Page](./READMEimages/mobile-level-selection-page-image.png)
   ![ipad Level Selection Page](./READMEimages/ipad-level-selection-page-image.png)
 
   ## Quiz Page
+  ***
+
   + It display the social media icon at the top left of the page and the footer at the buttom center of the page.
   + User Name
     + The username is also displayed at the top left.
@@ -184,15 +197,21 @@ The home page consists of the following features:
 
 ![End of Questions and Result Button](./READMEimages/end-of-questions-image.png)
 
++ ## Quiz Page on Mobile and larger screens
+
 ![ipad Question Page](./READMEimages/ipad-questions-page-image.png)
 
 ![Mobile Question Page](./READMEimages/mobile-question-page-image.png)
 
+
 + ## Result Page
+***
   + The result page display the user score. The page consists of a star icon, user's name, with a personalised feedback of user's total score and the Play Again Button.
   + There are three different feedback remark together with one presenting a star icon depending on the user's score. 
   + The icon is meant as a visual reward and to encourage user for their effort and also improve their score at all levels.
 
+
++ ## Result Page on Mobile and larger screens
 
 ![ipad Result Page](./READMEimages/ipad-result-page-image.png)
 
@@ -203,6 +222,7 @@ The home page consists of the following features:
   + The button refreshes the quiz and take player bak to the home page.
 
 ## Future Features
+***
 
 The following features can be added at a later date in order to improve user experience: 
 
@@ -290,21 +310,19 @@ The Score Result display at the end of the question give the user some visual fe
 The Wireframes were first sketched out with pen and paper, in order to have a preview and work out what's possible and what's not, before transfering the idea to a digital wireframe on Balsamiq. Which give a closer feel of the proposed design. 
 
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+[Quiz Home Page Wireframe](./READMEimages/quiz-home-page-wf.png)
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+[Mobile Quiz Rules Page Wireframe](./READMEimages/quiz-info-page-wf.png)
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+[ipad Quiz Level Page Wireframe](./READMEimages/quiz-level-page-wf.png)
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+[Mobile Question Page Wireframe](./READMEimages/mobile-question-page-wf.png)
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+[Desktop Question Page Wireframe](./READMEimages/question-page-wf.png)
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
+[Result Page Wireframe](./READMEimages/feedback-page-wf.png)
 
-[Desktop Home Page Wireframe](./READMEimages/desktop-homepage-wireframe.png)
-
-# Technology
+# 4. Technology
 
 ## Technologies used
 
