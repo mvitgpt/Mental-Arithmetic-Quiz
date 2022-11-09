@@ -399,19 +399,47 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
 
 ## Chrome DevTools Lighthouse
 
-### Home Page - Mobile Test
+### Home Page - Mobile Lighthouse Test
 
 
 ![Home Page Mobile Lighthouse Test](./READMEimages/home-page-mobile-lighthouse-test.png)
 
 
-### Home Page - Desktop Test
+### Home Page - Desktop Lighthouse Test 
 
 ![Home Page Desktop Lighthouse Test](./READMEimages/home-page-desktop-lighthouse-test.png)
 
+### Quiz Rule Page - Mobile Lighthouse Test
 
+![Quiz Rules Page Mobile Lighthouse Test](./READMEimages/quiz-rule-page-mobile-lighthouse-test.png)
 
+### Quiz Rule Page - Desktop Lighthouse Test
 
+![Quiz Rules Page Desktop Lighthouse Test](./READMEimages/quiz-rule-page-desktop-lighthouse-test.png)
+
+### Select Difficulty Level Page - Mobile Lighthouse Test
+
+![Select Difficulty Level Page Mobile Lighthouse Test](./READMEimages/select-level-page-mobile-lighthouse-test.png)
+
+### Select Difficulty Level Page - Desktop Lighthouse Test
+
+![Select Difficulty Level Page Desktop Lighthouse Test](./READMEimages/select-level-page-desktop-lighthouse-test.png)
+
+### Quiz Page - Mobile Lighthouse Test
+
+![Quiz Page Mobile Lighthouse Test](./READMEimages/mobile-question-page-lighthouse-test.png)
+
+### Quiz Page - Desktop Lighthouse Test
+
+![Quiz Page Desktop Lighthouse Test](./READMEimages/question-page-desktop-lighthouse-test.png)
+
+### Result Page - Mobile Lighthouse Test
+
+![Result Page Mobile Lighthouse Test](./READMEimages/result-page-mobile-lighthouse-test.png)
+
+### Result Page - Desktop Lighthouse Test
+
+![Result Page Desktop Lighthouse Test](./READMEimages/result-page-desktop-lighthouse-test.png)
 
 ***
 
