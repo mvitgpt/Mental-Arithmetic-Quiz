@@ -183,7 +183,8 @@ let allQuestions = [];
 
 // Function to execute each difficulty Level Questions
 function questionStart() {
-    // Show questions box
+
+    // Show questions 
     questionBox.style.display = "block"; 
     playerName = localStorage.getItem("player");
 
@@ -203,6 +204,7 @@ function questionStart() {
 
 // Render first question
 function renderQuestions() {
+
     // Get the difficulity level's set of random questions and options & load the first question.
     allQuestions = shuffle(currentQuestion);
     allQuestions = allQuestions.slice(0, 5);
@@ -233,7 +235,7 @@ function enableOptions(){
 
 // Function to check if user answer is coreect, option button changes to green and vice visa and increases score.
 function optionClick(userAnswer) {
-    // console.log(optionBtn, "<==optionBtn")
+    
     if(userAnswer == allQuestions[questionNum].answer) {
         ++userScored;
         userScore.innerHTML = `${userScored}/5`;
@@ -313,9 +315,9 @@ resultBtn.addEventListener("click", () =>{
 
 
  /**
- * Function to randomly display quiz with level of difficulty
+  * Function to randomly display quiz with level of difficulty
  *  using the Math.random() to Swap an item with another
-*/
+ */
 function shuffle(questionsArray) {
     //Code from jsfiddle.net/gautamz07/zotsc64e/
     let currentQuestionIndex = questionsArray.length,  randomise;
@@ -342,6 +344,7 @@ function showResults(){
     const icon = document.getElementById("icon");
     
     if (userScored > 3){ 
+
         //creating template literals and passing the user name,score  and total questions 
         icon.innerHTML = `<i class="far fa-star" aria-hidden="true" id="star"></i>`;
         resultText.innerHTML = ` congrats! ${playerName}.You are a Star, You scored ${userScored} out of 5. You're ready to move up a new level`;

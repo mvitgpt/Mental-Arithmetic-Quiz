@@ -393,7 +393,7 @@ The Wireframes were first sketched out with pen and paper, in order to have a pr
       These are : (questionsLevel1, questionsLevel2, questionsLevel3)
         	
 
-     + One Unused variable: These are functions that have been called internally from the HTML or from other functions. - (optionClick)
+     + One Unused variable: Theseis function that have been called internally from the HTML. - (optionClick)
 
 ## Lighthouse Testing
 
@@ -489,19 +489,113 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 
    addEventListener('DOMContentLoaded', () => {});
 
-When checking to see that all the button work correctly, I realised, the Home button when clicked from the Quiz Rules page,  will go to the home page as normal. However, if the name input is still displayed when the Next Button is clicked, it opens the Quiz Rules Page while the Home page is still open.
++ When checking to see that all the buttons work correctly, I realised, the Home button when clicked from the Quiz Rules page,  will go to the home page as normal. However, if the name input is still displayed when the Next Button is clicked, it opens the Quiz Rules Page while the Home page is still open.
 
 ### Solution:
    + This was resolved by using :
 
+   window.location.reload();
+
+   This function refreshes the content.
+
+
++ Username displayed - I was getting the username displayed on two pages, the (Level selction page and the Quiz page). The name only showed up on the Level Selection Page.
+
++ Reason for this was because, I thought it's just using the userNameInput 'id'. So, I was looking to get the element reference to display the name on both pages. 
+
++ After google search. I realised it's a bad practice to call an ID on different task.
+
+### Solution:
+   + This was resolved by using :
+
+   class instead of an id element.
+
++ Question Counter(questionNum) - I found here, when the Next Question Button is clicked, it was not displaying the question number accordingly as number of questions should be adding up on the click of Next Button. But instead the question counter would display the position of the question inside the array.  Here is an example of the bug: 
+
+![Question Counter Display Bug](./READMEimages/bug-index-display.png)
+
+### Solution:
+   + This was resolved by :
+
+   Passing the questionCounter in as an integer and adding one inside an if statement contained in the (nextQuestion()) function.
+
+   questionsCounter.innerText = parseInt(questionsCounter.innerText) + 1;
+
+
++ User - Score display one less every time the question ends.
+
+### Solution:
+   + This was resolved by :
+
+   Using the ++x (pre-increment) method inside an If statement, to increase the count every time the user clicks an option button to make a choice.
+
+   ++userScored;
+        userScore.innerHTML = `${userScored}/5`; 
+
+
++ Timer - The time counter counts up to 20 seconds according to what was set, then would jump to the next question as expected, if no activity completed within that time. However, the time would stop counting immediately if there is no activities performed by the user, such as going on to the next question.
+
++ This negates the purpose of getting the user getting to beat the time within the stipulated time.
+
+### Solution:
+   + This was resolved by :
+
+   Setting the time counter to 0 index inside the if statement, and the clearInterval to reset it to zero. Initially the time counter was not set to 0.
+
+    if (timer === 20) {
+        clearInterval(interval);
+        nextQueBtn.click();  
+        timeCounter.innerText = 0    
+    } else {
+        timer++;
+        timeCounter.innerText = timer;
+    }  
+
+
++ Next Question Button - Would always threw error at the end of the quiz.
+
++ The error pointing to a 'Syntax error of unable to read an undefined question'.
+
+### Solution:
+   + This was resolved by :
+
+    nextQueBtn.disabled = true;
+
+    This was used to disable the reading after the quiz questions end.
+
+
++ Swapping the Next Question Button with Result Button when the quiz finished in order to advise user its end of questions.
+
++ Here I have used the if stamtement if(questionNum == 5), But I was unable to get the Result Button displayed, because I put the condition inside the else rather than the if. So, The 'End of questions will be displayed without a button to show the result.
+
+### Solution:
+   + This was resolved by :
+
+  if(questionNum == 5){
+    
+        quizEnd.innerHTML = `End of Questions.`;
+        resultBtn.style.display = "block";
+        nextQueBtn.style.display = "none";
+        nextQueBtn.disabled = true;
+
+  This was resolve by adding the resultBtn inside of the if condition rather than on the outside.
+
+  + HTML Bug
+  + ![HTML Bug](./READMEimages/js-bug-image.png)
+  
+  This was a rsult of a missing closing div inside on the index file.
+
+  ### Solution:
+   + This was resolved by :
+
+    This was fixed by proper indentation, which allow me see where the particular 'div' was causing issue. 
 
 
 ## UnKnown Bugs
 
+When the testing was done on a Motorola G8 Powerlite, the time counter was reading faster than on other mobile devices test have been carried on.
 
-
-
-
+***
 
 ## 7. Deployment
 
@@ -563,11 +657,16 @@ View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/
 
   I would like to acknowledge the following people who helped me along the way in completing my first milestone project:
 
-  + My family, for their uderstanding.
+  + My family, for their uderstanding and support both morally and mentally.
+
   + The slack community, for always being there.
+
   + [MiaRasmussen_5P](https://github.com/MiaRasmussen05), for her great support and time and for mixing the gradient colors.
+
   + Tutor - George-Alexandru Ciobanu, for the time spent in guiding and explaing the steps to figuring things out .
+
   + My Code Institute mentor jubril_mentor, for helping me understand how to think logically before writing codes in programming.
+  
   + [Okurut_5p](https://github.com/kedi1991/), for is advice and suggestions during this projects. 
 
 
@@ -578,7 +677,7 @@ View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/
 
 
 
-
+-----
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
@@ -589,22 +688,6 @@ View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/
 
 
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
 
 

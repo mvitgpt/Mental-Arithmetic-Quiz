@@ -18,9 +18,9 @@ body {
     background-image: linear-gradient(to bottom right, #4E0A6D, #6E1BB1, #844FD8, #A484D8, #7651CC, #7132AD, #A086E9, #722CA0, #450A57);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    /* width: 100%;
     min-height: 100%;;
-   
+    */
     
 }
 
