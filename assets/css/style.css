@@ -548,6 +548,7 @@ footer p {
 /* ------------------------------------ */
      .start-quiz-home {
      margin: 3rem auto;
+     width: 85vw;
     } 
 
     .quiz-intro-txt {
@@ -567,6 +568,9 @@ footer p {
 
      .rule-box {
         margin: 4rem auto;
+        width: 85vw;
+    } 
+
     }
 
     .selection-area {
@@ -581,7 +585,7 @@ footer p {
     .quiz-result {
         margin: 10rem auto;
     } 
- }  
+  
 
     /*----------- Question box user icon */
 
