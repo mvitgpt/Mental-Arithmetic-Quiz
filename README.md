@@ -278,7 +278,8 @@ The following features can be added at a later date in order to improve user exp
 
 ## Design Structure 
 ***
-This quiz is designed with a simple structured layout of simple colors across the pages.
+This quiz was designed with a simple structured layout of simple colors across the pages.
+
 All pages are clearly displayed with easy to read fonts. The pages are easily navigated with buttons.
 
 The main quiz page, display the questions and options clearly, with one question displayed at a time to help user focus.
@@ -460,9 +461,10 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 + Test the link on every page. Each worked as expected, and any links leading to external pages opened correctly in a seperate browser tab.
 
 
-## 6. Bugs
-***
+# 6. Bugs
+
 ## Fixed bugs
+***
 
 + During the Chrome lighthouse test on the quiz rules page, a warning of 'not unable to analyse the page' you popped up. But also advice to check all extension.
 
@@ -482,7 +484,9 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 
     To hide the Quiz rule and another if statement : (errorTxt !== ''), to display the error message. 
 
-+ When the levelTitle.innerHTML was added to the event listener, the page goes blank each time the level is cliked from the select level page. Google Search and [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event) helped figure this out.
++ When the levelTitle.innerHTML was added to the event listener, the page goes blank each time the level is cliked from the select level page. Google Search and 
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event) helped figure this out.
 
 ### Solution:
    + This was resolved by using :
@@ -593,7 +597,10 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 
 ## UnKnown Bugs
 
-When the testing was done on a Motorola G8 Powerlite, the time counter was reading faster than on other mobile devices test have been carried on.
++ When the testing was done on a Motorola G8 Powerlite, the time counter was reading faster than on other mobile devices test have been carried on.
++ The page goes blank for about a seconds when the Home Button is click to refresh the page.
+
+
 
 ***
 
@@ -666,7 +673,7 @@ View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/
   + Tutor - George-Alexandru Ciobanu, for the time spent in guiding and explaing the steps to figuring things out .
 
   + My Code Institute mentor jubril_mentor, for helping me understand how to think logically before writing codes in programming.
-  
+
   + [Okurut_5p](https://github.com/kedi1991/), for is advice and suggestions during this projects. 
 
 
