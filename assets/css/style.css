@@ -8,9 +8,6 @@
     box-sizing: border-box;
 }
 
-
-
-
 body {
     font-family: 'Open sans', sans-serif;
     color: #595959;
@@ -18,14 +15,12 @@ body {
     background-image: linear-gradient(to bottom right, #4E0A6D, #6E1BB1, #844FD8, #A484D8, #7651CC, #7132AD, #A086E9, #722CA0, #450A57);
     background-repeat: no-repeat;
     background-size: cover;
-    /* width: 100%;
-    min-height: 100%;;
-    */
     
 }
 
 /* --------- Heading */
 /* ------------------ */
+
 .header-icon .social-icon{
     color: #FAFAFA;
     font-size: 1.5rem; 
@@ -74,6 +69,7 @@ body {
 
 /* --------- Start Quiz Home Page layout */
 /* ------------------------------------ */
+
  .start-quiz-home {
      display: grid;
     background-color:#FAFAFA;
@@ -106,7 +102,6 @@ input[type = 'text'] {
     border-radius: 8px;
     margin: 0.8rem 0 1rem 0;
     border: 1px solid #3F13A4;
-    /* font-size: 1rem; */
     text-align: center;
 }
 
@@ -169,6 +164,7 @@ label {
     display: none;
     overflow: auto;
     overflow-x: hidden;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .rule-title {
@@ -240,6 +236,7 @@ label {
     max-width: 70%;
     margin: 5rem auto;
     border-style: ridge;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5); 
     display: none;
 }
 
@@ -298,7 +295,7 @@ label {
     margin: 5rem auto;
     border-style: ridge; 
     display: none;
-    box-shadow: 0 0 10px 2px;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .question-box-area .header-icon {
@@ -311,9 +308,7 @@ label {
 .question-box-area .user-icon {
     font-size: 1.5rem;
     margin: 0.8rem 4rem 0 0;
-    /* margin: 0.5rem 8rem 1rem 2rem; */
     color: #050505;  
-    /* display: none; */
 }
 
 .question-box-area .player-name {
@@ -403,13 +398,6 @@ label {
      border-color: #050505;
  }
 
- 
- /* .option-btn.incorrect {
-     background-color: red;
-     color: #FAFAFA;
- }  */
-
-
 .next-question-container {
     border-top: 1px solid #595959;
     margin-bottom: 1rem;
@@ -471,6 +459,7 @@ label {
     margin: 5rem auto;
     border-style: ridge;
     text-align: center;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .quiz-result h2 {
@@ -530,18 +519,14 @@ label {
 
 footer {
     color: #050505;
-    /* margin-bottom: 0.5rem; */
     left: 0;
     bottom: 0;
-    margin-top: 60px;
-   
-   
+    margin-top: 60px; 
 }
 
 footer p {
     font-size: small;
-    width: 100%;
-   
+    width: 100%; 
 }
 
 /* --------------- Media Queries */
@@ -602,12 +587,10 @@ footer p {
 
     .question-box-area {
         margin: 6rem auto;
-    
     }
  }
 
     /*----------- Question box */
-    
 
     @media (max-width: 320px) {
         .question-box-area .user-icon {

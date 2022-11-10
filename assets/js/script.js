@@ -368,9 +368,3 @@ replayQuiz.addEventListener("click", function(){
  
 
 
-
-
-
-
-
-// Set Questions Counter and display random Questions
