@@ -464,8 +464,9 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 ***
 ## Fixed bugs
 
-+ During the Chrome lighthouse test on the quiz rules page, an error extension error pop up.
++ During the Chrome lighthouse test on the quiz rules page, a warning of 'not unable to analyse the page' you popped up. But also advice to check all extension.
 
+   + This was quickly fixed after disabling the extensions.
 
 
 + When checking the User Input for validation to check if the function was working, I realised user can actually start without any user name input as the quiz rules can be displayed. So, this will allow user to start the quiz without a log in.
@@ -473,8 +474,6 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 + This Bug nullified the error messages (please enter a username / Username must have maximum of 8 characters), as the messages get displayed but user can still start the quiz without obeying the userInput function. While, the Home Page is also displayed with the Rule Page.
 
 
-### Solution:
-   + This was resolved by using :
 
    The if statment and the character index was change to greater than or equal to from less than 6.
 
@@ -485,11 +484,16 @@ and on devices, such as (iPhone, android, surface and Apple ipad). No issues wit
 
 + When the levelTitle.innerHTML was added to the event listener, the page goes blank each time the level is cliked from the select level page. Google Search and [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event) helped figure this out.
 
-
 ### Solution:
    + This was resolved by using :
 
    addEventListener('DOMContentLoaded', () => {});
+
+When checking to see that all the button work correctly, I realised, the Home button when clicked from the Quiz Rules page,  will go to the home page as normal. However, if the name input is still displayed when the Next Button is clicked, it opens the Quiz Rules Page while the Home page is still open.
+
+### Solution:
+   + This was resolved by using :
+
 
 
 ## UnKnown Bugs
@@ -562,8 +566,8 @@ View the online quiz here [Mental Arithmetic Quiz](https://shida18719.github.io/
   + My family, for their uderstanding.
   + The slack community, for always being there.
   + [MiaRasmussen_5P](https://github.com/MiaRasmussen05), for her great support and time and for mixing the gradient colors.
-  + Tutor - George-Alexandru Ciobanu, for the time spent figuring out .
-  + My mentor jubril_mentor, for helping me understand where I was going wrong
+  + Tutor - George-Alexandru Ciobanu, for the time spent in guiding and explaing the steps to figuring things out .
+  + My Code Institute mentor jubril_mentor, for helping me understand how to think logically before writing codes in programming.
   + [Okurut_5p](https://github.com/kedi1991/), for is advice and suggestions during this projects. 
 
 
