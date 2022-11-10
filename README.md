@@ -4,7 +4,7 @@
 Welcome to Mental Arithmetic Quiz. Mental Arithmetic Quiz is an online quiz that allow user test how quick they are able to solve maths problems mentally, if they are able to beat the time. Users can take part in randomly generated arithmetic quiz of 3 difficulties level, LEVEL 1, LEVEL 2 and LEVEL 3. Each question is presented with four answer options out of one correct answer. Both correct and incorrect answers are highlighted to allow them to learn from the experience. They are able to move up a level as a way of challenging themselves. User gets a feed back result of their score after anwsering the questions. The quiz was designed to be interactive and engaging for user, having user want to play again.
 
 
- ![Mental Arithmetic Quiz](./READMEimages/amiresponsive-image.png)     
+ ![Mental Arithmetic Quiz](./READMEimages/imiresponsive-image.png)     
 
 
  ***                                    
