@@ -529,66 +529,6 @@ footer p {
     width: 100%; 
 }
 
-/* --------------- Media Queries */
-/* Screens wider than 400x */
-
-  @media only screen and (min-width: 400px) {
-
-    .header-icon .social-icon {
-        margin: 3rem 0 3rem;
-    } 
-
-    .logo {
-        margin-top: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-/* --------- Start Quiz Home Page layout */
-/* ------------------------------------ */
-    .start-quiz-home {
-     margin: 5rem auto;
-    } 
-
-    .quiz-intro-txt {
-        font-size: 1.3rem;
-    } 
-
-    input[type = 'text'] {
-        width: 11rem;
-        height: 3rem;
-        margin: 0.8rem 0 2rem 0;  
-    } 
-
-     footer {
-        margin-top: 90px;
-        
-    }
-
-     .rule-box {
-        margin: 6.5rem auto;
-    }
-
-    .selection-area {
-        margin: 4rem auto;
-    }
-
-    .question-box-area {
-        margin: 4rem auto;
-        align-items: center;
-    }
-
-    .quiz-result {
-        margin: 10rem auto;
-    } 
- }  
- 
-
- @media (min-width: 1024px) {
-
-    .question-box-area {
-        margin: 6rem auto;
-    }
- }
 
     /*----------- Question box */
 
