@@ -1,4 +1,5 @@
 // Get the HTML Elements by their Tag Name and assigned to variable
+
 // Start Quiz Section
 const startQuiz = document.getElementById('start-quiz-home');
 const userNameInput = document.getElementById("user-name-input");
@@ -91,28 +92,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Redirect user to home page when home button is clicked on the difficulty level page
 homeBtn.addEventListener("click", function(){
-    // selection.style.display = "none";
-    // startQuiz.style.display = "block";
-    // userNameInput.innerHTML = "";
+
     window.location.reload();
 });
 
  // Redirect user to home page when home button is clicked on the quiz rule box
 backHome.addEventListener("click", function(){
-    // ruleBox.style.display = "none";
-    // startQuiz.style.display = "block";
+
     window.location.reload();
 
 });
 
 
-// Redirect user to question page for each level when a level is selected 
+// Redirect user to question page for each level, when level is selected 
+
 let difficultyLevel = "";
 
 // playerName = localStorage.getItem("player");
  const levelTitle = document.getElementById("level");
 
- // Easy level
+ // Level 2
 window.addEventListener('DOMContentLoaded', () => {  
 
 level1.addEventListener("click", function(){
@@ -125,7 +124,7 @@ level1.addEventListener("click", function(){
     
 });
  
- // Medium level
+ // Level 2
 level2.addEventListener("click", function(){
      selection.style.display = "none";
      difficultyLevel = "medium"; 
@@ -136,7 +135,7 @@ level2.addEventListener("click", function(){
 });
 
 
- // Hard level
+ // Level 3
 level3.addEventListener("click", function(){
      selection.style.display = "none";
      difficultyLevel = "hard"; 
@@ -299,24 +298,21 @@ function nextQuestion() {
         
             // Start timer
             timer = 0;  
-        
-    
-      
-     }   
-    //  enableOptions();  
+     }    
 }
 
 
 // Hide question box and show result
 resultBtn.addEventListener("click", () =>{
+
     questionBox.style.display = "none";
     showResults();
 });
 
 
- /**
+/**
   * Function to randomly display quiz with level of difficulty
- *  using the Math.random() to Swap an item with another
+*  using the Math.random() to Swap an item with another
  */
 function shuffle(questionsArray) {
     //Code from jsfiddle.net/gautamz07/zotsc64e/
@@ -358,6 +354,7 @@ function showResults(){
         resultText.innerHTML = `Sorry, ${playerName}. You scored ${userScored} out of 5. Better luck next time`;   
     }
 }
+
 
 // Restart quiz page
 replayQuiz.addEventListener("click", function(){
