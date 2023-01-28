@@ -15,8 +15,7 @@ body {
     background-image: linear-gradient(to bottom right, #4E0A6D, #6E1BB1, #844FD8, #A484D8, #7651CC, #7132AD, #A086E9, #722CA0, #450A57);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    
+    min-height: 100vh;   
 }
 
 /* --------- Heading */
@@ -155,11 +154,11 @@ label {
  /* -------------- Quiz Rule Box*/
  /* --------------------------- */
  .rule-box {
-    max-width: 70%;
+    max-width: 80%;
     background-color:#FAFAFA;
     border-radius: 10px;
-    display: grid;
-    width: 70vw;   
+    /* display: grid; */
+    width: 80vw;   
     border-style: ridge;
     margin: 5rem auto;
     display: none;
@@ -531,12 +530,13 @@ footer p {
 }
 
 /* --------------- Media Queries */
-/* Screens less than 400x */
 
-  @media only screen and (max-width: 400px) {
+/* Screens less than 640x */
 
-     .header-icon .social-icon {
-        margin: 3rem 0 3rem;
+  @media only screen and (max-width: 640px) {
+
+     .header-icon {
+        margin: 2.5rem 0 5rem;
     } 
 
     .logo {
@@ -562,16 +562,13 @@ footer p {
     } 
 
      footer {
-        margin-top: 60px;
-        
+        margin-top: 30px;
     }
 
      .rule-box {
-        margin: 4rem auto;
-        width: 85vw;
+        margin-top: 3rem;
+        margin-bottom: 4rem; 
     } 
-
-    }
 
     .selection-area {
         margin: 4rem auto;
@@ -585,7 +582,7 @@ footer p {
     .quiz-result {
         margin: 10rem auto;
     } 
-  
+}
 
     /*----------- Question box user icon */
 
